@@ -1,0 +1,287 @@
+# Copyright (c) 2022 by Michael Arsollon
+# derived from original game at https://github.com/endless-sky/endless-sky
+#
+# Endless Sky is free software: you can redistribute it and/or modify it under the
+# terms of the GNU General Public License as published by the Free Software
+# Foundation, either version 3 of the License, or (at your option) any later version.
+#
+# Endless Sky is distributed in the hope that it will be useful, but WITHOUT ANY
+# WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+
+
+# ships derived from AES Misc.
+# Copyright: Michael Arsollon
+# License: CC-BY-SA-4.0
+# Comment: Derived from works by Darcy Manoel (under the same license) and Michael Zahniser (under the same license).
+
+
+
+# This ship was derived from the "Kar Ik Vot 637"
+ship "Korath Warlord"
+	sprite "ship/AESmisc kar_ik_vot_637"
+	thumbnail "thumbnail/AESmisc kar_ik_vot_637"
+	attributes
+		category "Heavy Warship"
+		cost 44130000
+		shields 82900
+		hull 67400
+		"required crew" 376
+		bunks 637
+		mass 1850
+		drag 24.6
+		"heat dissipation" .45
+		"fuel capacity" 600
+		"cargo space" 63
+		"outfit space" 1239
+		"weapon capacity" 527
+		"engine capacity" 211
+		ramscoop 3
+		weapon
+			"blast radius" 550
+			"shield damage" 6800
+			"hull damage" 3600
+			"hit force" 9800
+	outfits
+		"Korath Fire-Lance" 2
+		"Korath Disruptor Gun" 2
+		"Korath Disruptor" 2
+		"Korath Slicer Turret" 4
+		"Korath Warder" 2
+
+		"Double Plasma Core"
+		"Triple Plasma Core"
+		"Systems Core (Large)"
+		"Systems Core (Medium)"
+		"Large Heat Shunt" 5
+		"Small Heat Shunt"
+		"Korath Repeater Rifle" 508 
+
+		"Steering (Stellar Class)"
+		"Thruster (Stellar Class)"
+		"Jump Drive"
+
+	engine -78 221
+	engine 78 221
+	engine 0 335
+	engine -31 349 .6
+	engine 31 349 .6
+	gun -11 -323 "Korath Fire-Lance"
+	gun 11 -323 "Korath Fire-Lance"
+	gun -22 -272 "Korath Disruptor Gun"
+	gun 22 -272 "Korath Disruptor Gun"
+	turret -50 -261 "Korath Slicer Turret"
+	turret 50 -261 "Korath Slicer Turret"
+	turret -52 -238 "Korath Disruptor"
+	turret 52 -238 "Korath Slicer Turret"
+	turret -54 -210 "Korath Slicer Turret"
+	turret 54 -210 "Korath Disruptor"
+	turret -57 -181 "Korath Warder"
+	turret 57 -181 "Korath Warder"
+	drone 52 -37 under
+	drone 46 0 over
+	drone -52 296 under back
+	fighter -44 -17 over
+	fighter 52 258 over back
+	explode "huge explosion" 20
+	explode "large explosion" 60
+	explode "medium explosion" 90
+	explode "small explosion" 70
+	explode "tiny explosion" 140
+	"final explode" "final explosion large"
+	description `After gaining access to Sestor and Mereti technology, the Exiles have developed this new ship. Unlike the Raider or Dredger, this is a true war machine.`
+
+
+ship "Korath Warlord" "Korath Warlord (Artillery)"
+	outfits
+		"Korath Detainer" 2
+		"Korath Repeater Turret" 6
+		"Korath Warder" 2
+		"Korath Piercer Launcher" 2
+		"Korath Piercer" 62
+		"Double Plasma Core"
+		"Triple Plasma Core"
+		"Systems Core (Large)" 2
+		"Large Heat Shunt" 5
+		"Small Heat Shunt"
+		"Steering (Stellar Class)"
+		"Thruster (Stellar Class)"
+		"Jump Drive"
+
+
+# This ship was derived from the "Kar Ik Vot 711"
+ship "Prateskar 711"
+	sprite "ship/AESmisc kar_ik_vot_711"
+	thumbnail "thumbnail/AESmisc kar_ik_vot_711"
+	attributes
+		category "Heavy Warship"
+		cost 47550000
+		shields 88400
+		hull 82100
+		automaton 1
+		mass 2410
+		drag 30.6
+		"heat dissipation" .4
+		"fuel capacity" 700
+		"cargo space" 56
+		"outfit space" 1461
+		"weapon capacity" 527
+		"engine capacity" 261
+		"self destruct" .8
+		ramscoop 3
+		weapon
+			"blast radius" 570
+			"shield damage" 6900
+			"hull damage" 4100
+			"hit force" 9500
+	outfits
+		"Korath Banisher" 2
+		"Korath Repeater Turret" 8
+		"Korath Warder" 4
+		"Korath Piercer Launcher" 2
+		"Korath Piercer Rack" 3
+		"Korath Piercer" 110
+
+		"Triple Plasma Core" 2
+		"Systems Core (Large)"
+		"Systems Core (Medium)"
+		"Systems Core (Small)"
+		"Large Heat Shunt" 7
+		"Small Heat Shunt" 2
+		"Control Transceiver" 2
+		"Outfits Expansion"
+
+		"Thruster (Lunar Class)"
+		"Vector Engine (Reality Class)"
+		Hyperdrive
+	engine -57.5 297
+		over
+	engine 57.5 297
+		over
+	engine -31.5 365.5 1.2
+	engine 31.5 365.5 1.2
+	turret -50.5 -259.5 "Korath Repeater Turret"
+	turret 50.5 -259.5 "Korath Repeater Turret"
+	turret -52 -235.5 "Korath Repeater Turret"
+	turret 52 -235.5 "Korath Repeater Turret"
+	turret -54.5 -207.5 "Korath Repeater Turret"
+	turret 54.5 -207.5 "Korath Repeater Turret"
+	turret -55 -178.5 "Korath Banisher"
+	turret 55 -178.5 "Korath Banisher"
+	turret -53 -152.5
+	turret 53 -152.5
+	turret -50.5 -128.5 "Korath Warder"
+	turret 50.5 -128.5 "Korath Warder"
+	turret -123.5 201 "Korath Repeater Turret"
+	turret -102.5 201 "Korath Warder"
+	turret 102.5 201 "Korath Warder"
+	turret 123.5 201 "Korath Repeater Turret"
+	gun -11.5 -319.5 "Korath Piercer Launcher"
+	gun 11.5 -319.5 "Korath Piercer Launcher"
+	explode "huge explosion" 20
+	explode "large explosion" 60
+	explode "medium explosion" 90
+	explode "small explosion" 70
+	explode "tiny explosion" 140
+	"final explode" "final explosion large"
+	description `An unfinished protoype being developed by the Kor Sestor at the time their network was shut down. Its deployment into the Sestor fleets could have shifted the balance of power in their war with the Mereti.`
+	
+# Altered the "self destruct" stat on the Model 1024 and added a Cargo Expansion outfit
+ship "Model 1024"
+	sprite "ship/AESmisc model_1024"
+	thumbnail "thumbnail/AESmisc model_1024"
+	attributes
+		category "Heavy Warship"
+		cost 45936000
+		shields 119200
+		hull 37900
+		automaton 1
+		mass 1300
+		drag 19.1
+		"heat dissipation" .8
+		"fuel capacity" 500
+		"cargo space" 669
+		"outfit space" 819
+		"weapon capacity" 267
+		"engine capacity" 192
+		"self destruct" .8
+		ramscoop 3
+		weapon
+			"blast radius" 420
+			"shield damage" 5600
+			"hull damage" 2800
+			"hit force" 8400
+	outfits
+		"Cargo Expansion"
+		"Hyperdrive"
+		"Korath Disruptor"
+		"Korath Mine" 34
+		"Korath Minelayer" 2
+		"Korath Slicer Turret" 2
+		"Large Heat Shunt" 2
+		"Reasoning Node" 5
+		"Steering (Stellar Class)"
+		"Systems Core (Large)"
+		"Systems Core (Small)"
+		"Thruster (Comet Class)"
+		"Thruster (Planetary Class)"
+		"Triple Plasma Core"
+	engine -149 97
+	engine 149 97
+	gun -22 -143 "Korath Minelayer"
+	gun 22 -143 "Korath Minelayer"
+	turret 91 -102 "Korath Slicer Turret"
+	turret -121 86 "Korath Slicer Turret"
+	turret 54 138 "Korath Disruptor"
+	explode "large explosion" 35
+	explode "medium explosion" 80
+	explode "small explosion" 115
+	explode "tiny explosion" 160
+	"final explode" "final explosion large"
+	description `The next step in the evolution of the Kor Mereti war-machine is the Model 1024, somewhat improved beyond a perfect ring. Sporting minimal armament with a sudden conversion to a cargo hauling vessel, this was obviously developed after the Kor Mereti gained sapience and diverted their focus to less self-destructive endeavors.`
+
+
+
+# The Korath Stalker was originally categorized as a Fighter
+# Midnight Expansion adds a description and alters the stats and outfit list.
+ship "Korath Stalker"
+	sprite "ship/AESmisc korath_stalker"
+	thumbnail "thumbnail/AESmisc korath_stalker"
+	attributes
+		category "Interceptor"
+		cost 1786000
+		shields 5000
+		hull 2800
+		"required crew" 2
+		bunks 3
+		mass 140
+		drag 2
+		"heat dissipation" 2.6
+		"fuel capacity" 200
+		"cargo space" 20
+		"outfit space" 172
+		"weapon capacity" 45
+		"engine capacity" 30
+		weapon
+			"blast radius" 50
+			"shield damage" 320
+			"hull damage" 160
+			"hit force" 480
+	outfits
+		"Korath Fire-Lance" 2
+
+		"Generator (Furnace Class)"
+		"Systems Core (Small)"
+		"Fuel Processor"
+
+		"Steering (Asteroid Class)"
+		"Thruster (Asteroid Class)"
+		Hyperdrive
+
+	engine -7 37
+	engine 7 37
+	gun -4 -37 "Korath Fire-Lance"
+	gun 4 -37 "Korath Fire-Lance"
+	explode "tiny explosion" 30
+	description `Originally designed as a weapon of war, the Kor Efret have repurposed these interceptors for mining asteroids.`
