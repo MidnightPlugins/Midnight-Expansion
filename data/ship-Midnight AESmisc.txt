@@ -74,9 +74,9 @@ ship "Korath Warlord"
 	turret -50 -261 "Korath Slicer Turret"
 	turret 50 -261 "Korath Slicer Turret"
 	turret -52 -238 "Korath Disruptor"
-	turret 52 -238 "Korath Slicer Turret"
+	turret 52 -238 "Korath Disruptor"
 	turret -54 -210 "Korath Slicer Turret"
-	turret 54 -210 "Korath Disruptor"
+	turret 54 -210 "Korath Slicer Turret"
 	turret -57 -181 "Korath Warder"
 	turret 57 -181 "Korath Warder"
 	drone 52 -37 under
@@ -108,6 +108,19 @@ ship "Korath Warlord" "Korath Warlord (Artillery)"
 		"Steering (Stellar Class)"
 		"Thruster (Stellar Class)"
 		"Jump Drive"
+	gun "Korath Detainer"
+	gun "Korath Detainer"
+	gun "Korath Piercer Launcher"
+	gun "Korath Piercer Launcher"
+	turret "Korath Repeater Turret"
+	turret "Korath Repeater Turret"
+	turret "Korath Repeater Turret"
+	turret "Korath Repeater Turret"
+	turret "Korath Repeater Turret"
+	turret "Korath Repeater Turret"
+	turret "Korath Warder"
+	turret "Korath Warder"
+
 
 
 # This ship was derived from the "Kar Ik Vot 711"
@@ -167,16 +180,16 @@ ship "Prateskar 711"
 	turret 52 -235.5 "Korath Repeater Turret"
 	turret -54.5 -207.5 "Korath Repeater Turret"
 	turret 54.5 -207.5 "Korath Repeater Turret"
-	turret -55 -178.5 "Korath Banisher"
-	turret 55 -178.5 "Korath Banisher"
-	turret -53 -152.5
-	turret 53 -152.5
-	turret -50.5 -128.5 "Korath Warder"
-	turret 50.5 -128.5 "Korath Warder"
-	turret -123.5 201 "Korath Repeater Turret"
-	turret -102.5 201 "Korath Warder"
+	turret -55 -178.5 "Korath Repeater Turret"
+	turret 55 -178.5 "Korath Repeater Turret"
+	turret -53 -152.5 "Korath Warder"
+	turret 53 -152.5 "Korath Warder"
+	turret -50.5 -128.5
+	turret 50.5 -128.5
+	turret -123.5 201 "Korath Banisher"
+	turret -102.5 201 "Korath Banisher"
 	turret 102.5 201 "Korath Warder"
-	turret 123.5 201 "Korath Repeater Turret"
+	turret 123.5 201 "Korath Warder"
 	gun -11.5 -319.5 "Korath Piercer Launcher"
 	gun 11.5 -319.5 "Korath Piercer Launcher"
 	explode "huge explosion" 20
@@ -186,8 +199,10 @@ ship "Prateskar 711"
 	explode "tiny explosion" 140
 	"final explode" "final explosion large"
 	description `An unfinished protoype being developed by the Kor Sestor at the time their network was shut down. Its deployment into the Sestor fleets could have shifted the balance of power in their war with the Mereti.`
+
+
 	
-# Altered the "self destruct" stat on the Model 1024 and added a Cargo Expansion outfit
+# Altered some stats and outfits on the Model 1024
 ship "Model 1024"
 	sprite "ship/AESmisc model_1024"
 	thumbnail "thumbnail/AESmisc model_1024"
@@ -213,12 +228,12 @@ ship "Model 1024"
 			"hull damage" 2800
 			"hit force" 8400
 	outfits
-		"Cargo Expansion"
-		"Hyperdrive"
+		"Korath Disruptor Gun"
+		"Korath Slicer"
 		"Korath Disruptor"
-		"Korath Mine" 34
-		"Korath Minelayer" 2
 		"Korath Slicer Turret" 2
+		"Cargo Expansion" 2
+		"Hyperdrive"
 		"Large Heat Shunt" 2
 		"Reasoning Node" 5
 		"Steering (Stellar Class)"
@@ -229,8 +244,8 @@ ship "Model 1024"
 		"Triple Plasma Core"
 	engine -149 97
 	engine 149 97
-	gun -22 -143 "Korath Minelayer"
-	gun 22 -143 "Korath Minelayer"
+	gun -22 -143 "Korath Disruptor Gun"
+	gun 22 -143 "Korath Slicer"
 	turret 91 -102 "Korath Slicer Turret"
 	turret -121 86 "Korath Slicer Turret"
 	turret 54 138 "Korath Disruptor"
@@ -243,9 +258,8 @@ ship "Model 1024"
 
 
 
-# The Korath Stalker was originally categorized as a Fighter
-# Midnight Expansion adds a description and alters the stats and outfit list.
-ship "Korath Stalker"
+# This ship is derived from the Korath Stalker
+ship "Korath Forager"
 	sprite "ship/AESmisc korath_stalker"
 	thumbnail "thumbnail/AESmisc korath_stalker"
 	attributes
@@ -284,4 +298,229 @@ ship "Korath Stalker"
 	gun -4 -37 "Korath Fire-Lance"
 	gun 4 -37 "Korath Fire-Lance"
 	explode "tiny explosion" 30
-	description `Originally designed as a weapon of war, the Kor Efret have repurposed these interceptors for mining asteroids.`
+	description `Originally designed as a military scout, the Kor Efret have repurposed these interceptors for mining asteroids.`
+
+
+
+# This ship was derived from the Quarg Rhea.
+# This ship's sprite and thumbnail were derived from the Balaur sprite/thumbnail.
+ship "Quarg Seakraken"
+	sprite "ship/Midnight AESmisc quarg seakraken"
+	thumbnail "thumbnail/Midnight AESmisc quarg seakraken"
+	attributes
+		category "Transport"
+		"cost" 99334000
+		"shields" 146000
+		"hull" 132000
+		"required crew" 122
+		"bunks" 404
+		"mass" 980
+		"drag" 15
+		"heat dissipation" 1.34
+		"fuel capacity" 1000
+		"cargo space" 92
+		"outfit space" 600
+		"weapon capacity" 200
+		"engine capacity" 120
+		"ramscoop" 10
+		weapon
+			"blast radius" 278
+			"shield damage" 2780
+			"hull damage" 1390
+			"hit force" 4170
+	outfits
+		"Quarg Skydagger" 6
+		"Quarg Anti-Missile"
+		"Quarg Culverin"
+
+		"Nanotech Battery"
+		"Singularity Core"
+		"Infimum Shield Generator"
+		"Central Repair Hub"
+		"Intrusion Countermeasures" 57
+
+		"Medium Graviton Steering"
+		"Medium Graviton Thruster"
+		"Jump Drive"
+	gun 0 -326
+	turret -31 -207
+	turret 31 -207
+	turret 0 -156
+	turret -48 -99
+	turret 48 -99
+	turret -68 9
+	turret 68 9
+	engine -38 304
+	engine 38 304
+	engine 0 315
+	explode "tiny explosion" 12
+	explode "small explosion" 16
+	explode "medium explosion" 30
+	explode "large explosion" 40
+	explode "huge explosion" 20
+	"final explode" "final explosion medium"
+	description `Despite their enormous population, the Quarg seldom are seen travelling from one of their rings to another via ships. When they need to do so, however, these ships are at their disposal. While most think of the Quarg as a peaceful species, the large number of turret mounts on the Seakraken hint at its violent past as a troop carrier.`
+
+
+
+# This ship is derived from the Quarg Oriole.
+ship "Quarg Wardrake"
+	sprite "ship/AESmisc quarg_oriole"
+	thumbnail "thumbnail/AESmisc quarg_oriole"
+	attributes
+		category "Light Warship"
+		cost 33960000
+		shields 94500
+		hull 45000
+		"required crew" 32
+		bunks 56
+		mass 260
+		drag 2.8
+		"heat dissipation" .7
+		"fuel capacity" 1200
+		"cargo space" 60
+		"outfit space" 380
+		"weapon capacity" 105
+		"engine capacity" 90
+		ramscoop 10
+		weapon
+			"blast radius" 180
+			"shield damage" 1000
+			"hull damage" 500
+			"hit force" 1500
+	outfits
+		"Quarg Skydagger" 2
+		"Quarg Anti-Missile"
+		"Quarg Culverin"
+
+		"Nanotech Battery"
+		"Tachyon Core"
+		"Fluxion Shield Generator"
+		"Peripheral Repair Hub"
+		"Intrusion Countermeasures" 32
+
+		"Small Graviton Steering"
+		"Small Graviton Thruster"
+		"Jump Drive"
+	engine -14 47
+	engine 14 47
+	gun 0 -70 "Quarg Culverin"
+	turret 0 -1 "Quarg Anti-Missile"
+	turret -18 37.5 "Quarg Skydagger"
+	turret 18 37.5 "Quarg Skydagger"
+	explode "tiny explosion" 12
+	explode "small explosion" 14
+	explode "medium explosion" 24
+	explode "large explosion" 24
+	explode "huge explosion" 18
+	"final explode" "final explosion medium"
+	description `The Quarg use this as a small patrol and scouting vessel. They typically travel in squadrons escorting other Quarg vessels to prevent the theft of Quarg technology.`
+
+
+
+# This ship is derived from the Quarg Hydra.
+ship "Quarg Warwyvern"
+	sprite "ship/AESmisc quarg_hydra"
+	thumbnail "thumbnail/AESmisc quarg_hydra"
+	attributes
+		category "Heavy Warship"
+		"cost" 82441000
+		"shields" 194000
+		"hull" 95000
+		"required crew" 89
+		"bunks" 118
+		"mass" 610
+		"drag" 9.2
+		"heat dissipation" .52
+		"fuel capacity" 800
+		"ramscoop" 10
+		"cargo space" 19
+		"outfit space" 760
+		"weapon capacity" 300
+		"engine capacity" 120
+		"ramscoop" 10
+	outfits
+		"Quarg Ranseur" 2
+		"Quarg Skydagger" 4
+		"Quarg Anti-Missile" 2
+		"Quarg Culverin" 2
+
+		"Nanotech Battery"
+		"Singularity Core"
+		"Tachyon Core"
+		"Infimum Shield Generator"
+		"Peripheral Repair Hub"
+		"Central Repair Hub"
+		"Intrusion Countermeasures" 55
+
+		"Medium Graviton Steering"
+		"Medium Graviton Thruster"
+		"Jump Drive"
+
+	engine -36.5 94
+	engine 36.5 94
+	engine 0 95
+	engine -28 101.5
+	engine 28 101.5
+	gun -14.5 -63.5 "Quarg Ranseur"
+	gun 14.5 -63.5 "Quarg Ranseur"
+	gun -75 45.5 "Quarg Culverin"
+	gun 75 45.5 "Quarg Culverin"
+	turret 0 -17.5 "Quarg Skydagger"
+	turret 0 -35.5 "Quarg Skydagger"
+	turret -27 64.5 "Quarg Skydagger"
+	turret 27 64.5 "Quarg Skydagger"
+	turret -66.5 73 "Quarg Anti-Missile"
+	turret 66.5 73 "Quarg Anti-Missile"
+	description `The Warwyvern was used by the Quarg as a medium warship during times of war. Rarely seen among their fleets today, Warwyverns still remain on standby to defend Quarg ringworlds from external threats.`
+
+
+
+# This ship is derived from the Quarg Partridge
+ship "Quarg Skyswift"
+	sprite "ship/Midnight quarg skyswift"
+	attributes
+		category "Heavy Freighter"
+		"cost" 68566000
+		"shields" 126000
+		"hull" 84000
+		"required crew" 58
+		"bunks" 97
+		"mass" 710
+		"drag" 14.6
+		"heat dissipation" .5
+		"fuel capacity" 1000
+		"cargo space" 1253
+		"outfit space" 520
+		"weapon capacity" 120
+		"engine capacity" 120
+		"ramscoop" 10
+	outfits
+		"Quarg Culverin" 2
+		"Quarg Anti-Missile" 2
+
+		"Nanotech Battery"
+		"Singularity Core"
+		"Infimum Shield Generator"
+		"Central Repair Hub"
+		"Intrusion Countermeasures" 49
+
+		"Medium Graviton Steering"
+		"Medium Graviton Thruster"
+		"Jump Drive"
+
+	engine -15 117
+	engine 15 117
+	gun -12 -80 "Quarg Culverin"
+		over
+	gun 12 -80 "Quarg Culverin"
+		over
+	turret -34 24 "Quarg Anti-Missile"
+	turret 34 24 "Quarg Anti-Missile"
+	explode "tiny explosion" 12
+	explode "small explosion" 16
+	explode "medium explosion" 30
+	explode "large explosion" 40
+	explode "huge explosion" 20
+	"final explode" "final explosion medium"
+	description `With over twice the cargo capacity of the largest human freighters, Skyswifts are old freighters the Quarg use mostly to transport materials in bulk.`
