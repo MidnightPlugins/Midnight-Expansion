@@ -13,3 +13,9 @@ Currently features:
 - Escort missions for a new Mereti freighter
 
 - Kor Efret interceptors mining asteroids near their worlds
+
+- Restores an old Quarg ringworld
+
+- Parts hunt to restore a derelict Quarg ship
+
+- Increased traffic at Quarg ringworlds
