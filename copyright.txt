@@ -56,11 +56,13 @@ Endless Sky Photographs:
 
 Files:
  data/outfit-AESmisc.txt
+ data/ship-AESmisc.txt
 Copyright: Darcy Manoel
 License: CC-BY-SA-4.0
 Comment: Derived from works by Michael Zahniser (under the same license).
 
 Files:
+ data/outfit-Midnight AESmisc.txt
  data/ship-Midnight AESmisc.txt
 Copyright: Michael Arsollon
 License: CC-BY-SA-4.0
@@ -77,9 +79,17 @@ Comment: Derived from works by Becca Tommaso (from under the same license).
 	
 Files:
  images/outfit/AESmisc*
+ images/projectile/AESmisc*
  images/ship/AESmisc*
  images/thumbnail/AESmisc*
 Copyright: Darcy Manoel
 License: CC-BY-SA-4.0
 Comment: Derived from works by Michael Zahniser (under the same license).
 
+Files:
+ images/outfit/Midnight AESmisc*
+ images/ship/Midnight AESmisc*
+ images/thumbnail/Midnight AESmisc*
+Copyright: Michael Arsollon
+License: CC-BY-SA-4.0
+Comment: Derived from works by Darcy Manoel (under the same license)
