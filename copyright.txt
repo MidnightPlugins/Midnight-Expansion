@@ -78,6 +78,7 @@ License: CC-BY-SA-4.0
 Comment: Derived from works by Becca Tommaso (from under the same license).
 	
 Files:
+ images/hardpoint/AESmisc*
  images/outfit/AESmisc*
  images/projectile/AESmisc*
  images/ship/AESmisc*
