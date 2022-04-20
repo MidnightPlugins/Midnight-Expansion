@@ -1383,50 +1383,8 @@ mission "Midnight Expansion: Mereti Trading Copper"
 			
 
 
-fleet "Kor Efret Miners"
-	government "Kor Efret"
-	personality mining harvests coward
-		confusion 20
-	cargo 0
-	variant 3
-		"Korath Forager"
-	variant 2
-		"Korath Forager" 2
-	variant 1
-		"Korath Forager" 3
-
-mission "Midnight Expansion: Kor Efret Miners"
-	landing
-	invisible
-	on offer
-		event "kor efret miners"
-
-event "kor efret miners"
-	system Sumprast
-		add fleet "Kor Efret Miners" 4000
-	system Sevrelect
-		add fleet "Kor Efret Miners" 4000
-	system Kashikt
-		add fleet "Kor Efret Miners" 4000
-	system Furmeliki
-		add fleet "Kor Efret Miners" 6000
-	system Dokdobaru
-		add fleet "Kor Efret Miners" 6000
-	system Chikatip
-		add fleet "Kor Efret Miners" 8000
-	system Skeruto
-		add fleet "Kor Efret Miners" 8000
-	system Meftarkata
-		add fleet "Kor Efret Miners" 8000
-	system Chornifath
-		add fleet "Kor Efret Miners" 8000
-	system Hesselpost
-		add fleet "Kor Efret Miners" 8000
-		
-
 mission "Midnight Expansion: Kor Efret Forager Sales"
 	landing
-	invisible
 	source "Laki Nemparu"
 	to offer
 		has "event: Laki Nemparu opens Shipyard"
@@ -1435,19 +1393,18 @@ mission "Midnight Expansion: Kor Efret Forager Sales"
 		conversation
 			scene "thumbnail/AESmisc korath_stalker"
 			`	The Efret shipyard is developing rapidly. Another type of ship has been added to their inventory and eager buyers are lined up at the entrance.`
+				decline
 
 event "kor efret forager sales"
 	shipyard "Kor Efret Scrapyard"
 		add "Korath Forager"
 	fleet "Kor Efret Miners"
-		variant 1
+		add variant 1
+			"Korath Forager"
+		add variant 1
 			"Korath Forager" 2
-		variant 2
+		add variant 1
 			"Korath Forager" 3
-		variant 2
-			"Korath Forager" 4
-		variant 1
-			"Korath Forager" 5
 	system Seketra
 		add fleet "Kor Efret Miners" 8000
 	system Fornarep
