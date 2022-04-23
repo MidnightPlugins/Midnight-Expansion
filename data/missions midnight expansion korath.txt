@@ -11,6 +11,32 @@
 
 
 
+mission "Midnight Expansion: Model 8 deployments."
+	landing
+	source
+		attributes "korath"
+		attributes "uninhabited"
+	on offer
+		event "Model 8 deployments"
+		fail
+
+event "Model 8 deployments"
+	fleet "Small Kor Mereti"
+		add variant 6
+			"Model 8 (minelayer)" 8
+		add variant 6
+			"Model 8" 4
+			"Model 8 (disruptor)" 4
+	fleet "Large Kor Mereti"
+		add variant 4
+			"Model 512"
+			"Model 8" 4
+			"Model 8 (disruptor)" 4
+	outfitter "Efret Salvage"
+		add "Korath Disruptor Gun"
+
+
+
 mission "Midnight Expansion: Korath Warlord"
 	name "Korath Warships"
 	description "Remnant scouts report that the Korath are testing new warships at <waypoints>. Steal one and bring it back to <destination>. You may keep the ship after the Remnant study it."
@@ -152,7 +178,7 @@ mission "Midnight Expansion: Korath Warlord Vengeance"
 		
 	on fail
 		"reputation: Remnant" -= 1000
-
+		dialog `Prefect Chilia survived in an escape pod. Your inability to protect his ship has harmed your reputation with the Remnant.`
 	on complete
 		payment 1000000
 		"reputation: Remnant" ++
@@ -164,7 +190,7 @@ mission "Midnight Expansion: Korath Warlord Vengeance"
 mission "Midnight Expansion: Sestor Protoype "
 	landing
 	name "Sestor Protoype: Vector Engine"
-	description "Search for a Vector Engine and bring it back to <destination>."
+	description "Search for a Vector Engine and bring it back to <destinatioton>."
 	source "Sestor Ikfar"
 	to offer
 		has "event: "wanderers: sestor eliminated"
@@ -1421,3 +1447,6 @@ event "kor efret forager sales"
 		add fleet "Kor Efret Miners" 10000
 	system Makislepti
 		add fleet "Kor Efret Miners" 10000
+
+
+
