@@ -1406,8 +1406,7 @@ mission "Midnight Expansion: Mereti Trading Copper"
 		personality target timid opportunistic
 		fleet
 			names "kor mereti"
-			commodities "Equipment" "Industrial"
-			outfitters "Korath Basics"
+			cargo 0
 			variant
 				"Model 1024"
 	on abort
