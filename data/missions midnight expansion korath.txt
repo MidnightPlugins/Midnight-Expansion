@@ -193,7 +193,7 @@ mission "Midnight Expansion: Sestor Protoype "
 	description "Search for a Vector Engine and bring it back to <destinatioton>."
 	source "Sestor Ikfar"
 	to offer
-		has "event: "wanderers: sestor eliminated"
+		has "event: Scrapyard Add Scrap"
 		or
 			not "Randomize Midnight Expansion: Sestor Protoype"
 			and
@@ -221,7 +221,7 @@ mission "Midnight Expansion: Sestor Protoype "
 			`	-"Large Heat Shunt"`
 			`	-"Small Heat Shunt"`
 			`	-"Control Transceiver"`
-			`	-"Vector Engine"`
+			`	-"Vector Engine (Reality Class)"`
 			`	-"Hyperdrive"`
 				accept
 	on decline
@@ -288,7 +288,7 @@ mission "Midnight Expansion: Sestor Protoype "
 		has "Midnight Expansion: Sestor Scrap Metal: done"
 	on complete
 		outfit "Vector Engine (Reality Class)" -1
-		give ship "Prateskar 711" "Nameless Prototype"
+		give ship "Prateskar 711" "00-000.0"
 		conversation
 			scene "thumbnail/AESmisc kar_ik_vot_711"
 			`	You manually operate the factory machinery to assemble the prototype ship. With all the outfits installed, the ship is ready to fly!`
@@ -296,7 +296,7 @@ mission "Midnight Expansion: Sestor Protoype "
 mission "Midnight Expansion: Sestor Engines"
 	landing
 	name "Sestor Protoype: Vector Engine"
-	description "Search for a Vector Engine and bring it back to <destination>."
+	description "Search for a Vector Engine (Reality Class) and bring it back to <destination>."
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -1056,22 +1056,15 @@ mission "Midnight Expansion: Sestor Scrap Metal"
 		conversation
 			scene "outfit/AESmisc vector_engine_reality_class"
 
-			branch previous
-				has "Midnight Expansion: Sestor Protoype: done"
-			
 			`	You've got everthing but the engines. You've never actually seen Vector Engines on any of the Korath ships you've encountered. Perhaps they don't exist yet. But from the schematics, you can try to make them if you had the spare parts. There's a lot of Scrap Metal floating around Sestor space these days...`
 				accept
-				
-			label previous
-			
-			`	You've got everthing but the engines. It's time to make a new engine by harvesting Scrap Metal for spare parts...`
-				accept
-				
+								
 	on complete
+		fail "Midnight Expansion: Sestor Engines"
 		outfit "Scrap Metal" -100
 		conversation
 			scene "outfit/AESmisc vector_engine_reality_class"
-			`	You manually operate the factory machinery to make the Vector Engine and are one step closer to completing the prototype!`
+			`	You manually operate the factory machinery to make the Vector Engine (Reality Class) and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
 		fail "Midnight Expansion: Sestor Engines"
@@ -1128,6 +1121,7 @@ mission "Midnight Expansion: Mereti Trading Platinum"
 		government "Kor Mereti"
 	destination
 		government "Wanderer"
+		not attributes "korath"
 	to offer
 		has "event: "wanderers: sestor eliminated"
 		or
@@ -1197,14 +1191,30 @@ mission "Midnight Expansion: Mereti Trading Platinum"
 		dialog `You've arrived at <planet>, but <npc> hasn't arrived! Return to orbit and search for it.`
 	on complete
 		outfit "Platinum" 100 
-		event "Mereti Mining 1024"
 		conversation
+			scene "outfit/harvested platinum"
 			`Upon arrival, the automaton transfers 100 tons of Platinum to your ship. Ironically, one of the most advanced civilizations in the galaxy is using one of the most primitive forms of payment. Hopefully you have enough cargo space to hold it all.`
+
+
+mission "Midnight Expansion: Mereti deploy 1024"
+	landing
+	invisible
+	to offer
+		has "Midnight Expansion: Mereti Trading Platinum: done"
+	on offer
+		event "Mereti deploy 1024"
+		fail
 	
-event "Mereti Mining 1024"
+event "Mereti deploy 1024"
 	fleet "Kor Mereti Miners"
 		add variant 1
 			"Model 1024"
+	fleet "Large Kor Mereti"
+		add variant 4
+			"Model 1024"
+			"Model 8" 4
+			"Model 8 (disruptor)" 4
+
 	
 mission "Midnight Expansion: Mereti Trading Gold"
 	landing
@@ -1215,6 +1225,7 @@ mission "Midnight Expansion: Mereti Trading Gold"
 		government "Kor Mereti"
 	destination
 		government "Wanderer"
+		not attributes "korath"
 	to offer
 		has "Midnight Expansion: Mereti Trading Platinum: done"
 		random < 20
@@ -1268,6 +1279,7 @@ mission "Midnight Expansion: Mereti Trading Gold"
 	on complete
 		outfit "Gold" 100 
 		conversation
+			scene "outfit/harvested gold"
 			`Upon arrival, the automaton transfers 100 tons of Gold to your ship. Ironically, one of the most advanced civilizations in the galaxy is using one of the most primitive forms of payment. Hopefully you have enough cargo space to hold it all.`
 
 mission "Midnight Expansion: Mereti Trading Silver"
@@ -1279,6 +1291,7 @@ mission "Midnight Expansion: Mereti Trading Silver"
 		government "Kor Mereti"
 	destination
 		government "Wanderer"
+		not attributes "korath"
 	to offer
 		has "Midnight Expansion: Mereti Trading Platinum: done"
 		random < 25
@@ -1332,6 +1345,7 @@ mission "Midnight Expansion: Mereti Trading Silver"
 	on complete
 		outfit "Silver" 100 
 		conversation
+			scene "outfit/harvested silver"
 			`Upon arrival, the automaton transfers 100 tons of Silver to your ship. Ironically, one of the most advanced civilizations in the galaxy is using one of the most primitive forms of payment. Hopefully you have enough cargo space to hold it all.`
 
 mission "Midnight Expansion: Mereti Trading Copper"
@@ -1341,6 +1355,7 @@ mission "Midnight Expansion: Mereti Trading Copper"
 	description "Escort <npc> to <destination>. Payment is..."
 	source
 		government "Wanderer"
+		not attributes "korath"
 	destination
 		government "Kor Mereti"
 	to offer
@@ -1405,7 +1420,8 @@ mission "Midnight Expansion: Mereti Trading Copper"
 		outfit "Copper" 100 
 		"reputation: Kor Mereti" += 8
 		conversation
-			`Upon arrival, the automaton transfers 100 tons of Copper to your ship. Ironically, one of the most advanced civilizations in the galaxy is using one of the most primitive forms of payment. Hopefully you have enough cargo space to hold it all.`
+			scene "outfit/harvested copper"
+			`Upon arrival, the automaton sends a message of gratitude and transfers 100 tons of Copper to your ship. Ironically, one of the most advanced civilizations in the galaxy is using one of the most primitive forms of payment. Hopefully you have enough cargo space to hold it all.`
 			
 
 
