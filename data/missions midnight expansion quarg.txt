@@ -14,7 +14,7 @@
 fleet "Quarg Ringworld Traffic"
 	government "Quarg"
 	names "quarg"
-	variant
+	variant 5
 		"Quarg Wardrake" 5
 
 mission "Add Quarg Ringworld Traffic"		
@@ -35,17 +35,17 @@ event "add quarg ringworld traffic"
 		add variant
 			"Quarg Wardrake" 3
 	fleet "Large Quarg"
-		add variant
+		add variant 1
 			"Quarg Skylark"
 			"Quarg Wardrake" 4
-		add variant
+		add variant 1
 			"Quarg Wardragon"
 			"Quarg Wardrake" 4
-		add variant
+		add variant 1
 			"Quarg Skylark"
 			"Quarg Wardragon"
 			"Quarg Wardrake" 4
-		add variant
+		add variant 1
 			"Quarg Wardrake" 7
 			
 
@@ -79,7 +79,7 @@ mission "Midnight Expansion: Quarg Seakraken"
 
 event "add seakraken to ringworld traffic"
 	fleet "Quarg Ringworld Traffic"
-		add variant
+		add variant 1
 			"Quarg Seakraken"
 			"Quarg Wardrake" 7
 
@@ -94,7 +94,6 @@ mission "Midnight Expansion: Quarg Skyswift 1"
 	waypoint Enif
 	to offer
 		has "Lagrange Ring: Cargo: done"
-		random < 50
 	on enter Enif
 		event "add skyswift to ringworld traffic"
 		conversation
@@ -145,12 +144,18 @@ mission "Midnight Expansion: Quarg Skyswift 1"
 		dialog `You hand the scanner data to a group of scientists in exchange for <payment>. "Hopefully this data will shed some light on the secrets behind the Quarg and their ringworlds."`
 		
 
-event "add seakraken to ringworld traffic"
+event "add skyswift to ringworld traffic"
 	fleet "Quarg Ringworld Traffic"
-		add variant
+		add variant 1
 			"Quarg Skyswift"
 			"Quarg Wardrake" 7
-
+		add variant 1
+			"Quarg Skyswift"
+			"Quarg Skylark" 2
+		add variant 1
+			"Quarg Skyswift"
+			"Quarg Wardragon" 2
+			
 
 mission "Midnight Expansion: Quarg Skyswift 2"
 	job
@@ -162,7 +167,7 @@ mission "Midnight Expansion: Quarg Skyswift 2"
 	waypoint Enif
 	to offer
 		has "Midnight Expansion: Quarg Skyswift 1: done"
-		random < 20
+		random < 5
 	npc
 		government "Merchant"
 		system Enif
@@ -190,7 +195,7 @@ mission "Midnight Expansion: Quarg Skyswift 2"
 		fleet
 			names "quarg"
 			variant
-				"Quarg Wardrake" 2
+				"Quarg Wardrake" 7
 	npc "scan cargo"
 		government "Quarg"
 		system Enif
@@ -209,9 +214,7 @@ mission "Midnight Expansion: Restore Querii'ka"
 	landing
 	invisible
 	to offer
-		and
-			has "Ringworld Debris: Quarg: offered"
-			not "Ringworld Debris: Quarg: declined"
+		has "Ringworld Debris: Quarg: offered"
 	on offer
 		event "Restore Querii'ka"
 
@@ -291,11 +294,11 @@ mission "Midnight Expansion: Quarg Warwyvern"
 			not "Randomize Midnight Expansion: Quarg Warwyvern"
 			and
 				has "Randomize Midnight Expansion: Quarg Warwyvern"
-				random < 35
+				random < 35 - "quarg warwyvern deferred"
 	on offer
 		conversation
 			scene "thumbnail/AESmisc quarg_hydra"
-			`	While exploring the abandoned ringworld, you find an intact hull of an old Quarg ship. But the many of the internal outfits are damaged beyond repair. Do you want to try salvaging this derelict?`
+			`	While exploring the abandoned ringworld, you find an intact hull of an old Quarg ship. But many of the internal outfits are damaged beyond repair. Do you want to try salvaging this derelict?`
 			choice
 				`	(Try salvaging the ship.)`
 				`	(Forget about it.)`
@@ -304,6 +307,7 @@ mission "Midnight Expansion: Quarg Warwyvern"
 				accept
 	on defer
 		set "Randomize Midnight Expansion: Quarg Warwyvern"
+		"quarg warwyvern deferred" ++
 	to clear
 		has "Midnight Expansion: Quarg Warwyvern - Quarg Ranseur: done"
 		has "Midnight Expansion: Quarg Warwyvern - Quarg Skydagger: done"
@@ -320,7 +324,7 @@ mission "Midnight Expansion: Quarg Warwyvern"
 		has "Midnight Expansion: Quarg Warwyvern - Medium Graviton Thruster: done"
 		has "Midnight Expansion: Quarg Warwyvern - Jump Drive: done"
 		has "Midnight Expansion: Quarg Warwyvern - Crew: done"
-	on clear
+	on complete
 		event "add warwyvern to ringworld traffic"
 		give ship "Quarg Warwyvern" "Warwyvern"
 		conversation
@@ -329,10 +333,10 @@ mission "Midnight Expansion: Quarg Warwyvern"
 
 event "add warwyvern to ringworld traffic"
 	fleet "Quarg Ringworld Traffic"
-		add variant
+		add variant 3
 			"Warwyvern"
 			"Wardrake" 4
-		add variant
+		add variant 5
 			"Wardragon"
 			"Warwyvern" 2
 
@@ -398,9 +402,6 @@ mission "Midnight Expansion: Pirate Sales - Quarg Skydagger"
 			`	You and your crew manage to overpower the arms dealer's crew and steal the Skydagger!`
 				accept
 
-	on accept
-		"reputation: Independent (Killable)" <?= -1000
-
 	on decline
 		"Midnight Market" ++
 		payment -6000000
@@ -414,12 +415,9 @@ mission "Midnight Expansion: Pirate Sales - Quarg Skydagger"
 		dialog `Looks like the arms dealer's friends were waiting to pay you back for stealing that Quarg Skydagger.`
 	
 	npc evade
-		government "Independent (Killable)"
+		government "Bounty Hunter"
 		personality waiting vindictive coward
 		fleet "S. Advanced Independent (Killable)" 10
-	
-	on complete
-		"reputation: Independent (Killable)" >?= 10
 
 
 
@@ -484,9 +482,6 @@ mission "Midnight Expansion: Pirate Sales - Quarg Anti-Missile"
 			`	You and your crew manage to overpower the arms dealer's crew and steal the Quarg Anti-Missile!`
 				accept
 
-	on accept
-		"reputation: Independent (Killable)" <?= -1000
-
 	on decline
 		"Midnight Market" ++
 		payment -6000000
@@ -500,13 +495,10 @@ mission "Midnight Expansion: Pirate Sales - Quarg Anti-Missile"
 		dialog `Looks like the arms dealer's friends were waiting to pay you back for stealing that Quarg Anti-Missile.`
 	
 	npc evade
-		government "Independent (Killable)"
+		government "Bounty Hunter"
 		personality waiting vindictive coward
 		fleet "S. Advanced Independent (Killable)" 10
 		
-	on complete
-		"reputation: Independent (Killable)" >?= 10
-
 
 
 mission "Midnight Expansion: Quarg Warwyvern - Quarg Culverin"
@@ -535,7 +527,7 @@ mission "Midnight Expansion: Pirate Sales - Quarg Culverin"
 	on offer
 		conversation
 			scene "outfit/quarg anti missile"
-			`	An arms dealer is trying to sell a Quarg weapon. It's a Quarg Anti-Missile, probably looted off a disabled Quarg ship or otherwise acquired illegally. "Would you be interested in this exotic weapon? Made by the Quarg, it will be a formidable addition to your flagship's armaments. The price is 5,000,000 credits.`
+			`	An arms dealer is trying to sell a Quarg weapon. It's a Quarg Culverin, probably looted off a disabled Quarg ship or otherwise acquired illegally. "Would you be interested in this exotic weapon? Made by the Quarg, it will be a formidable addition to your flagship's armaments. The price is 5,000,000 credits.`
 			choice
 				`	"Sounds good. I'll buy it!`
 				`	"That's way too much. I'll pay half that."`
@@ -570,9 +562,6 @@ mission "Midnight Expansion: Pirate Sales - Quarg Culverin"
 			`	You and your crew manage to overpower the arms dealer's crew and steal the Quarg Culverin!`
 				accept
 
-	on accept
-		"reputation: Independent (Killable)" <?= -1000
-
 	on decline
 		"Midnight Market" ++
 		payment -5000000
@@ -586,13 +575,10 @@ mission "Midnight Expansion: Pirate Sales - Quarg Culverin"
 		dialog `Looks like the arms dealer's friends were waiting to pay you back for stealing that Quarg Culverin.`
 	
 	npc evade
-		government "Independent (Killable)"
+		government "Bounty Hunter"
 		personality waiting vindictive coward
 		fleet "S. Advanced Independent (Killable)" 10
 		
-	on complete
-		"reputation: Independent (Killable)" >?= 10
-
 
 
 mission "Midnight Expansion: Quarg Warwyvern - Medium Graviton Steering"
@@ -773,7 +759,7 @@ mission "Midnight Expansion: Heliarch Scouting - Tachyon Core"
 			names "quarg"
 			variant
 				"Quarg Skyswift"
-				"Quarg Wardrake" 2
+				"Quarg Wardrake" 7
 	npc disable
 		government "Test Dummy"
 		system Enif
@@ -952,8 +938,8 @@ mission "Midnight Expansion: Heliarch Scouting - Nanotech Battery"
 			names "quarg"
 			variant
 				"Quarg Skylark"
-				"Quarg Wardragon" 2
-				"Quarg Wardkrake" 4
+				"Quarg Wardragon"
+				"Quarg Wardrake" 4
 	npc disable
 		government "Test Dummy"
 		system "Dokdobaru"
@@ -1000,15 +986,11 @@ mission "Midnight Expansion: Midnight Market - Infimum Shield Generator 1"
 		"Midnight Market" > 4
 		"credits" >= 14,000,000
 		has "Midnight Expansion: Quarg Warwyvern - Infimum Shield Generator: active"
-		or 
-			has "Midnight Expansion: Pirate Sales - Quarg Skydagger: done"
-			has "Midnight Expansion: Pirate Sales - Quarg Anti-Missile: done"
-			has "Midnight Expansion: Pirate Sales - Quarg Culverin: done"
 		random < 35
 	on offer
 		conversation
 			`You receive an anonymous message:`
-			`	"Greetings, Captain <first> <last>. We have determined that you would be a suitable client for a certain piece of unique merchandise that has found its way into our inventory. Come to the address in the attached data file if you are interested in purchasing this one of a kind item. Be prepared to pay us 7,368,000 credits at the time of the transaction."`
+			`	"Greetings, Captain <first> <last>. We have determined that you would be a suitable client for a certain piece of rare merchandise that has found its way into our inventory. Come to the address in the attached data file if you are interested in purchasing this one of a kind item. Be prepared to pay us 7,368,000 credits at the time of the transaction."`
 			`	The address listed is for a warehouse on <destination>.`
 			choice
 				`	(Accept the invitation.)`
@@ -1086,15 +1068,11 @@ mission "Midnight Expansion: Midnight Market - Peripheral Repair Hub 1"
 		"Midnight Market" > 4
 		"credits" >= 5,000,000
 		has "Midnight Expansion: Quarg Warwyvern - Peripheral Repair Hub: active"
-		or 
-			has "Midnight Expansion: Pirate Sales - Quarg Skydagger: done"
-			has "Midnight Expansion: Pirate Sales - Quarg Anti-Missile: done"
-			has "Midnight Expansion: Pirate Sales - Quarg Culverin: done"
 		random < 35
 	on offer
 		conversation
 			`You receive an anonymous message:`
-			`	"Greetings, Captain <first> <last>. We have determined that you would be a suitable client for a certain piece of unique merchandise that has found its way into our inventory. Come to the address in the attached data file if you are interested in purchasing this one of a kind item. Be prepared to pay us 2,735,000 credits at the time of the transaction."`
+			`	"Greetings, Captain <first> <last>. We have determined that you would be a suitable client for a certain piece of rare merchandise that has found its way into our inventory. Come to the address in the attached data file if you are interested in purchasing this one of a kind item. Be prepared to pay us 2,735,000 credits at the time of the transaction."`
 			`	The address listed is for a warehouse on <destination>.`
 			choice
 				`	(Accept the invitation.)`
@@ -1174,15 +1152,11 @@ mission "Midnight Expansion: Midnight Market - Central Repair Hub 1"
 		"Midnight Market" > 4
 		"credits" >= 12,000,000
 		has "Midnight Expansion: Quarg Warwyvern - Central Repair Hub: active"
-		or 
-			has "Midnight Expansion: Pirate Sales - Quarg Skydagger: done"
-			has "Midnight Expansion: Pirate Sales - Quarg Anti-Missile: done"
-			has "Midnight Expansion: Pirate Sales - Quarg Culverin: done"
 		random < 35
 	on offer
 		conversation
 			`You receive an anonymous message:`
-			`	"Greetings, Captain <first> <last>. We have determined that you would be a suitable client for a certain piece of unique merchandise that has found its way into our inventory. Come to the address in the attached data file if you are interested in purchasing this one of a kind item. Be prepared to pay us 6,120,000 credits at the time of the transaction."`
+			`	"Greetings, Captain <first> <last>. We have determined that you would be a suitable client for a certain piece of rare merchandise that has found its way into our inventory. Come to the address in the attached data file if you are interested in purchasing this one of a kind item. Be prepared to pay us 6,120,000 credits at the time of the transaction."`
 			`	The address listed is for a warehouse on <destination>.`
 			choice
 				`	(Accept the invitation.)`
