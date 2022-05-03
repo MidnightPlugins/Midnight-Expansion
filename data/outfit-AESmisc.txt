@@ -63,7 +63,7 @@ outfit "Vector Engine (Reality Class)"
 outfit "Large Graviton Steering"
 	category "Engines"
 	"cost" 2512000
-	thumbnail "outfit/AESmisc large quarg steering"
+	thumbnail "outfit/large quarg steering"
 	"mass" 73
 	"outfit space" -73
 	"engine capacity" -73
@@ -76,7 +76,7 @@ outfit "Large Graviton Steering"
 outfit "Small Graviton Steering"
 	category "Engines"
 	"cost" 715000
-	thumbnail "outfit/AESmisc small quarg steering"
+	thumbnail "outfit/small quarg steering"
 	"mass" 35
 	"outfit space" -35
 	"engine capacity" -35

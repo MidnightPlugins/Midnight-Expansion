@@ -62,7 +62,6 @@ mission "Midnight Expansion: Quarg Seakraken"
 		has "Coalition: First Contact: offered"
 		has "First Contact: Kuwaru Efreti: offered"
 		has "Ringworld Debris: Quarg: offered"
-		random < 15
 	on enter
 		event "add seakraken to ringworld traffic"
 		conversation
@@ -167,7 +166,7 @@ mission "Midnight Expansion: Quarg Skyswift 2"
 	waypoint Enif
 	to offer
 		has "Midnight Expansion: Quarg Skyswift 1: done"
-		random < 5
+		random < 15
 	npc
 		government "Merchant"
 		system Enif
@@ -308,7 +307,7 @@ mission "Midnight Expansion: Quarg Warwyvern"
 	on defer
 		set "Randomize Midnight Expansion: Quarg Warwyvern"
 		"quarg warwyvern deferred" ++
-	to clear
+	to complete
 		has "Midnight Expansion: Quarg Warwyvern - Quarg Ranseur: done"
 		has "Midnight Expansion: Quarg Warwyvern - Quarg Skydagger: done"
 		has "Midnight Expansion: Quarg Warwyvern - Quarg Anti-Missile: done"
@@ -329,7 +328,7 @@ mission "Midnight Expansion: Quarg Warwyvern"
 		give ship "Quarg Warwyvern" "Warwyvern"
 		conversation
 			scene "thumbnail/AESmisc quarg_hydra"
-			`You've installed all the outfits and have assembled a crew able to pilot it. The Quarg Warwyvern is ready for takeoff!"
+			`You've installed all the outfits and have assembled a crew able to pilot it. The Quarg Warwyvern is ready for takeoff!"`
 
 event "add warwyvern to ringworld traffic"
 	fleet "Quarg Ringworld Traffic"
@@ -619,7 +618,7 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Steering"
 			choice
 				`	"What do you want me to do?"`
 			scene "thumbnail/skylark"
-			`	"The outfits of a modern Quarg freighter you must scan. Rewarded for the data you will be." It should be easy enough to scan one of the Quarg Skylarks arriving or departing from Tarazed.
+			`	"The outfits of a modern Quarg freighter you must scan. Rewarded for the data you will be." It should be easy enough to scan one of the Quarg Skylarks arriving or departing from Tarazed.`
 				accept
 			label observe
 			`	The technicians finish unloading the engines and cart them away. You try following them for some distance, but they eventually pass through a door that locks behind them. A passing security patrol stops to watch as you head back towards the spaceport.`
@@ -681,7 +680,7 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster"
 			choice
 				`	"What do you want me to do?"`
 			scene "thumbnail/wardragon"
-			`	"The outfits of a modern Quarg war ship you must scan. Rewarded for the data you will be." It should be easy enough to scan one of the Quarg Wardragons arriving or departing from Tarazed.
+			`	"The outfits of a modern Quarg war ship you must scan. Rewarded for the data you will be." It should be easy enough to scan one of the Quarg Wardragons arriving or departing from Tarazed.`
 				accept
 			label observe
 			`	The technicians finish unloading the engines and cart them away. You try following them for some distance, but they eventually pass through a door that locks behind them. A passing security patrol stops to watch as you head back towards the spaceport.`
@@ -743,7 +742,7 @@ mission "Midnight Expansion: Heliarch Scouting - Tachyon Core"
 			choice
 				`	"What do you want me to do?"`
 			scene "thumbnail/heliarch hunter"
-			`	"One of our ships you must escort to a Quarg ringworld. Observe the Quarg they will. Safely back to <origin> you must then escort them." It should be easy enough to take them to the ringworld near Lagrange.
+			`	"One of our ships you must escort to a Quarg ringworld. Observe the Quarg they will. Safely back to <origin> you must then escort them." It should be easy enough to take them to the ringworld near Lagrange.`
 				accept
 			label observe
 			`	The technicians finish unloading the power systems and cart them away. You try following them for some distance, but they eventually pass through a door that locks behind them. A passing security patrol stops to watch as you head back towards the spaceport.`
@@ -823,7 +822,7 @@ mission "Midnight Expansion: Heliarch Scouting - Singularity Core"
 			choice
 				`	"What do you want me to do?"`
 			scene "thumbnail/heliarch hunter"
-			`	"One of our ships you must escort to a Quarg ringworld. Observe the Quarg they will. Safely back to <origin> you must then escort them." There should be a ringworld in Hai space...
+			`	"One of our ships you must escort to a Quarg ringworld. Observe the Quarg they will. Safely back to <origin> you must then escort them." There should be a ringworld in Hai space...`
 				accept
 			label observe
 			`	The technicians finish unloading the power systems and cart them away. You try following them for some distance, but they eventually pass through a door that locks behind them. A passing security patrol stops to watch as you head back towards the spaceport.`
@@ -900,7 +899,7 @@ mission "Midnight Expansion: Heliarch Scouting - Nanotech Battery"
 			choice
 				`	"What do you want me to do?"`
 			scene "thumbnail/heliarch hunter"
-			`	"One of our ships you must escort to a Quarg ringworld. Observe the Quarg they will. Safely back to <origin> you must then escort them." There should be a ringworld in Korath space...
+			`	"One of our ships you must escort to a Quarg ringworld. Observe the Quarg they will. Safely back to <origin> you must then escort them." There should be a ringworld in Korath space...`
 				accept
 			label observe
 			`	The technicians finish unloading the batteries and cart them away. You try following them for some distance, but they eventually pass through a door that locks behind them. A passing security patrol stops to watch as you head back towards the spaceport.`
@@ -1212,7 +1211,7 @@ mission "Midnight Expansion: Midnight Market - Central Repair Hub 2"
 
 mission "Midnight Expansion: Quarg Warwyvern - Intrusion Countermeasures"
 	landing
-	name "Warwyvern: Intrusion Countermeasures
+	name "Warwyvern: Intrusion Countermeasures"
 	description "Bring a Intrusion Countermeasures to <destination>"
 	destination "Querii'ka"
 	to offer
@@ -1239,7 +1238,7 @@ mission "Midnight Expansion: Angry Squirrels - Intrusion Countermeasures"
 	on offer
 		conversation
 			scene "outfit/quarg countermeasures"
-			`	You notice an absurd number of Intrusion Countermeasures devices stacked on a cargolift. Next to the quarg devices is a familiar Unfettered weapons developer. Ask if you can buy one?
+			`	You notice an absurd number of Intrusion Countermeasures devices stacked on a cargolift. Next to the quarg devices is a familiar Unfettered weapons developer. Ask if you can buy one?`
 			choice
 				`	(Offer to buy one.)`
 				`	(Do not offer to buy one.)`

@@ -163,7 +163,6 @@ ship "Prateskar 711"
 		"Large Heat Shunt" 7
 		"Small Heat Shunt" 2
 		"Control Transceiver" 2
-		"Outfits Expansion"
 
 		"Thruster (Lunar Class)"
 		"Vector Engine (Reality Class)"
@@ -512,9 +511,7 @@ ship "Quarg Skyswift"
 	engine -15 117
 	engine 15 117
 	gun -12 -80 "Quarg Culverin"
-		over
 	gun 12 -80 "Quarg Culverin"
-		over
 	turret -34 24 "Quarg Anti-Missile"
 	turret 34 24 "Quarg Anti-Missile"
 	explode "tiny explosion" 12

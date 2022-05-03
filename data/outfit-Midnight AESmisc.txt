@@ -91,7 +91,7 @@ outfit "Quarg Culverin"
 	weapon
 		sprite "projectile/Midnight culverin a"
 		sound "typhoon"
-		icon "icon/culverin"
+		icon "icon/Midnight culverin"
 		"hit effect" "culverin impact"
 		"inaccuracy" 3
 		"velocity" 9
@@ -223,10 +223,11 @@ outfit "Tachyon Core"
 
 # Removed reverse thrust
 # Added description
+# Created flare sprites
 outfit "Large Graviton Thruster"
 	category "Engines"
 	"cost" 3014000
-	thumbnail "outfit/AESmisc large quarg thruster"
+	thumbnail "outfit/large quarg thruster"
 	"mass" 97
 	"outfit space" -97
 	"engine capacity" -97
@@ -239,10 +240,11 @@ outfit "Large Graviton Thruster"
 
 # Removed reverse thrust
 # Added description
+# Created flare sprites
 outfit "Small Graviton Thruster"
 	category "Engines"
 	"cost" 858000
-	thumbnail "outfit/AESmisc small quarg thruster"
+	thumbnail "outfit/small quarg thruster"
 	"mass" 47
 	"outfit space" -47
 	"engine capacity" -47

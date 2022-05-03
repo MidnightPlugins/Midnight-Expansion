@@ -41,9 +41,9 @@ mission "Midnight Expansion: Korath Warlord"
 	name "Korath Warships"
 	description "Remnant scouts report that the Korath are testing new warships at <waypoints>. Steal one and bring it back to <destination>. You may keep the ship after the Remnant study it."
 	source "Viminal"
-	waypoint "Kor Ak'mari"
+	waypoint "Kor Ak'Mari"
 	to offer
-		has "event: "wanderers: sestor eliminated"
+		has "event: wanderers: sestor eliminated"
 		has "Remnant: Expanded Horizons Astral 2: done"
 		random < 50 - "Midnight Expansion: Korath Warlord: declined"
 	on offer
@@ -55,7 +55,7 @@ mission "Midnight Expansion: Korath Warlord"
 			choice
 				`	"Can I help you with something?"`
 					goto help
-				`	"Is there something you need from me?"
+				`	"Is there something you need from me?"`
 					goto help				
 				`	"I didn't do it."`
 			`	She looks at you in confusion. Before a misunderstanding can escalate, you explain that it was a joke.`
@@ -63,7 +63,7 @@ mission "Midnight Expansion: Korath Warlord"
 
 			choice
 				`	"Can I help you with something?"`
-				`	"Is there something you need from me?"
+				`	"Is there something you need from me?"`
 			
 			label help
 			scene "thumbnail/AESmisc kar_ik_vot_637"
@@ -79,9 +79,9 @@ mission "Midnight Expansion: Korath Warlord"
 				`	"I'm not sure I want to take the risk."`
 					decline
 
-			label previous offer
+			label previousoffer
 			scene "thumbnail/AESmisc kar_ik_vot_637"
-			`	You run into Taely at the spaceport. "<first> <last>! Have you reconsidered stealing one of those Korath war ships we talked about?"
+			`	You run into Taely at the spaceport. "<first> <last>! Have you reconsidered stealing one of those Korath war ships we talked about?"`
 			choice
 				`	"Sure, I can steal one."`
 					accept
@@ -89,13 +89,13 @@ mission "Midnight Expansion: Korath Warlord"
 					decline
 	on decline
 		clear "Midnight Expansion: Korath Warlord: offered"
-	on enter "Kor Ak'mari"
+	on enter "Kor Ak'Mari"
 		conversation
 			scene "thumbnail/AESmisc kar_ik_vot_637"
 			`You find one of the new war ships testing its weapons an asteroids while a Dredger collects the scraps. The war ship turns to fight you!`
 	npc
 		government "Korath"
-		system "Kor Ak'mari"
+		system "Kor Ak'Mari"
 		personality waiting staying
 		fleet
 			names "korath"
@@ -106,7 +106,7 @@ mission "Midnight Expansion: Korath Warlord"
 				"Far Lek 14" 3
 	npc capture
 		government "Korath"
-		system "Kor Ak'mari"
+		system "Kor Ak'Mari"
 		personality target waiting staying vindictive
 		fleet
 			names "korath"
@@ -141,12 +141,12 @@ mission "Midnight Expansion: Korath Warlord Vengeance"
 	on offer
 		conversation
 			scene "thumbnail/AESmisc kar_ik_vot_637"
-			`	The mood in the spaceport is grim. When you ask about it, the air traffic controller informs you that a Remnant fleet that had gone off to fight a Korath raid didn't return. Not long after, Prefect Chilia runs up to you. "It is very fortunate you are here now," he sings. "We would be grateful if you were to help finish what our fallen failed to do." Will you avenge the fallen Remnant?
+			`	The mood in the spaceport is grim. When you ask about it, the air traffic controller informs you that a Remnant fleet that had gone off to fight a Korath raid didn't return. Not long after, Prefect Chilia runs up to you. "It is very fortunate you are here now," he sings. "We would be grateful if you were to help finish what our fallen failed to do." Will you avenge the fallen Remnant?`
 			choice
 				`	"I'll finish the job."`
 				`	"Sorry, this sounds too risky."`
 					decline
-			`	"Excellent! We must hurry to eliminate the threat before they can escape. May the Embers burn bright for us," he sings brightly. You're surprised by his response. He must have taken destruction of that fleet very seriously if he's accompanying you on this mission.
+			`	"Excellent! We must hurry to eliminate the threat before they can escape. May the Embers burn bright for us," he sings brightly. You're surprised by his response. He must have taken destruction of that fleet very seriously if he's accompanying you on this mission.`
 				accept
 	on decline
 		"reputation: Remnant" --
@@ -187,7 +187,7 @@ mission "Midnight Expansion: Korath Warlord Vengeance"
 
 
 
-mission "Midnight Expansion: Sestor Protoype "
+mission "Midnight Expansion: Sestor Protoype"
 	landing
 	name "Sestor Protoype: Vector Engine"
 	description "Search for a Vector Engine and bring it back to <destinatioton>."
@@ -1123,11 +1123,11 @@ mission "Midnight Expansion: Mereti Trading Platinum"
 		government "Wanderer"
 		not attributes "korath"
 	to offer
-		has "event: "wanderers: sestor eliminated"
+		has "event: wanderers: sestor eliminated"
 		or
 			not "Randomize Midnight Expansion: Mereti Trading"
 			and
-				has Midnight Expansion: Mereti Trading"
+				has "Randomize Midnight Expansion: Mereti Trading"
 				random < 15
 	on offer
 		set "Randomize Midnight Expansion: Mereti Trading"
