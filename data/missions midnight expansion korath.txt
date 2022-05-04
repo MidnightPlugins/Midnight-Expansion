@@ -45,7 +45,7 @@ mission "Midnight Expansion: Korath Warlord"
 	to offer
 		has "event: wanderers: sestor eliminated"
 		has "Remnant: Expanded Horizons Astral 2: done"
-		random < 50 - "Midnight Expansion: Korath Warlord: declined"
+		random < 50 - ( 5 * "Midnight Expansion: Korath Warlord: declined" )
 	on offer
 		conversation
 			branch previousoffer
@@ -72,7 +72,7 @@ mission "Midnight Expansion: Korath Warlord"
 			choice
 				`	"You want me to scan one?"`
 				
-			`	She signs, "I'd like to suggest something more bold. Can you steal one and bring it back here? I want to get a close look at it. You can keep it once we're done studying it." A prototype Korath war ship would be a nice catch. On the other hand, you have no idea how dangerous it is.`
+			`	She signs, "I'd like to suggest something more bold. Can you steal one and bring it back here? I want to get a close look at it. You can keep it once we're done studying it." A prototype Korath warship would be a nice catch. On the other hand, you have no idea how dangerous it is.`
 			choice
 				`	"Sure, I can steal one."`
 					accept
@@ -81,7 +81,7 @@ mission "Midnight Expansion: Korath Warlord"
 
 			label previousoffer
 			scene "thumbnail/AESmisc kar_ik_vot_637"
-			`	You run into Taely at the spaceport. "<first> <last>! Have you reconsidered stealing one of those Korath war ships we talked about?"`
+			`	You run into Taely at the spaceport. "<first> <last>! Have you reconsidered stealing one of those Korath warships we talked about?"`
 			choice
 				`	"Sure, I can steal one."`
 					accept
@@ -92,7 +92,7 @@ mission "Midnight Expansion: Korath Warlord"
 	on enter "Kor Ak'Mari"
 		conversation
 			scene "thumbnail/AESmisc kar_ik_vot_637"
-			`You find one of the new war ships testing its weapons an asteroids while a Dredger collects the scraps. The war ship turns to fight you!`
+			`You find one of the new warships testing its weapons an asteroids while a Dredger collects the scraps. The warship turns to fight you!`
 	npc
 		government "Korath"
 		system "Kor Ak'Mari"
@@ -112,8 +112,8 @@ mission "Midnight Expansion: Korath Warlord"
 			names "korath"
 			cargo 3
 			variant
-				"Korath Warlord"
-		dialog `You've captured the war ship. Return to <destination> so Taely can examine it.`
+				"Korath Warlord (Prototype)"
+		dialog `You've captured the warship. Return to <destination> so Taely can examine it.`
 	on abort
 		"reputation: Remnant" --
 		event "korath warlord development" 20
@@ -125,7 +125,12 @@ mission "Midnight Expansion: Korath Warlord"
 		event "korath warlord development" 20
 		conversation
 			scene "thumbnail/AESmisc kar_ik_vot_637"
-			`	The Remnant run intensive scans on the unfamiliar ship as you approach the spaceport. Taely has a team of researchers ready to do a thorough inspection of the vessel as soon as you open the entry hatch. Their inspection is quick and effecient. They're done after only a few hours.`
+			`	The Remnant run intensive scans on the unfamiliar ship as you approach the spaceport. Taely has a team of researchers ready to do a thorough inspection of the vessel as soon as you open the entry hatch. Their inspection is quick and effecient. After only a few hours they're done with the ship. "The level of automation is amazing," Taely signs. "The ship almost flies itself."`
+
+ship "Korath Warlord" "Korath Warlord (Prototype)"
+	add attributes
+		"self destruct" -.8
+
 			
 event "korath warlord development"
 
@@ -146,6 +151,7 @@ mission "Midnight Expansion: Korath Warlord Vengeance"
 				`	"I'll finish the job."`
 				`	"Sorry, this sounds too risky."`
 					decline
+			scene "ship/prefect's albatross"
 			`	"Excellent! We must hurry to eliminate the threat before they can escape. May the Embers burn bright for us," he sings brightly. You're surprised by his response. He must have taken destruction of that fleet very seriously if he's accompanying you on this mission.`
 				accept
 	on decline
@@ -178,19 +184,108 @@ mission "Midnight Expansion: Korath Warlord Vengeance"
 		
 	on fail
 		"reputation: Remnant" -= 1000
-		dialog `Prefect Chilia survived in an escape pod. Your inability to protect his ship has harmed your reputation with the Remnant.`
+		dialog `Prefect Chilia survived in an escape pod. But your inability to protect his ship has harmed your reputation with the Remnant.`
 	on complete
 		payment 1000000
 		"reputation: Remnant" ++
 		conversation
-			`	You safely escort Prefect Chilia back home after destroying the Korath war ship. You find <payment> desposited into your account.`
+			`	You safely escort Prefect Chilia back home after destroying the Korath warship. He never mentioned why he chose to join you on this mission, but you suspect someone close to him was part of the missing Remnant fleet. You find <payment> desposited into your account.`
+
+
+
+mission "Midnight Expansion: Korath Warlord Syndication"
+	job
+	repeat
+	deadline 7
+	name "Alien Warship"
+	description "An alien fleet led by a massive warship is pillaging systems near <system>. Find the fleet and eliminate it. Then return to <destination>. Payment is <payment>."
+	source
+		government "Syndicate"
+		attributes "core"
+		attributes "frontier"
+	to offer
+		has "event: korath warlord development"
+		random < 5
+	npc kill
+		government "Korath"
+		system
+			distance 1 3
+		personality target waiting staying vindictive
+		fleet
+			names "korath"
+			cargo 3
+			variant 1
+				"Korath Warlord"
+				"Korath Dredger"
+				"Korath Chaser" 4
+				"Far Osk 27" 2
+				"Far Lek 14" 3
+			variant 3
+				"Korath Warlord"
+				"Korath Raider" 2
+				"Korath Chaser" 4
+				"Far Osk 27" 2
+				"Far Lek 14" 3
+			variant 1
+				"Korath Warlord (Artillery)"
+				"Korath Dredger"
+				"Korath Chaser" 4
+				"Far Osk 27" 2
+				"Far Lek 14" 3
+			variant 3
+				"Korath Warlord (Artillery)"
+				"Korath Raider" 2
+				"Korath Chaser" 4
+				"Far Osk 27" 2
+				"Far Lek 14" 3
+	on fail
+		dialog `No one has seen the warship for several days. Perhaps it escaped back to wherever it came from.`
+	on complete
+		payment 2000000
+		dialog `The local planetary governments thank you for eliminating the alien threat and reward you with <payment>.`
+
+
+
+mission "Midnight Expansion: Korath Warlord Pirate"
+	landing
+	invisible
+	source
+		government "Syndicate"
+	destination
+		government "Pirate"
+		attributes "core"
+	to offer
+		has "Midnight Expansion: Korath Warlord Syndication: failed"
+		random < 5
+	npc kill
+		government "Pirate"
+		system destination
+		personality waiting staying harvests plunders
+		fleet
+			names "pirate"
+			cargo 3
+			variant 3
+				"Korath Warlord"
+				"Protector (Korath)"
+				"Vanguard (Korath)"
+				"Splinter (Korath)"
+				"Quicksilver (Korath)"
+			variant 3
+				"Korath Warlord (Artillery)"
+				"Protector (Korath)"
+				"Vanguard (Korath)"
+				"Splinter (Korath)"
+				"Quicksilver (Korath)"
+	on complete
+		clear "Midnight Expansion: Korath Warlord Syndication: failed"
+		clear "Midnight Expansion: Korath Warlord Pirate: offered"
 
 
 
 mission "Midnight Expansion: Sestor Protoype"
 	landing
 	name "Sestor Protoype: Vector Engine"
-	description "Search for a Vector Engine and bring it back to <destinatioton>."
+	description "Search for a Vector Engine and bring it back to <destination>."
 	source "Sestor Ikfar"
 	to offer
 		has "event: Scrapyard Add Scrap"
@@ -229,7 +324,6 @@ mission "Midnight Expansion: Sestor Protoype"
 		clear "Midnight Expansion: Sestor Protoype: offered"
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -244,7 +338,6 @@ mission "Midnight Expansion: Sestor Protoype"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -287,65 +380,11 @@ mission "Midnight Expansion: Sestor Protoype"
 		has "Midnight Expansion: Sestor Hyperdrive: done"
 		has "Midnight Expansion: Sestor Scrap Metal: done"
 	on complete
-		outfit "Vector Engine (Reality Class)" -1
 		give ship "Prateskar 711" "00-000.0"
 		conversation
 			scene "thumbnail/AESmisc kar_ik_vot_711"
 			`	You manually operate the factory machinery to assemble the prototype ship. With all the outfits installed, the ship is ready to fly!`
 
-mission "Midnight Expansion: Sestor Engines"
-	landing
-	name "Sestor Protoype: Vector Engine"
-	description "Search for a Vector Engine (Reality Class) and bring it back to <destination>."
-	destination "Sestor Ikfar"
-	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
-	to complete
-		never
-	on abort
-		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
-		fail "Midnight Expansion: Sestor Banisher"
-		fail "Midnight Expansion: Sestor Repeater"
-		fail "Midnight Expansion: Sestor Warder"
-		fail "Midnight Expansion: Sestor Piercer"
-		fail "Midnight Expansion: Sestor Plasma Core"
-		fail "Midnight Expansion: Sestor Core (Large)"
-		fail "Midnight Expansion: Sestor Core (Medium)"
-		fail "Midnight Expansion: Sestor Core (Small)"
-		fail "Midnight Expansion: Sestor Large Shunt"
-		fail "Midnight Expansion: Sestor Small Shunt"
-		fail "Midnight Expansion: Sestor Control Transceiver"
-		fail "Midnight Expansion: Sestor Hyperdrive"
-		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
-		clear "Midnight Expansion: Sestor Banisher: offered"
-		clear "Midnight Expansion: Sestor Repeater: offered"
-		clear "Midnight Expansion: Sestor Warder: offered"
-		clear "Midnight Expansion: Sestor Piercer: offered"
-		clear "Midnight Expansion: Sestor Plasma Core: offered"
-		clear "Midnight Expansion: Sestor Core (Large): offered"
-		clear "Midnight Expansion: Sestor Core (Medium): offered"
-		clear "Midnight Expansion: Sestor Core (Small): offered"
-		clear "Midnight Expansion: Sestor Large Shunt: offered"
-		clear "Midnight Expansion: Sestor Small Shunt: offered"
-		clear "Midnight Expansion: Sestor Control Transceiver: offered"
-		clear "Midnight Expansion: Sestor Hyperdrive: offered"
-		clear "Midnight Expansion: Sestor Scrap Metal: offered"
-		clear "Midnight Expansion: Sestor Banisher: done"
-		clear "Midnight Expansion: Sestor Repeater: done"
-		clear "Midnight Expansion: Sestor Warder: done"
-		clear "Midnight Expansion: Sestor Piercer: done"
-		clear "Midnight Expansion: Sestor Plasma Core: done"
-		clear "Midnight Expansion: Sestor Core (Large): done"
-		clear "Midnight Expansion: Sestor Core (Medium): done"
-		clear "Midnight Expansion: Sestor Core (Small): done"
-		clear "Midnight Expansion: Sestor Large Shunt: done"
-		clear "Midnight Expansion: Sestor Small Shunt: done"
-		clear "Midnight Expansion: Sestor Control Transceiver: done"
-		clear "Midnight Expansion: Sestor Hyperdrive: done"
-		clear "Midnight Expansion: Sestor Scrap Metal: done"
 
 
 mission "Midnight Expansion: Sestor Banisher"
@@ -362,7 +401,6 @@ mission "Midnight Expansion: Sestor Banisher"
 			`	You installed the Korath Banisher and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -377,7 +415,6 @@ mission "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -413,13 +450,12 @@ mission "Midnight Expansion: Sestor Repeater"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
 	on complete
-		outfit "Korath Repeater" -1
+		outfit "Korath Repeater Turret" -1
 		conversation
 			scene "outfit/repeater"
 			`	You installed the Korath Repeater and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -434,7 +470,6 @@ mission "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -476,7 +511,6 @@ mission "Midnight Expansion: Sestor Warder"
 			`	You installed the Korath Warder and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -491,7 +525,6 @@ mission "Midnight Expansion: Sestor Warder"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -533,7 +566,6 @@ mission "Midnight Expansion: Sestor Piercer"
 			`	You installed the Korath Piercer Launcher and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -548,7 +580,6 @@ mission "Midnight Expansion: Sestor Piercer"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -590,7 +621,6 @@ mission "Midnight Expansion: Sestor Plasma Core"
 			`	You installed the Triple Plasma Core and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -605,7 +635,6 @@ mission "Midnight Expansion: Sestor Plasma Core"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -647,7 +676,6 @@ mission "Midnight Expansion: Sestor Core (Large)"
 			`	You installed the Systems Core (Large) and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -662,7 +690,6 @@ mission "Midnight Expansion: Sestor Core (Large)"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -704,7 +731,6 @@ mission "Midnight Expansion: Sestor Core (Medium)"
 			`	You installed the Systems Core (Medium) and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -719,7 +745,6 @@ mission "Midnight Expansion: Sestor Core (Medium)"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -761,7 +786,6 @@ mission "Midnight Expansion: Sestor Core (Small)"
 			`	You installed the Systems Core (Small) and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -776,7 +800,6 @@ mission "Midnight Expansion: Sestor Core (Small)"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -818,7 +841,6 @@ mission "Midnight Expansion: Sestor Large Shunt"
 			`	You installed the Large Heat Shunt and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -833,7 +855,6 @@ mission "Midnight Expansion: Sestor Large Shunt"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -864,7 +885,7 @@ mission "Midnight Expansion: Sestor Large Shunt"
 mission "Midnight Expansion: Sestor Small Shunt"
 	landing
 	name "Sestor Protoype: Small Heat Shunt"
-	description "Bring a  to <destination>."
+	description "Bring a Small Heat Shunt to <destination>."
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -875,7 +896,6 @@ mission "Midnight Expansion: Sestor Small Shunt"
 			`	You installed the Small Heat Shunt and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -890,7 +910,6 @@ mission "Midnight Expansion: Sestor Small Shunt"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -932,7 +951,6 @@ mission "Midnight Expansion: Sestor Control Transceiver"
 			`	You installed the Control Transceiver and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -947,7 +965,6 @@ mission "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -989,7 +1006,6 @@ mission "Midnight Expansion: Sestor Hyperdrive"
 			`	You installed the Hyperdrive and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -1004,7 +1020,6 @@ mission "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -1052,7 +1067,6 @@ mission "Midnight Expansion: Sestor Scrap Metal"
 		has "Midnight Expansion: Sestor Control Transceiver: done"
 		has "Midnight Expansion: Sestor Hyperdrive: done"
 	on offer
-		fail "Midnight Expansion: Sestor Engines"
 		conversation
 			scene "outfit/AESmisc vector_engine_reality_class"
 
@@ -1060,14 +1074,12 @@ mission "Midnight Expansion: Sestor Scrap Metal"
 				accept
 								
 	on complete
-		fail "Midnight Expansion: Sestor Engines"
 		outfit "Scrap Metal" -100
 		conversation
 			scene "outfit/AESmisc vector_engine_reality_class"
 			`	You manually operate the factory machinery to make the Vector Engine (Reality Class) and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
-		fail "Midnight Expansion: Sestor Engines"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -1082,7 +1094,6 @@ mission "Midnight Expansion: Sestor Scrap Metal"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
 		clear "Midnight Expansion: Sestor Protoype: offered"
-		clear "Midnight Expansion: Sestor Engines: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -1176,7 +1187,7 @@ mission "Midnight Expansion: Mereti Trading Platinum"
 		fleet "Large Blight Shadow"
 	npc accompany save
 		government "Kor Mereti"
-		personality target timid opportunistic
+		personality target escort timid opportunistic
 		fleet
 			names "kor mereti"
 			commodities "Equipment" "Industrial"
@@ -1263,7 +1274,7 @@ mission "Midnight Expansion: Mereti Trading Gold"
 		fleet "Large Blight Shadow"
 	npc accompany save
 		government "Kor Mereti"
-		personality target timid opportunistic
+		personality target escort timid opportunistic
 		fleet
 			names "kor mereti"
 			commodities "Equipment" "Industrial"
@@ -1329,7 +1340,7 @@ mission "Midnight Expansion: Mereti Trading Silver"
 		fleet "Large Blight Shadow"
 	npc accompany save
 		government "Kor Mereti"
-		personality target timid opportunistic
+		personality target escort timid opportunistic
 		fleet
 			names "kor mereti"
 			commodities "Equipment" "Industrial"
@@ -1403,7 +1414,7 @@ mission "Midnight Expansion: Mereti Trading Copper"
 		fleet "Large Blight Shadow"
 	npc accompany save
 		government "Kor Mereti"
-		personality target timid opportunistic
+		personality target escort timid opportunistic
 		fleet
 			names "kor mereti"
 			cargo 0

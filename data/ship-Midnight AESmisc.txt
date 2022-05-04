@@ -24,11 +24,11 @@ ship "Korath Warlord"
 	thumbnail "thumbnail/AESmisc kar_ik_vot_637"
 	attributes
 		category "Heavy Warship"
-		cost 44130000
+		cost 63700000
 		shields 82900
 		hull 67400
-		"required crew" 376
-		bunks 637
+		"required crew" 4
+		bunks 24
 		mass 1850
 		drag 24.6
 		"heat dissipation" .45
@@ -38,6 +38,7 @@ ship "Korath Warlord"
 		"weapon capacity" 527
 		"engine capacity" 211
 		ramscoop 3
+		"self destruct" .8
 		weapon
 			"blast radius" 550
 			"shield damage" 6800
@@ -56,7 +57,7 @@ ship "Korath Warlord"
 		"Systems Core (Medium)"
 		"Large Heat Shunt" 5
 		"Small Heat Shunt"
-		"Korath Repeater Rifle" 508 
+		"Korath Repeater Rifle" 24 
 
 		"Steering (Stellar Class)"
 		"Thruster (Stellar Class)"
