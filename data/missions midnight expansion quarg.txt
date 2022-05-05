@@ -321,7 +321,6 @@ mission "Midnight Expansion: Quarg Warwyvern"
 		has "Midnight Expansion: Quarg Warwyvern - Intrusion Countermeasures: done"
 		has "Midnight Expansion: Quarg Warwyvern - Medium Graviton Steering: done"
 		has "Midnight Expansion: Quarg Warwyvern - Medium Graviton Thruster: done"
-		has "Midnight Expansion: Quarg Warwyvern - Jump Drive: done"
 		has "Midnight Expansion: Quarg Warwyvern - Crew: done"
 	on complete
 		event "add warwyvern to ringworld traffic"
@@ -361,7 +360,7 @@ mission "Midnight Expansion: Pirate Sales - Quarg Skydagger"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern - Quarg Skydagger: active"
-		random < 25
+		random < 25 - ( 5 * "Midnight Expansion: Pirate Sales - Quarg Skydagger: deferred" )
 		"credits" > 12000000
 	on offer
 		conversation
@@ -400,6 +399,9 @@ mission "Midnight Expansion: Pirate Sales - Quarg Skydagger"
 			label victory
 			`	You and your crew manage to overpower the arms dealer's crew and steal the Skydagger!`
 				accept
+
+	on defer
+		set "Midnight Expansion: Pirate Sales - Quarg Skydagger: deferred"
 
 	on decline
 		"Midnight Market" ++
@@ -441,7 +443,7 @@ mission "Midnight Expansion: Pirate Sales - Quarg Anti-Missile"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern - Quarg Anti-Missile: active"
-		random < 25
+		random < 25 - ( 5 * "Midnight Expansion: Pirate Sales - Quarg Anti-Missile: deferred" )
 		"credits" > 12000000
 	on offer
 		conversation
@@ -480,6 +482,9 @@ mission "Midnight Expansion: Pirate Sales - Quarg Anti-Missile"
 			label victory
 			`	You and your crew manage to overpower the arms dealer's crew and steal the Quarg Anti-Missile!`
 				accept
+
+	on defer
+		set "Midnight Expansion: Pirate Sales - Quarg Anti-Missile: deferred"
 
 	on decline
 		"Midnight Market" ++
@@ -521,11 +526,11 @@ mission "Midnight Expansion: Pirate Sales - Quarg Culverin"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern - Quarg Culverin: active"
-		random < 25
+		random < 25 - ( 5 * "Midnight Expansion: Pirate Sales - Quarg Culverin: deferred" )
 		"credits" > 10000000
 	on offer
 		conversation
-			scene "outfit/quarg anti missile"
+			scene "outfit/Midnight AESmisc culverin"
 			`	An arms dealer is trying to sell a Quarg weapon. It's a Quarg Culverin, probably looted off a disabled Quarg ship or otherwise acquired illegally. "Would you be interested in this exotic weapon? Made by the Quarg, it will be a formidable addition to your flagship's armaments. The price is 5,000,000 credits.`
 			choice
 				`	"Sounds good. I'll buy it!`
@@ -560,6 +565,9 @@ mission "Midnight Expansion: Pirate Sales - Quarg Culverin"
 			label victory
 			`	You and your crew manage to overpower the arms dealer's crew and steal the Quarg Culverin!`
 				accept
+
+	on defer
+		set "Midnight Expansion: Pirate Sales - Quarg Culverin: deferred"
 
 	on decline
 		"Midnight Market" ++
@@ -597,15 +605,13 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Steering"
 	landing
 	name "Heliarch Espionage"
 	description "Go to <waypoints> and scan the outfits of a Quarg Skylark. Then report back to <destination>."
-	source "Ring of Friendship"
+	source
+		government "Heliarch"
+		attributes "ringworld"
 	waypoint Tarazed
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern - Medium Graviton Steering: active"
-		or
-			not "Randomize Midnight Expansion: Heliarch Espionage - Medium Graviton Steering"
-			and
-				has "Randomize Midnight Expansion: Heliarch Espionage - Medium Graviton Steering"
-				random < 30
+		random < 25 - ( 5 * "Midnight Expansion: Heliarch Espionage - Medium Graviton Steering: deferred" )
 	on offer
 		conversation
 			scene "outfit/medium quarg steering"
@@ -624,7 +630,7 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Steering"
 			`	The technicians finish unloading the engines and cart them away. You try following them for some distance, but they eventually pass through a door that locks behind them. A passing security patrol stops to watch as you head back towards the spaceport.`
 				defer
 	on defer
-		set "Randomize Midnight Expansion: Heliarch Espionage - Medium Graviton Steering"
+		set "Midnight Expansion: Heliarch Espionage - Medium Graviton Steering: deferred"
 	npc "scan outfits"
 		government "Quarg"
 		system Tarazed
@@ -659,15 +665,13 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster"
 	landing
 	name "Heliarch Espionage"
 	description "Go to <waypoints> and scan the outfits of a Quarg Wardragon. Then report back to <destination>."
-	source "Ring of Wisdom"
+	source
+		government "Heliarch"
+		attributes "ringworld"
 	waypoint Tarazed
 	to offer
-		has "Midnight Expansion: Quarg Warwyvern - Medium Graviton Steering: active"
-		or
-			not "Randomize Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster"
-			and
-				has "Randomize Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster"
-				random < 30
+		has "Midnight Expansion: Quarg Warwyvern - Medium Graviton Thruster: active"
+		random < 25 - ( 5 * "Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster: deferred" )
 	on offer
 		conversation
 			scene "outfit/medium quarg thruster"
@@ -686,7 +690,7 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster"
 			`	The technicians finish unloading the engines and cart them away. You try following them for some distance, but they eventually pass through a door that locks behind them. A passing security patrol stops to watch as you head back towards the spaceport.`
 				defer
 	on defer
-		set "Randomize Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster"
+		set "Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster: deferred"
 	npc "scan outfits"
 		government "Quarg"
 		system Tarazed
@@ -697,9 +701,9 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster"
 				"Quarg Wardragon"
 		dialog `This scanner data should satisfy the Heliarchs. You should report to <destination>.`
 	on complete
-		outfit "Medium Graviton Steering" 1
+		outfit "Medium Graviton Thruster" 1
 		conversation
-			scene "outfit/medium quarg steering"
+			scene "outfit/medium quarg thruster"
 			`	You share your scanner data with the Heliarchs and are given the Medium Graviton Thruster you asked for.`
 
 
@@ -721,15 +725,13 @@ mission "Midnight Expansion: Heliarch Scouting - Tachyon Core"
 	landing
 	name "Heliarch Espionage"
 	description "Escort the <npc> to <waypoints> to observe the ringworld. Then escort them back to <destination>."
-	source "Ring of Power"
+	source
+		government "Heliarch"
+		attributes "ringworld"
 	waypoint Enif
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern - Tachyon Core: active"
-		or
-			not "Randomize Midnight Expansion: Heliarch Scouting - Tachyon Core"
-			and
-				has "Randomize Midnight Expansion: Heliarch Scouting - Tachyon Core"
-				random < 30
+		random < 25 - ( 5 * "Midnight Expansion: Heliarch Scouting - Tachyon Core: deferred" )
 	on offer
 		conversation
 			scene "outfit/AESmisc quarg tachyon core"
@@ -748,7 +750,7 @@ mission "Midnight Expansion: Heliarch Scouting - Tachyon Core"
 			`	The technicians finish unloading the power systems and cart them away. You try following them for some distance, but they eventually pass through a door that locks behind them. A passing security patrol stops to watch as you head back towards the spaceport.`
 				defer
 	on defer
-		set "Randomize Midnight Expansion: Heliarch Scouting - Tachyon Core"
+		set "Midnight Expansion: Heliarch Scouting - Tachyon Core: deferred"
 
 	npc
 		government "Quarg"
@@ -798,18 +800,13 @@ mission "Midnight Expansion: Heliarch Scouting - Singularity Core"
 	landing
 	name "Heliarch Espionage"
 	description "Escort the <npc> to <waypoints> to observe the ringworld. Then escort them back to <destination>."
-	source "Ring of Power"
+	source
+		government "Heliarch"
+		attributes "ringworld"
 	waypoint "Hevru Hai"
 	to offer
-		has "Midnight Expansion: Heliarch Espionage - Medium Graviton Steering: done"
-		has "Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster: done"
-		has "Midnight Expansion: Heliarch Scouting - Tachyon Core: done"
 		has "Midnight Expansion: Quarg Warwyvern - Singularity Core: active"
-		or
-			not "Randomize Midnight Expansion: Heliarch Scouting - Singularity Core"
-			and
-				has "Randomize Midnight Expansion: Heliarch Scouting - Singularity Core"
-				random < 30
+		random < 25 - ( 5 * "Midnight Expansion: Heliarch Scouting - Singularity Core: deferred" )
 	on offer
 		conversation
 			scene "outfit/AESmisc quarg singularity core"
@@ -828,7 +825,7 @@ mission "Midnight Expansion: Heliarch Scouting - Singularity Core"
 			`	The technicians finish unloading the power systems and cart them away. You try following them for some distance, but they eventually pass through a door that locks behind them. A passing security patrol stops to watch as you head back towards the spaceport.`
 				defer
 	on defer
-		set "Randomize Midnight Expansion: Heliarch Scouting - Singularity Core"
+		set "Midnight Expansion: Heliarch Scouting - Singularity Core: deferred"
 
 	npc
 		government "Quarg"
@@ -877,16 +874,13 @@ mission "Midnight Expansion: Heliarch Scouting - Nanotech Battery"
 	landing
 	name "Heliarch Espionage"
 	description "Escort the <npc> to <waypoints> to observe the ringworld. Then escort them back to <destination>."
-	source "Ring of Power"
+	source
+		government "Heliarch"
+		attributes "ringworld"
 	waypoint "Dokdobaru"
 	to offer
-		has "Midnight Expansion: Heliarch Scouting - Singularity Core: done"
 		has "Midnight Expansion: Quarg Warwyvern - Nanotech Battery: active"
-		or
-			not "Randomize Midnight Expansion: Heliarch Scouting - Nanotech Battery"
-			and
-				has "Randomize Midnight Expansion: Heliarch Scouting - Nanotech Battery"
-				random < 30
+		random < 25 - ( 5 * "Midnight Expansion: Heliarch Scouting - Nanotech Battery: deferred" )
 	on offer
 		conversation
 			scene "outfit/quarg nanotech battery"
@@ -905,7 +899,7 @@ mission "Midnight Expansion: Heliarch Scouting - Nanotech Battery"
 			`	The technicians finish unloading the batteries and cart them away. You try following them for some distance, but they eventually pass through a door that locks behind them. A passing security patrol stops to watch as you head back towards the spaceport.`
 				defer
 	on defer
-		set "Randomize Midnight Expansion: Heliarch Scouting - Nanotech Battery"
+		set "Midnight Expansion: Heliarch Scouting - Nanotech Battery: deferred"
 
 	npc
 		to spawn
@@ -953,10 +947,10 @@ mission "Midnight Expansion: Heliarch Scouting - Nanotech Battery"
 			variant
 				"Heliarch Hunter Ion (Jump)"
 	on complete
-		outfit "Singularity Core" 1
+		outfit "Nanotech Battery" 1
 		conversation
 			scene "outfit/quarg nanotech battery"
-			`	You return with the Heliarch surveillance team and are given the Singularity Core you asked for.`
+			`	You return with the Heliarch surveillance team and are given the Nanotech Battery you asked for.`
 
 
 
@@ -985,7 +979,7 @@ mission "Midnight Expansion: Midnight Market - Infimum Shield Generator 1"
 		"Midnight Market" > 4
 		"credits" >= 14,000,000
 		has "Midnight Expansion: Quarg Warwyvern - Infimum Shield Generator: active"
-		random < 35
+		random < 25 - ( 5 * "Midnight Expansion: Midnight Market - Infimum Shield Generator 1: deferred" )
 	on offer
 		conversation
 			`You receive an anonymous message:`
@@ -996,6 +990,8 @@ mission "Midnight Expansion: Midnight Market - Infimum Shield Generator 1"
 					accept
 				`	(Reject the invitation.)`
 					defer
+	on defer
+		set "Midnight Expansion: Midnight Market - Infimum Shield Generator 1: deferred"
 	to complete
 		"credits" >= 7368000
 	on visit
@@ -1067,7 +1063,7 @@ mission "Midnight Expansion: Midnight Market - Peripheral Repair Hub 1"
 		"Midnight Market" > 4
 		"credits" >= 5,000,000
 		has "Midnight Expansion: Quarg Warwyvern - Peripheral Repair Hub: active"
-		random < 35
+		random < 25 - ( 5 * "Midnight Expansion: Midnight Market - Peripheral Repair Hub 1: deferred" )
 	on offer
 		conversation
 			`You receive an anonymous message:`
@@ -1078,6 +1074,8 @@ mission "Midnight Expansion: Midnight Market - Peripheral Repair Hub 1"
 					accept
 				`	(Reject the invitation.)`
 					defer
+	on defer
+		set "Midnight Expansion: Midnight Market - Peripheral Repair Hub 1: deferred"
 	to complete
 		"credits" >= 2735000
 	on visit
@@ -1129,7 +1127,7 @@ mission "Midnight Expansion: Midnight Market - Peripheral Repair Hub 2"
 mission "Midnight Expansion: Quarg Warwyvern - Central Repair Hub"
 	landing
 	name "Warwyvern: Central Repair Hub"
-	description "Bring an Central Repair Hub to <destination>"
+	description "Bring a Central Repair Hub to <destination>"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -1151,7 +1149,7 @@ mission "Midnight Expansion: Midnight Market - Central Repair Hub 1"
 		"Midnight Market" > 4
 		"credits" >= 12,000,000
 		has "Midnight Expansion: Quarg Warwyvern - Central Repair Hub: active"
-		random < 35
+		random < 25 - ( 5 * "Midnight Expansion: Midnight Market - Central Repair Hub 1: deferred" )
 	on offer
 		conversation
 			`You receive an anonymous message:`
@@ -1162,6 +1160,8 @@ mission "Midnight Expansion: Midnight Market - Central Repair Hub 1"
 					accept
 				`	(Reject the invitation.)`
 					defer
+	on defer
+		set "Midnight Expansion: Midnight Market - Central Repair Hub 1: deferred"
 	to complete
 		"credits" >= 6120000
 	on visit
@@ -1224,10 +1224,9 @@ mission "Midnight Expansion: Quarg Warwyvern - Intrusion Countermeasures"
 
 mission "Midnight Expansion: Angry Squirrels - Intrusion Countermeasures"
 	landing
-	invisible
 	source "Darkcloak"
 	to offer
-		has "Midnight Expansion: Angry Squirrels - Intrusion Countermeasures: active"
+		has "Midnight Expansion: Quarg Warwyvern - Intrusion Countermeasures: active"
 		has "Angry Squirrels: Countermeasures 3: done"
 		"credits" >= 2000000
 		or
@@ -1242,7 +1241,7 @@ mission "Midnight Expansion: Angry Squirrels - Intrusion Countermeasures"
 			choice
 				`	(Offer to buy one.)`
 				`	(Do not offer to buy one.)`
-					defer
+					decline
 			`	"You want one?" Go Foo Koo perks up. "Sure!" He hands you the data pad. The price is the same as what you charged him originally. "Thanks a lot. I over ordered these devices and ended up in debt! This sale really helps!"`
 			`	As you prepare to haul your purchase back to your ship, you wonder what he's going to do with the rest of the devices.`
 				accept
@@ -1250,21 +1249,6 @@ mission "Midnight Expansion: Angry Squirrels - Intrusion Countermeasures"
 		payment -1000000
 		outfit "Intrusion Countermeasures" 1
 		fail
-
-
-
-mission "Midnight Expansion: Quarg Warwyvern - Jump Drive"
-	landing
-	name "Warwyvern: Jump Drive"
-	description "Bring a Jump Drive to <destination>"
-	destination "Querii'ka"
-	to offer
-		has "Midnight Expansion: Quarg Warwyvern: active"
-	on complete
-		outfit "Jump Drive" -1
-		conversation
-			scene "outfit/jump drive"
-			`You've installed the Jump Drive and are one step closer to restoring the Quarg Warwyvern!`
 
 
 
@@ -1302,7 +1286,6 @@ mission "Midnight Expansion: Bounty Job - Quarg Ranseur"
 		has "Midnight Expansion: Quarg Warwyvern - Intrusion Countermeasures: done"
 		has "Midnight Expansion: Quarg Warwyvern - Medium Graviton Steering: done"
 		has "Midnight Expansion: Quarg Warwyvern - Medium Graviton Thruster: done"
-		has "Midnight Expansion: Quarg Warwyvern - Jump Drive: done"
 		or
 			not "Randomize Midnight Expansion: Bounty Job - Quarg Ranseur"
 			and
@@ -1311,7 +1294,7 @@ mission "Midnight Expansion: Bounty Job - Quarg Ranseur"
 	on accept
 		conversation
 			scene "outfit/AESmisc quarg ranseur"
-			`	This ship may have the final piece you are looking for to complete the Warwyvern! Be sure to avoid destroying it before you can plunder its outfits.`
+			`	This ship may have the final piece you are looking for to complete the Warwyvern! Be sure to avoid destroying it before you can plunder its outfits. Beware, it's a Marauder, so the captain may choose to activate a self destruct rather than let you capture it.`
 	npc board
 		government "Bounty"
 		system
@@ -1320,7 +1303,7 @@ mission "Midnight Expansion: Bounty Job - Quarg Ranseur"
 		ship "Marauder Vanguard (Ranseur)" "Ranseur"
 		conversation
 			scene "outfit/AESmisc quarg ranseur"
-			`	This ship does have the final piece you are looking for to complete the Warwyvern! Remember to stop at <destination> for the bounty reward and to hire crew.`
+			`	This ship does have the final piece you are looking for installed on it! Remember to stop at <destination> for the bounty reward and to hire crew.`
 	on abort
 		clear "Midnight Expansion: Bounty Job - Quarg Ranseur: offered"
 		set "Randomize Midnight Expansion: Bounty Job - Quarg Ranseur"
@@ -1333,12 +1316,13 @@ mission "Midnight Expansion: Bounty Job - Quarg Ranseur"
 ship "Marauder Vanguard" "Marauder Vanguard (Ranseur)"
 	outfits
 		"Quarg Ranseur"
-		"Torpedo Launcher" 6
-		Torpedo 180
-		"Anti-Missile Turret"
+		"Electron Beam" 4
+		"Typhoon Launcher" 2
+		"Typhoon Torpedoes" 60
+		"Heavy Anti-Missile Turret"
 		"Fusion Reactor"
 		"LP072a Battery Pack"
-		"S-270 Regenerator" 2
+		"S-270 Regenerator" 3
 		"S-970 Regenerator" 2
 		"Liquid Nitrogen Cooler"
 		"Laser Rifle" 4
@@ -1346,12 +1330,12 @@ ship "Marauder Vanguard" "Marauder Vanguard (Ranseur)"
 		"X4200 Ion Steering"
 		Hyperdrive
 	gun "Quarg Ranseur"
-	gun "Torpedo Launcher"
-	gun "Torpedo Launcher"
-	gun "Torpedo Launcher"
-	gun "Torpedo Launcher"
-	gun "Torpedo Launcher"
-	gun "Torpedo Launcher"
+	gun "Typhoon Launcher"
+	gun "Typhoon Launcher"
+	gun "Electron Beam"
+	gun "Electron Beam"
+	gun "Electron Beam"
+	gun "Electron Beam"
 
 mission "Midnight Expansion: Quarg Warwyvern - Crew"
 	landing
