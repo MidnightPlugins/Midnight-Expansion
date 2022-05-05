@@ -1229,11 +1229,6 @@ mission "Midnight Expansion: Angry Squirrels - Intrusion Countermeasures"
 		has "Midnight Expansion: Quarg Warwyvern - Intrusion Countermeasures: active"
 		has "Angry Squirrels: Countermeasures 3: done"
 		"credits" >= 2000000
-		or
-			not "Randomize Midnight Expansion: Angry Squirrels - Intrusion Countermeasures"
-			and
-				has "Randomize Midnight Expansion: Angry Squirrels - Intrusion Countermeasures"
-				random < 25
 	on offer
 		conversation
 			scene "outfit/quarg countermeasures"
