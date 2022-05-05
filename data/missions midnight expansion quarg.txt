@@ -158,7 +158,6 @@ event "add skyswift to ringworld traffic"
 
 mission "Midnight Expansion: Quarg Skyswift 2"
 	job
-	repeat
 	name "Research Quarg Ringworld"
 	description "Go to <waypoints> and scan the cargo of one of the large Quarg freighters there. Then report back to <destination>. Payment is <payment>."
 	source
@@ -204,6 +203,7 @@ mission "Midnight Expansion: Quarg Skyswift 2"
 			variant
 				"Quarg Skyswift"
 	on complete
+		clear "Midnight Expansion: Quarg Skyswift 2: offered"
 		payment 1000000
 		dialog `You hand the scanner data to a group of scientists in exchange for <payment>. "Hopefully this data will shed some light on the secrets behind the Quarg and their ringworlds."`
 		

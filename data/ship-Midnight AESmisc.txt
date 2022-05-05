@@ -342,17 +342,18 @@ ship "Quarg Seakraken"
 		"Medium Graviton Steering"
 		"Medium Graviton Thruster"
 		"Jump Drive"
-	gun 0 -326
-	turret -31 -207
-	turret 31 -207
-	turret 0 -156
-	turret -48 -99
-	turret 48 -99
-	turret -68 9
-	turret 68 9
+
 	engine -38 304
 	engine 38 304
 	engine 0 315
+	gun 0 -326
+	turret -31 -207 "Quarg Skydagger"
+	turret 31 -207 "Quarg Skydagger"
+	turret 0 -156 "Quarg Anti-Missile"
+	turret -48 -99 "Quarg Skydagger"
+	turret 48 -99 "Quarg Skydagger"
+	turret -68 9 "Quarg Skydagger"
+	turret 68 9 "Quarg Skydagger"
 	explode "tiny explosion" 12
 	explode "small explosion" 16
 	explode "medium explosion" 30
