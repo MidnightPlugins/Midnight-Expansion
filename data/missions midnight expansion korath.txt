@@ -1458,21 +1458,25 @@ event "kor efret forager sales"
 		add variant 1
 			"Korath Forager" 3
 	system Seketra
-		add fleet "Kor Efret Miners" 8000
+		add fleet "Kor Efret Miners" 12000
 	system Fornarep
-		add fleet "Kor Efret Miners" 8000
+		add fleet "Kor Efret Miners" 12000
 	system Kaliptari
-		add fleet "Kor Efret Miners" 8000
+		add fleet "Kor Efret Miners" 12000
 	system Solifar
-		add fleet "Kor Efret Miners" 10000
+		add fleet "Kor Efret Miners" 14000
 	system Sepriaptu
-		add fleet "Kor Efret Miners" 10000
+		add fleet "Kor Efret Miners" 14000
 	system Sabriset
-		add fleet "Kor Efret Miners" 10000
+		add fleet "Kor Efret Miners" 14000
 	system Farbutero
-		add fleet "Kor Efret Miners" 10000
-	system Makislepti
-		add fleet "Kor Efret Miners" 10000
+		add fleet "Kor Efret Miners" 14000
+	system Mekislepti
+		add fleet "Kor Efret Miners" 14000
+	system Feroteri
+		add fleet "Kor Efret Miners" 16000
+	system Korsmanath
+		add fleet "Kor Efret Miners" 16000
 
 
 

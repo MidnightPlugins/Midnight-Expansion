@@ -331,12 +331,12 @@ mission "Midnight Expansion: Quarg Warwyvern"
 
 event "add warwyvern to ringworld traffic"
 	fleet "Quarg Ringworld Traffic"
-		add variant 3
-			"Warwyvern"
-			"Wardrake" 4
-		add variant 5
-			"Wardragon"
-			"Warwyvern" 2
+		add variant 1
+			"Quarg Warwyvern"
+			"Quarg Wardrake" 4
+		add variant 1
+			"Quarg Wardragon"
+			"Quarg Warwyvern" 2
 
 
 mission "Midnight Expansion: Quarg Warwyvern - Quarg Skydagger"
@@ -1313,11 +1313,11 @@ ship "Marauder Vanguard" "Marauder Vanguard (Ranseur)"
 		"Quarg Ranseur"
 		"Electron Beam" 4
 		"Typhoon Launcher" 2
-		"Typhoon Torpedoes" 60
+		"Typhoon Torpedo" 60
 		"Heavy Anti-Missile Turret"
 		"Fusion Reactor"
 		"LP072a Battery Pack"
-		"S-270 Regenerator" 3
+		"S-270 Regenerator" 2
 		"S-970 Regenerator" 2
 		"Liquid Nitrogen Cooler"
 		"Laser Rifle" 4
