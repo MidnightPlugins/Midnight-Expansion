@@ -93,6 +93,7 @@ mission "Midnight Expansion: Quarg Skyswift 1"
 	waypoint Enif
 	to offer
 		has "Lagrange Ring: Cargo: done"
+		random < 50
 	on enter Enif
 		event "add skyswift to ringworld traffic"
 		conversation
@@ -165,7 +166,7 @@ mission "Midnight Expansion: Quarg Skyswift 2"
 	waypoint Enif
 	to offer
 		has "Midnight Expansion: Quarg Skyswift 1: done"
-		random < 15
+		random < 10
 	npc
 		government "Merchant"
 		system Enif
@@ -607,7 +608,7 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Steering"
 	description "Go to <waypoints> and scan the outfits of a Quarg Skylark. Then report back to <destination>."
 	source
 		government "Heliarch"
-		attributes "ringworld"
+		attributes "station"
 	waypoint Tarazed
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern - Medium Graviton Steering: active"
@@ -667,7 +668,7 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster"
 	description "Go to <waypoints> and scan the outfits of a Quarg Wardragon. Then report back to <destination>."
 	source
 		government "Heliarch"
-		attributes "ringworld"
+		attributes "station"
 	waypoint Tarazed
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern - Medium Graviton Thruster: active"
@@ -727,7 +728,7 @@ mission "Midnight Expansion: Heliarch Scouting - Tachyon Core"
 	description "Escort the <npc> to <waypoints> to observe the ringworld. Then escort them back to <destination>."
 	source
 		government "Heliarch"
-		attributes "ringworld"
+		attributes "station"
 	waypoint Enif
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern - Tachyon Core: active"
@@ -802,7 +803,7 @@ mission "Midnight Expansion: Heliarch Scouting - Singularity Core"
 	description "Escort the <npc> to <waypoints> to observe the ringworld. Then escort them back to <destination>."
 	source
 		government "Heliarch"
-		attributes "ringworld"
+		attributes "station"
 	waypoint "Hevru Hai"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern - Singularity Core: active"
@@ -876,7 +877,7 @@ mission "Midnight Expansion: Heliarch Scouting - Nanotech Battery"
 	description "Escort the <npc> to <waypoints> to observe the ringworld. Then escort them back to <destination>."
 	source
 		government "Heliarch"
-		attributes "ringworld"
+		attributes "station"
 	waypoint "Dokdobaru"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern - Nanotech Battery: active"
