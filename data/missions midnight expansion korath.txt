@@ -1164,6 +1164,9 @@ mission "Midnight Expansion: Mereti Trading Platinum"
 				`	(Decline.)`
 					defer
 
+	on defer
+		set "Randomize Midnight Expansion: Mereti Trading"
+
 	npc
 		to spawn
 			has "event: Blight Shadow Infestation"
@@ -1201,6 +1204,7 @@ mission "Midnight Expansion: Mereti Trading Platinum"
 	on visit
 		dialog `You've arrived at <planet>, but <npc> hasn't arrived! Return to orbit and search for it.`
 	on complete
+		set "Randomize Midnight Expansion: Mereti Trading"
 		outfit "Platinum" 100 
 		conversation
 			scene "outfit/harvested platinum"
