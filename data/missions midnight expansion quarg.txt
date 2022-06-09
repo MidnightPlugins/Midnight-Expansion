@@ -285,11 +285,43 @@ planet Querii'ka
 	description `This huge ringworld, built by the Quarg using most of the resources found near the Queri star, seems to be completely uninhabited. Apparently, the Pug moved this massive structure to its current location... somehow. Everything inside the station is empty and unpowered, from its large rooms to its long, silent corridors.`
 
 
+
+mission "Midnight Expansion: Quarg Wrecked Balaur"
+	landing
+	invisible
+	source "Querii'ka"
+	to offer
+		or
+			not "Randomize Midnight Expansion: Quarg Wrecked Balaur"
+			and
+				has "Randomize Midnight Expansion: Quarg Wrecked Balaur"
+				random < 35 - "quarg wrecked balaur deferred"
+	on offer
+		conversation
+			scene "outfit/large quarg thruster"
+			`This section of the ring stands out as it has the wreckage of an incredibly large Quarg ship jutting out of it. The ship must have been larger than anything else you've seen on your travels. Only some of the engines, at the rear of the ship, survived the crash. Do you want to salvage them?`
+			choice
+				`	(Salvage the engines.)`
+				`	(Don't salvage the engines.)`
+					defer
+			scene "outfit/large quarg steering"
+			`	These are larger than the engines you've seen on other Quarg ships. This ship had at least three sets of them installed! But two have deteriorated beyond repair, leaving only one set salvageable.`
+				decline
+	on defer
+		set "Randomize Midnight Expansion: Quarg Wrecked Balaur"
+		"quarg wrecked balaur deferred" ++
+	on decline
+		outfit "Large Graviton Thruster" 1
+		outfit "Large Graviton Steering" 1
+
+
+
 mission "Midnight Expansion: Quarg Warwyvern"
 	landing
 	invisible
 	source "Querii'ka"
 	to offer
+		has "Midnight Expansion: Quarg Wrecked Balaur: declined"
 		or
 			not "Randomize Midnight Expansion: Quarg Warwyvern"
 			and
@@ -343,7 +375,7 @@ event "add warwyvern to ringworld traffic"
 mission "Midnight Expansion: Quarg Warwyvern - Quarg Skydagger"
 	landing
 	name "Warwyvern: Skydagger"
-	description "Bring a Quarg Skydagger to <destination>"
+	description "Bring a Quarg Skydagger to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -426,7 +458,7 @@ mission "Midnight Expansion: Pirate Sales - Quarg Skydagger"
 mission "Midnight Expansion: Quarg Warwyvern - Quarg Anti-Missile"
 	landing
 	name "Warwyvern: Anti-Missile"
-	description "Bring a Quarg Anti-Missile to <destination>"
+	description "Bring a Quarg Anti-Missile to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -509,7 +541,7 @@ mission "Midnight Expansion: Pirate Sales - Quarg Anti-Missile"
 mission "Midnight Expansion: Quarg Warwyvern - Quarg Culverin"
 	landing
 	name "Warwyvern: Culverin"
-	description "Bring a Quarg Culverin to <destination>"
+	description "Bring a Quarg Culverin to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -592,7 +624,7 @@ mission "Midnight Expansion: Pirate Sales - Quarg Culverin"
 mission "Midnight Expansion: Quarg Warwyvern - Medium Graviton Steering"
 	landing
 	name "Warwyvern: Medium Graviton Steering"
-	description "Bring a Medium Graviton Steering to <destination>"
+	description "Bring a Medium Graviton Steering to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -652,7 +684,7 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Steering"
 mission "Midnight Expansion: Quarg Warwyvern - Medium Graviton Thruster"
 	landing
 	name "Warwyvern: Medium Graviton Thruster"
-	description "Bring a Medium Graviton Thruster to <destination>"
+	description "Bring a Medium Graviton Thruster to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -712,7 +744,7 @@ mission "Midnight Expansion: Heliarch Espionage - Medium Graviton Thruster"
 mission "Midnight Expansion: Quarg Warwyvern - Tachyon Core"
 	landing
 	name "Warwyvern: Tachyon Core"
-	description "Bring a Tachyon Core to <destination>"
+	description "Bring a Tachyon Core to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -787,7 +819,7 @@ mission "Midnight Expansion: Heliarch Scouting - Tachyon Core"
 mission "Midnight Expansion: Quarg Warwyvern - Singularity Core"
 	landing
 	name "Warwyvern: Singularity Core"
-	description "Bring a Singularity Core to <destination>"
+	description "Bring a Singularity Core to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -861,7 +893,7 @@ mission "Midnight Expansion: Heliarch Scouting - Singularity Core"
 mission "Midnight Expansion: Quarg Warwyvern - Nanotech Battery"
 	landing
 	name "Warwyvern: Nanotech Battery"
-	description "Bring a Nanotech Battery to <destination>"
+	description "Bring a Nanotech Battery to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -958,7 +990,7 @@ mission "Midnight Expansion: Heliarch Scouting - Nanotech Battery"
 mission "Midnight Expansion: Quarg Warwyvern - Infimum Shield Generator"
 	landing
 	name "Warwyvern: Infimum Shield Generator"
-	description "Bring a Infimum Shield Generator to <destination>"
+	description "Bring a Infimum Shield Generator to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -1041,7 +1073,7 @@ mission "Midnight Expansion: Midnight Market - Infimum Shield Generator 2"
 mission "Midnight Expansion: Quarg Warwyvern - Peripheral Repair Hub"
 	landing
 	name "Warwyvern: Peripheral Repair Hub"
-	description "Bring an Peripheral Repair Hub to <destination>"
+	description "Bring an Peripheral Repair Hub to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -1128,7 +1160,7 @@ mission "Midnight Expansion: Midnight Market - Peripheral Repair Hub 2"
 mission "Midnight Expansion: Quarg Warwyvern - Central Repair Hub"
 	landing
 	name "Warwyvern: Central Repair Hub"
-	description "Bring a Central Repair Hub to <destination>"
+	description "Bring a Central Repair Hub to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -1213,7 +1245,7 @@ mission "Midnight Expansion: Midnight Market - Central Repair Hub 2"
 mission "Midnight Expansion: Quarg Warwyvern - Intrusion Countermeasures"
 	landing
 	name "Warwyvern: Intrusion Countermeasures"
-	description "Bring a Intrusion Countermeasures to <destination>"
+	description "Bring a Intrusion Countermeasures to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -1251,7 +1283,7 @@ mission "Midnight Expansion: Angry Squirrels - Intrusion Countermeasures"
 mission "Midnight Expansion: Quarg Warwyvern - Quarg Ranseur"
 	landing
 	name "Warwyvern: Ranseur"
-	description "Bring a Quarg Ranseur to <destination>"
+	description "Bring a Quarg Ranseur to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Querii'ka"
 	to offer
 		has "Midnight Expansion: Quarg Warwyvern: active"
@@ -1353,13 +1385,6 @@ mission "Midnight Expansion: Quarg Warwyvern - Crew"
 		clear "Midnight Expansion: Quarg Warwyvern - Crew: offered"
 	on complete
 		dialog `You've brought the crew for the Quarg Warwyvern.`
-
-
-
-
-
-
-
 
 
 

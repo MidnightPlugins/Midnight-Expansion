@@ -390,7 +390,7 @@ mission "Midnight Expansion: Sestor Protoype"
 mission "Midnight Expansion: Sestor Banisher"
 	landing
 	name "Sestor Protoype: Banisher"
-	description "Bring a Korath Banisher to <destination>."
+	description "Bring a Korath Banisher to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -445,7 +445,7 @@ mission "Midnight Expansion: Sestor Banisher"
 mission "Midnight Expansion: Sestor Repeater"
 	landing
 	name "Sestor Protoype: Repeater Turret"
-	description "Bring a Korath Repeater Turret to <destination>."
+	description "Bring a Korath Repeater Turret to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -500,7 +500,7 @@ mission "Midnight Expansion: Sestor Repeater"
 mission "Midnight Expansion: Sestor Warder"
 	landing
 	name "Sestor Protoype: Warder"
-	description "Bring a Korath Warder to <destination>."
+	description "Bring a Korath Warder to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -555,7 +555,7 @@ mission "Midnight Expansion: Sestor Warder"
 mission "Midnight Expansion: Sestor Piercer"
 	landing
 	name "Sestor Protoype: Piercer Launcher"
-	description "Bring a Korath Piercer Launcher to <destination>."
+	description "Bring a Korath Piercer Launcher to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -610,7 +610,7 @@ mission "Midnight Expansion: Sestor Piercer"
 mission "Midnight Expansion: Sestor Plasma Core"
 	landing
 	name "Sestor Protoype: Triple Plasma Core"
-	description "Bring a Triple Plasma Core to <destination>."
+	description "Bring a Triple Plasma Core to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -665,7 +665,7 @@ mission "Midnight Expansion: Sestor Plasma Core"
 mission "Midnight Expansion: Sestor Core (Large)"
 	landing
 	name "Sestor Protoype: Systems Core (Large)"
-	description "Bring a Systems Core (Large) to <destination>."
+	description "Bring a Systems Core (Large) to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -720,7 +720,7 @@ mission "Midnight Expansion: Sestor Core (Large)"
 mission "Midnight Expansion: Sestor Core (Medium)"
 	landing
 	name "Sestor Protoype: Systems Core (Medium)"
-	description "Bring a Systems Core (Medium) to <destination>."
+	description "Bring a Systems Core (Medium) to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -775,7 +775,7 @@ mission "Midnight Expansion: Sestor Core (Medium)"
 mission "Midnight Expansion: Sestor Core (Small)"
 	landing
 	name "Sestor Protoype: Systems Core (Small)"
-	description "Bring a Systems Core (Small) to <destination>."
+	description "Bring a Systems Core (Small) to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -830,7 +830,7 @@ mission "Midnight Expansion: Sestor Core (Small)"
 mission "Midnight Expansion: Sestor Large Shunt"
 	landing
 	name "Sestor Protoype: Large Heat Shunt"
-	description "Bring a Large Heat Shunt to <destination>."
+	description "Bring a Large Heat Shunt to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -885,7 +885,7 @@ mission "Midnight Expansion: Sestor Large Shunt"
 mission "Midnight Expansion: Sestor Small Shunt"
 	landing
 	name "Sestor Protoype: Small Heat Shunt"
-	description "Bring a Small Heat Shunt to <destination>."
+	description "Bring a Small Heat Shunt to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -940,7 +940,7 @@ mission "Midnight Expansion: Sestor Small Shunt"
 mission "Midnight Expansion: Sestor Control Transceiver"
 	landing
 	name "Sestor Protoype: Control Transceiver"
-	description "Bring a Control Transceiver to <destination>."
+	description "Bring a Control Transceiver to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
@@ -995,7 +995,7 @@ mission "Midnight Expansion: Sestor Control Transceiver"
 mission "Midnight Expansion: Sestor Hyperdrive"
 	landing
 	name "Sestor Protoype: Hyperdrive"
-	description "Bring a Hyperdrive to <destination>."
+	description "Bring a Hyperdrive to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
