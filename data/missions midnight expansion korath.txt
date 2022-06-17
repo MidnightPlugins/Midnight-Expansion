@@ -51,7 +51,7 @@ mission "Midnight Expansion: Korath Warlord"
 			branch previousoffer
 				has "Midnight Expansion: Korath Warlord: declined"
 
-			`	You see Taely at the cafeteria, but she's not eating. When she notices you, she waves you over. She signs, "Captain <last>, you're just the person I wanted to see!"`
+			`	You see Taely at the cafeteria, but she's not eating. When she notices you, she waves you over. She signs, "Captain <last>, you are just the person I wanted to see!"`
 			choice
 				`	"Can I help you with something?"`
 					goto help
@@ -67,16 +67,16 @@ mission "Midnight Expansion: Korath Warlord"
 			
 			label help
 			scene "thumbnail/AESmisc kar_ik_vot_637"
-			`	"While passing through <waypoints> a science team noted what looked like new warships being tested by the Korath." She shows you a picture. "Unfortunately they couldn't get more data without revealing their presence."`
+			`	"While passing through <waypoints> a science team noted what looked like new warships being tested by the Korath." She shows you a picture. "Unfortunately they could not get more data without revealing their presence."`
 			
 			choice
 				`	"You want me to scan one?"`
 				
-			`	She signs, "I'd like to suggest something more bold. Can you steal one and bring it back here? I want to get a close look at it. You can keep it once we're done studying it." A prototype Korath warship would be a nice catch. On the other hand, you have no idea how dangerous it is.`
+			`	She signs, "I would like to suggest something more bold. Can you steal one and bring it back here? I want to get a close look at it. You can keep it once we are done studying it." A prototype Korath warship would be a nice catch. On the other hand, you have no idea how dangerous it is.`
 			choice
 				`	"Sure, I can steal one."`
 					accept
-				`	"I'm not sure I want to take the risk."`
+				`	"I am not sure I want to take the risk."`
 					decline
 
 			label previousoffer
@@ -85,14 +85,14 @@ mission "Midnight Expansion: Korath Warlord"
 			choice
 				`	"Sure, I can steal one."`
 					accept
-				`	"I'm still not sure I want to take the risk."`
+				`	"I am still not sure I want to take the risk."`
 					decline
 	on decline
 		clear "Midnight Expansion: Korath Warlord: offered"
 	on enter "Kor Ak'Mari"
 		conversation
 			scene "thumbnail/AESmisc kar_ik_vot_637"
-			`You find one of the new warships testing its weapons an asteroids while a Dredger collects the scraps. The warship turns to fight you!`
+			`You find one of the new warships testing its weapons on asteroids while a Dredger collects the scraps. The warship turns to fight you!`
 	npc
 		government "Korath"
 		system "Kor Ak'Mari"
@@ -135,9 +135,8 @@ ship "Korath Warlord" "Korath Warlord (Prototype)"
 event "korath warlord development"
 
 mission "Midnight Expansion: Korath Warlord Vengeance"
-	deadline
 	name "Korath Warship"
-	description "A Remnant fleet was destroyed at <waypoints>. Investigate and eliminate the threat. Protect and return the Dark Vengeance to <destination> by date."
+	description "A Remnant fleet was destroyed at <waypoints>. Investigate and eliminate the threat. Protect and return the Dark Vengeance to <destination>."
 	source "Caelian"
 	waypoint "Stercutus"
 	to offer
@@ -148,7 +147,7 @@ mission "Midnight Expansion: Korath Warlord Vengeance"
 			scene "thumbnail/AESmisc kar_ik_vot_637"
 			`	The mood in the spaceport is grim. When you ask about it, the air traffic controller informs you that a Remnant fleet that had gone off to fight a Korath raid didn't return. Not long after, Prefect Chilia runs up to you. "It is very fortunate you are here now," he sings. "We would be grateful if you were to help finish what our fallen failed to do." Will you avenge the fallen Remnant?`
 			choice
-				`	"I'll finish the job."`
+				`	"I will finish the job."`
 				`	"Sorry, this sounds too risky."`
 					decline
 			scene "ship/prefect's albatross"
@@ -209,7 +208,7 @@ mission "Midnight Expansion: Korath Warlord Syndication"
 	npc kill
 		government "Korath"
 		system
-			distance 1 3
+			distance 1 2
 		personality target waiting staying vindictive
 		fleet
 			names "korath"
