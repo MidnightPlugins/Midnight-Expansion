@@ -784,7 +784,8 @@ mission "Midnight Expansion: Heliarch Scouting - Tachyon Core"
 				defer
 	on defer
 		set "Midnight Expansion: Heliarch Scouting - Tachyon Core: deferred"
-
+	on enter Enif
+		dialog `The Heliarch ask you to wait while they conduct their observations...`
 	npc
 		government "Quarg"
 		system Enif
@@ -859,7 +860,8 @@ mission "Midnight Expansion: Heliarch Scouting - Singularity Core"
 				defer
 	on defer
 		set "Midnight Expansion: Heliarch Scouting - Singularity Core: deferred"
-
+	on enter "Hevru Hai"
+		dialog `The Heliarch ask you to wait while they conduct their observations...`
 	npc
 		government "Quarg"
 		system "Hevru Hai"
@@ -933,7 +935,8 @@ mission "Midnight Expansion: Heliarch Scouting - Nanotech Battery"
 				defer
 	on defer
 		set "Midnight Expansion: Heliarch Scouting - Nanotech Battery: deferred"
-
+	on enter "Dokdobaru"
+		dialog `The Heliarch ask you to wait while they conduct their observations...`
 	npc
 		to spawn
 			not "event: wanderers: kor mereti friendly"
@@ -955,7 +958,21 @@ mission "Midnight Expansion: Heliarch Scouting - Nanotech Battery"
 		government "Invasive Predator"
 		system "Dokdobaru"
 		personality staying disables unconstrained mute
-		fleet "Large Blight Shadow" 3
+		fleet "Large Blight Shadow"
+	npc
+		to spawn
+			"Scrapyard Threat Level" >= 5
+		government "Invasive Predator"
+		system "Dokdobaru"
+		personality staying disables unconstrained mute
+		fleet "Large Blight Shadow"
+	npc
+		to spawn
+			"Scrapyard Threat Level" >= 10
+		government "Invasive Predator"
+		system "Dokdobaru"
+		personality staying disables unconstrained mute
+		fleet "Large Blight Shadow"
 	npc
 		government "Quarg"
 		system "Dokdobaru"
