@@ -1069,7 +1069,7 @@ mission "Midnight Expansion: Sestor Scrap Metal"
 		conversation
 			scene "outfit/AESmisc vector_engine_reality_class"
 
-			`	You've got everthing but the engines. You've never actually seen Vector Engines on any of the Korath ships you've encountered. Perhaps they don't exist yet. But from the schematics, you can try to make them if you had the spare parts. There's a lot of Scrap Metal floating around Sestor space these days...`
+			`	You've got everthing but the engines. You've never actually seen Vector Engines on any of the Korath ships you've encountered. Perhaps they don't exist yet. But from the schematics, you can try to make them if you had the spare parts. There's a lot of Scrap Metal floating around Sestor space these days... One hundred pieces should be enough.`
 				accept
 								
 	on complete
