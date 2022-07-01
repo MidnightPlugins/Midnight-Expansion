@@ -1483,3 +1483,25 @@ event "kor efret forager sales"
 
 
 
+mission "Midnight Expansion: Forager Tormentor Upgrade"
+	landing
+	invisible
+	to offer
+		has "event: efret salvage tormentor"
+	on offer
+		event "forager tormentor upgrade"
+		fail
+
+event "forager tormentor upgrade"
+	fleet "Kor Efret Miners"
+		add variant 1
+			"Korath Forager (Tormentor)"
+		add variant 1
+			"Korath Forager"
+			"Korath Forager (Tormentor)"
+		add variant 1
+			"Korath Forager"
+			"Korath Forager (Tormentor)" 2
+		add variant 1
+			"Korath Forager" 2
+			"Korath Forager (Tormentor)"
