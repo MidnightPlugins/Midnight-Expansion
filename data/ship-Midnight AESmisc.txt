@@ -301,6 +301,20 @@ ship "Korath Forager"
 	description `Originally designed as a military scout, the Kor Efret have repurposed these interceptors for mining asteroids.`
 
 
+ship "Korath Forager" "Korath Forager (Tormentor)"
+	outfits
+		"Korath Tormentor" 2
+
+		"Generator (Furnace Class)"
+		"Systems Core (Small)"
+		"Fuel Processor"
+		"Cargo Expansion"
+
+		"Steering (Asteroid Class)"
+		"Thruster (Asteroid Class)"
+		Hyperdrive
+
+
 
 # This ship was derived from the Quarg Rhea.
 # This ship's sprite and thumbnail were derived from the Balaur sprite/thumbnail.
