@@ -1133,12 +1133,13 @@ mission "Midnight Expansion: Mereti Trading Platinum"
 		government "Wanderer"
 		not attributes "korath"
 	to offer
+		"reputation: Kor Mereti" >= 0
 		has "event: wanderers: sestor eliminated"
 		or
 			not "Randomize Midnight Expansion: Mereti Trading"
 			and
 				has "Randomize Midnight Expansion: Mereti Trading"
-				random < 15
+				random < 5 - "mereti trading"
 	on offer
 		set "Randomize Midnight Expansion: Mereti Trading"
 		conversation
@@ -1205,6 +1206,7 @@ mission "Midnight Expansion: Mereti Trading Platinum"
 	on complete
 		set "Randomize Midnight Expansion: Mereti Trading"
 		outfit "Platinum" 100 
+		"mereti trading" ++
 		conversation
 			scene "outfit/harvested platinum"
 			`Upon arrival, the automaton transfers 100 tons of Platinum to your ship. Ironically, one of the most advanced civilizations in the galaxy is using one of the most primitive forms of payment. Hopefully you have enough cargo space to hold it all.`
@@ -1240,9 +1242,10 @@ mission "Midnight Expansion: Mereti Trading Gold"
 	destination
 		government "Wanderer"
 		not attributes "korath"
+		"reputation: Kor Mereti" >= 0
 	to offer
 		has "Midnight Expansion: Mereti Trading Platinum: done"
-		random < 20
+		random < 5
 	on offer
 		conversation
 			scene "thumbnail/AESmisc model_1024"
@@ -1292,6 +1295,7 @@ mission "Midnight Expansion: Mereti Trading Gold"
 		dialog `You've arrived at <planet>, but <npc> hasn't arrived! Return to orbit and search for it.`
 	on complete
 		outfit "Gold" 100 
+		"mereti trading" ++
 		conversation
 			scene "outfit/harvested gold"
 			`Upon arrival, the automaton transfers 100 tons of Gold to your ship. Ironically, one of the most advanced civilizations in the galaxy is using one of the most primitive forms of payment. Hopefully you have enough cargo space to hold it all.`
@@ -1308,7 +1312,8 @@ mission "Midnight Expansion: Mereti Trading Silver"
 		not attributes "korath"
 	to offer
 		has "Midnight Expansion: Mereti Trading Platinum: done"
-		random < 25
+		random < 5 + "mereti trading"
+		"reputation: Kor Mereti" >= 0
 	on offer
 		conversation
 			scene "thumbnail/AESmisc model_1024"
@@ -1358,6 +1363,7 @@ mission "Midnight Expansion: Mereti Trading Silver"
 		dialog `You've arrived at <planet>, but <npc> hasn't arrived! Return to orbit and search for it.`
 	on complete
 		outfit "Silver" 100 
+		"mereti trading" ++
 		conversation
 			scene "outfit/harvested silver"
 			`Upon arrival, the automaton transfers 100 tons of Silver to your ship. Ironically, one of the most advanced civilizations in the galaxy is using one of the most primitive forms of payment. Hopefully you have enough cargo space to hold it all.`
@@ -1374,7 +1380,8 @@ mission "Midnight Expansion: Mereti Trading Copper"
 		government "Kor Mereti"
 	to offer
 		has "Midnight Expansion: Mereti Trading Platinum: done"
-		random < 30
+		random < 5 + "mereti trading"
+		"reputation: Kor Mereti" >= 0
 	on offer
 		conversation
 			scene "thumbnail/AESmisc model_1024"
@@ -1432,10 +1439,69 @@ mission "Midnight Expansion: Mereti Trading Copper"
 	on complete
 		outfit "Copper" 100 
 		"reputation: Kor Mereti" += 8
+		"mereti trading" --
 		conversation
 			scene "outfit/harvested copper"
 			`Upon arrival, the automaton sends a message of gratitude and transfers 100 tons of Copper to your ship. Ironically, one of the most advanced civilizations in the galaxy is using one of the most primitive forms of payment. Hopefully you have enough cargo space to hold it all.`
-			
+
+mission "Midnight Expansion: Mereti 88:88:88:8"
+	landing
+	name "88:88:88:8"
+	description "The <npc> disappeared near <waypoints>. Find and rescue that ship, then escort it back to <destination>."
+	source
+		government "Kor Mereti"
+	waypoint "Asikafarnut"
+	to offer
+		"reputation: Kor Mereti" > 0
+		( "Midnight Expansion: Mereti Trading Platinum: done" + "Midnight Expansion: Mereti Trading Gold: done" + "Midnight Expansion: Mereti Trading Silver: done" + "Midnight Expansion: Mereti Trading Copper: done" ) >= 4
+		has "event: Blight Shadow Infestation"
+		random < 32
+	on offer
+		conversation
+			scene "outfit/unknown"
+			`You receive a message from the Mereti indicating that the <npc>, one of their new Model 1024 ships, disappeared near <waypoints>.`
+			choice
+				`	(Offer to search for the <npc>.)`
+					accept
+				`	(Don't get involved.)`
+					decline
+	on enter Makferuti
+		conversation
+			scene "thumbnail/AESmisc model_1024"		
+			`The 88:88:88:8 is here, but is in need of assistance!`
+	npc assist accompany save
+		government "Kor Mereti"
+		system Makferuti 
+		personality target derelict timid opportunistic
+		ship "Model 1024" "88:88:88:8"
+		dialog `The <npc> is operational. Escort it back to <destination>.`
+	on complete
+		give ship "Model 1024" "88:88:88:8"
+		"reputation: Kor Mereti" += 8
+		conversation
+			scene "thumbnail/AESmisc model_1024"		
+			`The 88:88:88:8 is sending a message indicating it wishes to join your fleet. Maybe this is a form of gratitude for the rescue.`
+		
+mission "Midnight Expansion: Damnation 1024"
+	landing
+	invisible
+	source
+		government "Wanderer"
+	destination "Esperaktu Station"
+	to offer
+		has "event: node 8 processor Activated"
+		has "event: Mereti deploy 1024"
+	npc kill
+		government "Kor Mereti (Hostile)"
+		system Feroteri
+		personality waiting staying heroic
+		fleet
+			names "kor mereti"
+			variant
+				"Model 1024"
+	to fail
+		has "Scrapyard Damnation 3: done"
+	
 
 
 mission "Midnight Expansion: Kor Efret Forager Sales"
