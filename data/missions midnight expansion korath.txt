@@ -1242,8 +1242,8 @@ mission "Midnight Expansion: Mereti Trading Gold"
 	destination
 		government "Wanderer"
 		not attributes "korath"
-		"reputation: Kor Mereti" >= 0
 	to offer
+		"reputation: Kor Mereti" >= 0
 		has "Midnight Expansion: Mereti Trading Platinum: done"
 		random < 5
 	on offer
@@ -1311,9 +1311,9 @@ mission "Midnight Expansion: Mereti Trading Silver"
 		government "Wanderer"
 		not attributes "korath"
 	to offer
+		"reputation: Kor Mereti" >= 0
 		has "Midnight Expansion: Mereti Trading Platinum: done"
 		random < 5 + "mereti trading"
-		"reputation: Kor Mereti" >= 0
 	on offer
 		conversation
 			scene "thumbnail/AESmisc model_1024"
@@ -1379,9 +1379,9 @@ mission "Midnight Expansion: Mereti Trading Copper"
 	destination
 		government "Kor Mereti"
 	to offer
+		"reputation: Kor Mereti" >= 0
 		has "Midnight Expansion: Mereti Trading Platinum: done"
 		random < 5 + "mereti trading"
-		"reputation: Kor Mereti" >= 0
 	on offer
 		conversation
 			scene "thumbnail/AESmisc model_1024"
@@ -1502,7 +1502,22 @@ mission "Midnight Expansion: Damnation 1024"
 	to fail
 		has "Scrapyard Damnation 3: done"
 	
-
+mission "Midnight Expansion: Devourer 1024"
+	landing
+	invisible
+	to offer
+		has "Scrapyard Damnation Epilogue: done"
+		not "Scrapyard Devourer (Neutral) 2: done"
+	npc kill
+		government "Kor Scrappers"
+		system "Eneremprukt"
+		personality waiting staying mining harvests plunders uninterested
+		fleet
+			names "korath"
+			variant
+				"Model 1024"
+	to fail
+		has "Scrapyard Devourer (Neutral) 2: done"
 
 mission "Midnight Expansion: Kor Efret Forager Sales"
 	landing
