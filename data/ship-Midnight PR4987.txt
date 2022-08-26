@@ -75,6 +75,7 @@ ship "Korath Scouter"
 ship "Korath World Crafter"
 	sprite "ship/Midnight PR4987 korath refuge/Midnight PR4987 korath refuge"
 	thumbnail "thumbnail/PR4987 korath refuge"
+	"swizzle" 0
 	attributes
 		category "Transport"
 		cost 31970000
@@ -155,6 +156,7 @@ ship "Korath World Crafter"
 ship "Korath World Forger"
 	sprite "ship/Midnight PR4987 korath refabricator"
 		rewind
+	"swizzle" 0
 	thumbnail "thumbnail/PR4987 korath refabricator"
 	attributes
 		category "Heavy Freighter"
@@ -244,6 +246,7 @@ ship "Korath World Shaper"
 		"frame rate" .25
 		delay 1
 	thumbnail "thumbnail/PR4987 korath haven"
+	"swizzle" 0
 	attributes
 		category "Transport"
 		cost 110760000
