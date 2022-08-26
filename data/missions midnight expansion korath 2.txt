@@ -17,7 +17,7 @@ fleet "Korath Scouter"
 	fighters "korath"
 	cargo 1
 	personality
-		timid surveillance forbearing coward
+		timid surveillance fleeing uninterested
 	variant 1
 		"Korath Scouter"
 		"Korath Chaser"
