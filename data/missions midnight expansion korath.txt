@@ -13,6 +13,7 @@
 
 mission "Midnight Expansion: Model 8 deployments."
 	landing
+	invisible
 	source
 		attributes "korath"
 		attributes "uninhabited"
@@ -1501,7 +1502,7 @@ mission "Midnight Expansion: Damnation 1024"
 				"Model 1024"
 	to fail
 		has "Scrapyard Damnation 3: done"
-	
+
 mission "Midnight Expansion: Devourer 1024"
 	landing
 	invisible
