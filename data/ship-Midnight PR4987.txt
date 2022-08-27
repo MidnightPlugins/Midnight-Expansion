@@ -88,9 +88,10 @@ ship "Korath World Crafter"
 		"heat dissipation" .6
 		"fuel capacity" 1000
 		"cargo space" 528
-		"outfit space" 1005
-		"weapon capacity" 426
+		"outfit space" 1022
+		"weapon capacity" 443
 		"engine capacity" 192
+		"integrated systems" -1
 		weapon
 			"blast radius" 1600
 			"shield damage" 16000
@@ -98,6 +99,8 @@ ship "Korath World Crafter"
 			"hit force" 24000
 
 	outfits
+		"Korath Waste Launcher"
+		"Korath Waste" 96
 		"Korath Banisher" 4
 		"Korath Shocker Turret" 2
 		"Korath Warder" 4
@@ -129,6 +132,7 @@ ship "Korath World Crafter"
 	"steering engine" 171 235
 		left
 		zoom .6
+	gun 0 0
 	turret -134 -198  "Korath Banisher"
 	turret 134 -198 "Korath Banisher" 
 	turret -158 -187 "Korath Warder"
@@ -170,15 +174,18 @@ ship "Korath World Forger"
 		"heat dissipation" .65
 		"fuel capacity" 1000
 		"cargo space" 818
-		"outfit space" 1169
-		"weapon capacity" 559
+		"outfit space" 1186
+		"weapon capacity" 576
 		"engine capacity" 192
+		"integrated systems" -1
 		weapon
 			"blast radius" 1800
 			"shield damage" 18000
 			"hull damage" 9000
 			"hit force" 27000
 	outfits
+		"Korath Waste Launcher"
+		"Korath Waste" 96
 		"Korath Warder" 4
 		"Korath Shock-Strike" 3
 		"Korath Banisher" 4
@@ -213,6 +220,7 @@ ship "Korath World Forger"
 	"steering engine" 105 281
 		left
 		zoom 0.7
+	gun 0 0 "Korath Waste Launcher"
 	turret -78 -220 "Korath Repeater Turret"
 	turret 78 -220 "Korath Repeater Turret"
 	turret -176 -120 "Korath Warder"
@@ -259,15 +267,18 @@ ship "Korath World Shaper"
 		"heat dissipation" .7
 		"fuel capacity" 1000
 		"cargo space" 1020
-		"outfit space" 2053
-		"weapon capacity" 888
+		"outfit space" 2070
+		"weapon capacity" 905
 		"engine capacity" 229
+		"integrated systems" -1
 		weapon
 			"blast radius" 2400
 			"shield damage" 24000
 			"hull damage" 12000
 			"hit force" 36000
 	outfits
+		"Korath Waste Launcher"
+		"Korath Waste" 96
 		"Korath Warder" 6
 		"Korath Repeater Turret" 6
 		"Korath Banisher" 6
@@ -305,6 +316,7 @@ ship "Korath World Shaper"
 		left
 	"steering engine" 409 132 0.8
 		left
+	gun 0 0 "Korath Waste Launcher"
 	turret -47 -404 "Korath Repeater Turret"
 	turret 47 -404 "Korath Repeater Turret"
 	turret -131 -349 "Korath Banisher"

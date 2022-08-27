@@ -616,3 +616,21 @@ event "ember world shaper end"
 	system "Levana"
 		remove fleet "Korath Raid"
 
+
+
+mission "Korath Waste Disposal"
+	job
+	name "Korath Waste Disposal"
+	description "Dispose of 96 tons of industrial waste. You might be able to put this to good use..."
+	source
+		government "Kor Efret" "Korath" "Kor Mereti"
+	to offer
+		random < 50
+	on offer
+		require "Korath Waste Launcher"
+	on accept
+		outfit "Korath Waste" 96
+		conversation
+			scene "outfit/Korath Waste Launcher"
+			`Custody of the industrial waste is transferred to you. You can think of a good way to dispose of it...`
+		fail

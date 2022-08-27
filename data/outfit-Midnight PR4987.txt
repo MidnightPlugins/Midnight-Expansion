@@ -123,6 +123,72 @@ outfit "Korath Shock-Strike"
 
 
 
+outfit "Korath Waste"
+	category "Ammunition"
+	cost -2000
+	thumbnail "outfit/korath waste"
+	"mass" .0625
+	"korath waste capacity" -1
+	description "This irradiated industrial waste is a byproduct of Korath manufacturing processes."
+
+outfit "Korath Waste Launcher"
+	category "Secondary Weapons"
+	cost 393000
+	thumbnail "outfit/PR4987 shunt bomb launcher"
+	"mass" 11
+	"outfit space" -17
+	"weapon capacity" -17
+	"energy capacity" 50
+	"gun ports" -1
+	"korath waste capacity" 96
+	"integrated systems" 1
+	"reinstall" -1
+	weapon
+		sprite "projectile/korath waste launcher"
+			"frame rate" 7
+		sound "minelayer"
+		icon "icon/Midnight korath waste"
+		ammo "Korath Waste"
+		"hit effect" "large explosion"
+		"die effect" "bolide" 20
+		"submunition" "Korath Waste Submunition" 15
+		"inaccuracy" 1
+		"velocity" 10
+		"lifetime" 20
+		"reload" 90
+		"firing energy" 36
+		"firing heat" 107
+	description "The factories on larger Korath world ships produce a tremendous amount of waste. This weapon takes the most dangerous irradiated waste and fires it as a projectile that is very effective against shields."
+
+outfit "Korath Waste Submunition"
+	weapon
+		sprite "projectile/korath waste"
+			"frame rate" 1
+			"no repeat"
+		"hit effect" "small explosion"
+		"die effect" "Midnight korath waste" 5
+		"inaccuracy" 360
+		"velocity" .1
+		"random velocity" 1
+		"lifetime" 1000
+		"random lifetime" 60
+		"acceleration" .00001
+		"drag" .05
+		"shield damage" 30
+		"hull damage" 10
+		"missile strength" 22
+
+effect "Midnight korath waste"
+	sprite "effect/Midnight korath waste"
+		"no repeat"
+		"frame rate" 4
+	"lifetime" 31
+	"random angle" 360
+	"random spin" 5
+	"random velocity" 2.5
+	"velocity scale" .8
+
+
 outfit "Fuel Refiner"
 	category "Systems"
 	cost 1000000
