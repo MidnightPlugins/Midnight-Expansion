@@ -155,11 +155,14 @@ ship "Korath World Crafter"
 	"final explode" "final explosion large"
 	description "The Korath World Crafter manufactures parts, medicine, medical equipment, and sufficient food for bare sustenance. Onboard, there are incubators, nurseries, and hospitals."
 
+ship "Korath World Crafter" "Kor Efret World Crafter"
+	"swizzle" 4
 
 
 ship "Korath World Forger"
 	sprite "ship/Midnight PR4987 korath refabricator"
 		rewind
+		delay 1
 	"swizzle" 0
 	thumbnail "thumbnail/PR4987 korath refabricator"
 	attributes
@@ -339,18 +342,18 @@ ship "Korath World Shaper"
 	turret 183 330 "Korath Banisher"
 	turret -11 397 "Korath Warder"
 	turret 11 397 "Korath Warder"
-	fighter -241 -129 under
-	fighter -231 -129 under
+	fighter -138 -266.5 over
+	fighter 135.5 -260 over
+	fighter 156 -174.5 over
+	fighter -128 -105.5 over
+	fighter -82 115 over
+	fighter 38.5 125 over
+	fighter -93.5 183.5 over
+	fighter -50 256 over
 	fighter -221 -129 under
+	fighter 221 -129 under
 	fighter -211 -129 under
-	fighter -201 -129 under
-	fighter -191 -129 under
-	fighter  241 -129 under
-	fighter  231 -129 under
-	fighter  221 -129 under
-	fighter  211 -129 under
-	fighter  201 -129 under
-	fighter  191 -129 under
+	fighter 211 -129 under
 	explode "tiny explosion" 90
 	explode "small explosion" 120
 	explode "medium explosion" 110

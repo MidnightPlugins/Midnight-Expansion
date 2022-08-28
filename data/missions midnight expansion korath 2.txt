@@ -252,7 +252,7 @@ mission "Midnight Expansion: Kor Efret World Crafter Skeruto"
 			cargo 10
 			outfitters "Korath Basics"
 			variant
-				"Korath World Crafter"
+				"Kor Efret World Crafter"
 		conversation
 			apply
 				"reputation: Kor Efret" <?= -1000

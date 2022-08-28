@@ -68,6 +68,12 @@ ship "Korath Warlord"
 	engine 0 335
 	engine -31 349 .6
 	engine 31 349 .6
+	"reverse engine" -79 38 .06
+	"reverse engine" -79 38 .06
+	"steering engine" -78 221
+		right
+	"steering engine" 78 221
+		left
 	gun -11 -323 "Korath Fire-Lance"
 	gun 11 -323 "Korath Fire-Lance"
 	gun -22 -272 "Korath Disruptor Gun"
@@ -127,6 +133,7 @@ ship "Korath Warlord" "Korath Warlord (Artillery)"
 # This ship was derived from the "Kar Ik Vot 711"
 ship "Prateskar 711"
 	sprite "ship/AESmisc kar_ik_vot_711"
+		rewind
 	thumbnail "thumbnail/AESmisc kar_ik_vot_711"
 	attributes
 		category "Heavy Warship"
@@ -174,6 +181,12 @@ ship "Prateskar 711"
 		over
 	engine -31.5 365.5 1.2
 	engine 31.5 365.5 1.2
+	"reverse engine" -105 40 .6
+	"reverse engine" 105 40 .6
+	"steering engine" -57.5 297
+		over
+	"steering engine" 57.5 297
+		over
 	turret -50.5 -259.5 "Korath Repeater Turret"
 	turret 50.5 -259.5 "Korath Repeater Turret"
 	turret -52 -235.5 "Korath Repeater Turret"
@@ -244,6 +257,10 @@ ship "Model 1024"
 		"Triple Plasma Core"
 	engine -149 97
 	engine 149 97
+	"steering engine" -149 97
+		right
+	"steering engine" 149 97
+		left
 	gun -22 -143 "Korath Disruptor Gun"
 	gun 22 -143 "Korath Slicer"
 	turret 91 -102 "Korath Slicer Turret"
@@ -361,6 +378,20 @@ ship "Quarg Seakraken"
 	engine 38 304
 	engine 0 315
 	gun 0 -326
+	"reverse engine" -80 -75 .6
+	"reverse engine" 80 -75 .6
+	"steering engine" -31 -207 .6
+		angle 60
+		right
+	"steering engine" 31 -207 .6
+		angle 300
+		left
+	"steering engine" -99 131 .6
+		angle 155
+		left
+	"steering engine" 99 131 .6
+		angle 205
+		right
 	turret -31 -207 "Quarg Skydagger"
 	turret 31 -207 "Quarg Skydagger"
 	turret 0 -156 "Quarg Anti-Missile"

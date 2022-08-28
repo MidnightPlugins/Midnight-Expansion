@@ -207,7 +207,7 @@ mission "Midnight Expansion: Quarg Skyswift 2"
 		clear "Midnight Expansion: Quarg Skyswift 2: offered"
 		payment 1000000
 		dialog `You hand the scanner data to a group of scientists in exchange for <payment>. "Hopefully this data will shed some light on the secrets behind the Quarg and their ringworlds."`
-		
+
 
 
 mission "Midnight Expansion: Restore Querii'ka"
