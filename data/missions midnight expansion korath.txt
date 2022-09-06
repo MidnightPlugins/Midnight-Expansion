@@ -452,8 +452,8 @@ mission "Midnight Expansion: Sestor Repeater"
 	on complete
 		outfit "Korath Repeater Turret" -1
 		conversation
-			scene "outfit/repeater"
-			`	You installed the Korath Repeater and are one step closer to completing the prototype!`
+			scene "outfit/repeater turret"
+			`	You installed the Korath Repeater Turret and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
 		fail "Midnight Expansion: Sestor Banisher"
