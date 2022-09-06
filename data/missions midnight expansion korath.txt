@@ -39,6 +39,7 @@ event "Model 8 deployments"
 
 
 mission "Midnight Expansion: Korath Warlord"
+	minor
 	name "Korath Warships"
 	description "Remnant scouts report that the Korath are testing new warships at <waypoints>. Steal one and bring it back to <destination>. You may keep the ship after the Remnant study it."
 	source "Viminal"
@@ -136,6 +137,7 @@ ship "Korath Warlord" "Korath Warlord (Prototype)"
 event "korath warlord development"
 
 mission "Midnight Expansion: Korath Warlord Vengeance"
+	minor
 	name "Korath Warship"
 	description "A Remnant fleet was destroyed at <waypoints>. Investigate and eliminate the threat. Protect and return the Dark Vengeance to <destination>."
 	source "Caelian"
@@ -1123,6 +1125,93 @@ mission "Midnight Expansion: Sestor Scrap Metal"
 
 
 
+mission "Midnight Expansion: Sestor Protoype Rogue"
+	landing
+	name "Rogue Prateskar"
+	description "A rogue Prateskar 711 is on the loose. Track it down and eliminate it before it causes too much damage."
+	source "Sestor Ikfar"
+	to offer
+		has "event: Blight Shadow Infestation"
+		has "Midnight Expansion: Sestor Protoype: done"
+		random < 5
+	on offer
+		conversation
+			scene "thumbnail/AESmisc kar_ik_vot_711"
+			`After searching the abandoned factories, it seems you've found enough materials to craft another Prateskar 711. Give it a try?`
+			choice
+				`	(Try making another Prateskar 711.)`
+				`	(Do not make another Prateskar 711.)`
+					defer
+			scene "ship/AESmisc kar_ik_vot_711"
+			`	You assemble the pieces and craft another Vector Engine... The machines put the parts together and the form of a Prateskar 711 takes shape! But as it rolls off the assembly line, the ship takes flight. It's a rogue automaton!`
+				accept
+	on enter
+		"Scrapyard Threat Level" ++
+		dialog `Hopefully the rogue Prateskar 711 hasn't gotten too far. There's no telling how much trouble it can cause.`
+	npc kill
+		government "Kor Sestor"
+		system Silikatakfar
+		personality waiting uninterested timid
+		fleet
+			names "kor sestor"
+			cargo 0
+			variant
+				"Prateskar 711"
+	on abort
+		clear "Midnight Expansion: Sestor Protoype Rogue: offered"
+
+mission "Midnight Expansion: Sestor Protoype Scrapper"
+	landing
+	invisible
+	source "Sestor Ikfar"
+	to offer
+		has "event: Blight Shadow Infestation"
+		has "Midnight Expansion: Sestor Protoype Rogue: done"
+		random < 5
+	on offer
+		conversation
+			scene "thumbnail/AESmisc kar_ik_vot_711"
+			`While exploring the abandoned factories, the silence is broken by the roar of Vector Engines! It seems some scrappers have gotten their hands on a Prateskar 711.`
+				accept
+	on enter
+		dialog `The scrappers have taken their Prateskar 711 and left the system...`
+	npc kill
+		government "Kor Scrappers (Hostile)"
+		system Mesuket
+		personality target waiting uninterested plunders harvests
+		fleet
+			names "korath"
+			fighters "korath"
+			cargo 3
+			commodities Plastic Equipment Industrial Electronics "Heavy Metals"
+			variant
+				"Korath Dredger (Scrapper)"
+				"Prateskar 711"
+				"Tek Far 78 - Osk"
+				"Tek Far 71 - Lek"
+				"Far Osk 27" 13
+				"Far Lek 14" 10
+			variant
+				"Korath Dredger (Scrapper)"
+				"Prateskar 711"
+				"Kar Ik Vot 349" 2
+				"Far Osk 27" 4
+			variant
+				"Korath Dredger (Scrapper)"
+				"Prateskar 711"
+				"Met Par Tek 53" 2
+				"Met Par Tek 53 (Sniper)" 2
+				"Far Osk 27" 4
+			variant
+				"Korath Dredger (Scrapper)"
+				"Prateskar 711"
+				"Tek Far 109" 2
+				"Far Lek 14" 18
+				"Far Osk 27" 18
+	on complete
+		clear "Midnight Expansion: Sestor Protoype Scrapper: offered"
+
+
 mission "Midnight Expansion: Mereti Trading Platinum"
 	landing
 	repeat
@@ -1479,6 +1568,7 @@ mission "Midnight Expansion: Mereti 88:88:88:8"
 	on complete
 		give ship "Model 1024" "88:88:88:8"
 		"reputation: Kor Mereti" += 8
+		"Scrapyard Threat Level" ++
 		conversation
 			scene "thumbnail/AESmisc model_1024"		
 			`The 88:88:88:8 is sending a message indicating it wishes to join your fleet. Maybe this is a form of gratitude for the rescue.`

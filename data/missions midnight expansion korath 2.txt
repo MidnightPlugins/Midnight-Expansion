@@ -631,6 +631,6 @@ mission "Korath Waste Disposal"
 	on accept
 		outfit "Korath Waste" 96
 		conversation
-			scene "outfit/Korath Waste Launcher"
+			scene "outfit/PR4987 shunt bomb launcher"
 			`Custody of the industrial waste is transferred to you. You can think of a good way to dispose of it...`
 		fail
