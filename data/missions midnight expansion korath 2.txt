@@ -267,10 +267,10 @@ fleet "Korath Scrapper Raid"
 	fighters "korath"
 	outfitters "Korath Basics"
 	variant 2
-		"Korath Raider (Ember)"
+		"Korath Raider (Scrapyard)"
 		"Korath Chaser" 2
 	variant 2
-		"Korath Raider (Ember)"
+		"Korath Raider (Scrapyard)"
 		"Far Osk 27" 2
 	variant 1
 		"Korath Dredger"
@@ -412,6 +412,7 @@ mission "Midnight Expansion: Ember World Crafter"
 	to offer
 		has "event: remnant: surveillance end"
 		has "main plot completed"
+		random < 30
 	on offer
 		event "ember world crafter begin"
 		conversation
@@ -481,7 +482,8 @@ mission "Midnight Expansion: Ember World Forger"
 	source "Aventine"
 	waypoint Lucina
 	to offer
-		has "event: remnant: surveillance end"
+		has "event: ember world crafter end"
+		random < 30 - "day"
 	on offer
 		event "ember world forger begin"
 		conversation
@@ -620,6 +622,7 @@ event "ember world shaper end"
 
 mission "Korath Waste Disposal"
 	job
+	repeat
 	name "Korath Waste Disposal"
 	description "Dispose of 96 tons of industrial waste. You might be able to put this to good use..."
 	source
@@ -633,4 +636,18 @@ mission "Korath Waste Disposal"
 		conversation
 			scene "outfit/PR4987 shunt bomb launcher"
 			`Custody of the industrial waste is transferred to you. You can think of a good way to dispose of it...`
+		fail
+
+mission "Korath Waste Generation"
+	landing
+	invisible
+	repeat
+	to offer
+		random < 20
+	source
+		not government "Kor Efret" "Korath" "Kor Mereti"
+	on offer
+		require "Korath Waste Launcher"
+		require "Korath Waste" 0
+		outfit "Korath Waste" 96
 		fail
