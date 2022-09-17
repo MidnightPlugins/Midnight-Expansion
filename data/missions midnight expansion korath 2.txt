@@ -405,6 +405,7 @@ event "scrapper world shaper end"
 
 
 mission "Midnight Expansion: Ember World Crafter"
+	minor
 	name "World Crafter"
 	description "The Korath have brought one of their largest world ships to <waypoints>. Capture or destroy it if you can."
 	source "Viminal"
@@ -477,6 +478,7 @@ event "ember world crafter end"
 		remove fleet "Korath Raid"
 
 mission "Midnight Expansion: Ember World Forger"
+	minor
 	name "World Forger"
 	description "The Korath have brought one of their largest world ships to <waypoints>. Capture or destroy it if you can."
 	source "Aventine"
@@ -548,6 +550,7 @@ event "ember world forger end"
 		remove fleet "Korath Raid"
 
 mission "Midnight Expansion: Ember World Shaper"
+	minor
 	name "World Shaper"
 	description "The Korath have brought one of their largest world ships to <waypoints>. Capture or destroy it if you can."
 	source "Caelian"

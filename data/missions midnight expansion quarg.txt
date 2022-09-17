@@ -387,6 +387,7 @@ mission "Midnight Expansion: Quarg Warwyvern - Quarg Skydagger"
 
 mission "Midnight Expansion: Pirate Sales - Quarg Skydagger"
 	invisible
+	minor
 	source
 		government "Pirate"
 		attributes "north"
@@ -470,6 +471,7 @@ mission "Midnight Expansion: Quarg Warwyvern - Quarg Anti-Missile"
 
 mission "Midnight Expansion: Pirate Sales - Quarg Anti-Missile"
 	invisible
+	minor
 	source
 		government "Pirate" "Independent"
 		attributes "south"
@@ -553,6 +555,7 @@ mission "Midnight Expansion: Quarg Warwyvern - Quarg Culverin"
 
 mission "Midnight Expansion: Pirate Sales - Quarg Culverin"
 	invisible
+	minor
 	source
 		government "Pirate"
 		attributes "core"
@@ -1018,6 +1021,7 @@ mission "Midnight Expansion: Quarg Warwyvern - Infimum Shield Generator"
 			`You've installed the Infimum Shield Generator and are one step closer to restoring the Quarg Warwyvern!`
 
 mission "Midnight Expansion: Midnight Market - Infimum Shield Generator 1"
+	minor
 	name "Myserious Sales Pitch"
 	description "An anonymous seller is offering a unique item that would supposedly appeal to you. You must go to a warehouse on <destination> if you want to purchase it for 7,368,000 credits."
 	source
@@ -1102,6 +1106,7 @@ mission "Midnight Expansion: Quarg Warwyvern - Peripheral Repair Hub"
 
 
 mission "Midnight Expansion: Midnight Market - Peripheral Repair Hub 1"
+	minor
 	name "Myserious Sales Pitch"
 	description "An anonymous seller is offering a unique item that would supposedly appeal to you. You must go to a warehouse on <destination> if you want to purchase it for 2,735,000 credits."
 	source
@@ -1188,6 +1193,7 @@ mission "Midnight Expansion: Quarg Warwyvern - Central Repair Hub"
 			`You've installed the Central Repair Hub and are one step closer to restoring the Quarg Warwyvern!`
 
 mission "Midnight Expansion: Midnight Market - Central Repair Hub 1"
+	minor
 	name "Myserious Sales Pitch"
 	description "An anonymous seller is offering a unique item that would supposedly appeal to you. You must go to a warehouse on <destination> if you want to purchase it for 6,120,000 credits."
 	source
