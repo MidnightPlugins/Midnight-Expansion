@@ -25,9 +25,6 @@ fleet "Korath Scouter"
 mission "Midnight Expansion: Korath Scouter deployments."
 	landing
 	invisible
-	source
-		attributes "korath"
-		attributes "uninhabited"
 	on offer
 		event "Korath Scouter deployments"
 		fail
