@@ -270,10 +270,10 @@ fleet "Korath Scrapper Raid"
 		"Korath Raider (Scrapyard)"
 		"Far Osk 27" 2
 	variant 1
-		"Korath Dredger"
+		"Korath Dredger (Scrapyard)"
 		"Korath Chaser" 4
 	variant 1
-		"Korath Dredger"
+		"Korath Dredger (Scrapyard)"
 		"Far Osk 27" 4
 
 mission "Midnight Expansion: Scrapper World Forger"
