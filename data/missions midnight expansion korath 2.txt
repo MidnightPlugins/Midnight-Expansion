@@ -432,7 +432,7 @@ mission "Midnight Expansion: Ember World Crafter"
 			commodities "Electronics" "Equipment" "Industrial"
 			outfitters "Remnant"
 			variant
-				"Korath Scouter (Repeater)" 4
+				"Korath Scouter (Fire-Lance)" 4
 				"Korath Chaser" 8
 	npc kill
 		government "Korath"
@@ -504,7 +504,7 @@ mission "Midnight Expansion: Ember World Forger"
 			commodities "Electronics" "Equipment" "Industrial"
 			outfitters "Remnant"
 			variant
-				"Korath Scouter (Repeater)" 4
+				"Korath Scouter (Fire-Lance)" 4
 				"Korath Chaser" 10
 	npc kill
 		government "Korath"
@@ -576,7 +576,7 @@ mission "Midnight Expansion: Ember World Shaper"
 			commodities "Electronics" "Equipment" "Industrial"
 			outfitters "Remnant"
 			variant
-				"Korath Scouter (Repeater)" 6
+				"Korath Scouter (Fire-Lance)" 6
 				"Korath Chaser" 18
 	npc kill
 		government "Korath"
