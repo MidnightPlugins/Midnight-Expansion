@@ -217,72 +217,155 @@ mission "Midnight Expansion: Restore Querii'ka"
 		has "Ringworld Debris: Quarg: offered"
 	on offer
 		event "Restore Querii'ka"
+		fail
 
 event "Restore Querii'ka"
+
+mission "Midnight Expansion: Restore Querii'ka Patch"
+	landing
+	invisible
+	to offer
+		has "event: Restore Querii'ka"
+	on offer
+		event "Restore Querii'ka patch"
+		fail
+
+event "Restore Querii'ka patch"
 	system "World's End"
 		pos 9966.5 7017.5
 		government Uninhabited
 		attributes "pleiades"
+		arrival 700
 		habitable 700
+		belt 1500
 		haze _menu/haze-blackbody
 		object
-			sprite star/g5
+			sprite star/g3
 			period 10
 		object "Querii'ka"
-			sprite "planet/ringworld right"
+			sprite "planet/ringworld broken right"
+				scale 0.5
 			distance 812
-			period 360
-			offset 0
+			period 349.820
 		object "Querii'ka"
-			sprite "planet/ringworld left"
+			sprite "planet/ringworld broken left"
+				scale 0.5
 			distance 812
-			period 360
+			period 349.820
 			offset 20
-		object "Querii'ka"
-			sprite "planet/ringworld right"
+		object
+			sprite "planet/ringworld broken debris small"
+				scale 0.5
 			distance 812
-			period 360
+			period 349.820
+			offset 35
+		object "Querii'ka"
+			sprite "planet/ringworld broken right"
+				scale 0.5
+			distance 812
+			period 349.820
 			offset 50
 		object "Querii'ka"
-			sprite "planet/ringworld left"
+			sprite "planet/ringworld broken left"
+				scale 0.5
 			distance 812
-			period 360
+			period 349.820
 			offset 70
-		object "Querii'ka"
-			sprite "planet/ringworld right"
+		object
+			sprite "planet/ringworld broken debris"
+				scale 0.5
 			distance 812
-			period 360
+			period 349.820
+			offset 90
+		object
+			sprite "planet/ringworld broken debris small"
+				scale 0.5
+			distance 812
+			period 349.820
+			offset 105
+		object
+			sprite "planet/ringworld broken debris"
+				scale 0.5
+			distance 812
+			period 349.820
+			offset 120
+		object "Querii'ka"
+			sprite "planet/ringworld broken right"
+				scale 0.5
+			distance 812
+			period 349.820
 			offset 140
 		object "Querii'ka"
-			sprite "planet/ringworld left"
+			sprite "planet/ringworld broken left"
+				scale 0.5
 			distance 812
-			period 360
+			period 349.820
 			offset 160
 		object "Querii'ka"
-			sprite "planet/ringworld right"
+			sprite "planet/ringworld broken right"
+				scale 0.5
 			distance 812
-			period 360
+			period 349.820
 			offset 180
 		object "Querii'ka"
-			sprite "planet/ringworld left"
+			sprite "planet/ringworld broken left"
+				scale 0.5
 			distance 812
-			period 360
+			period 349.820
 			offset 200
-		object "Querii'ka"
-			sprite "planet/ringworld right"
+		object
+			sprite "planet/ringworld broken debris"
+				scale 0.5
 			distance 812
-			period 360
+			period 349.820
+			offset 220
+		object
+			sprite "planet/ringworld broken debris small"
+				scale 0.5
+			distance 812
+			period 349.820
+			offset 235
+		object
+			sprite "planet/ringworld broken debris"
+				scale 0.5
+			distance 812
+			period 349.820
+			offset 250
+		object "Querii'ka"
+			sprite "planet/ringworld broken right"
+				scale 0.5
+			distance 812
+			period 349.820
 			offset 270
 		object "Querii'ka"
-			sprite "planet/ringworld left"
+			sprite "planet/ringworld broken left"
+				scale 0.5
 			distance 812
-			period 360
+			period 349.820
 			offset 290
+		object
+			sprite "planet/ringworld broken debris"
+				scale 0.5
+			distance 812
+			period 349.820
+			offset 310
+		object
+			sprite "planet/ringworld broken debris small"
+				scale 0.5
+			distance 812
+			period 349.820
+			offset 325
+		object
+			sprite "planet/ringworld broken debris"
+				scale 0.5
+			distance 812
+			period 349.820
+			offset 340
 
-planet Querii'ka
-	attributes uninhabited
-	landscape land/station2
-	description `This huge ringworld, built by the Quarg using most of the resources found near the Queri star, seems to be completely uninhabited. Apparently, the Pug moved this massive structure to its current location... somehow. Everything inside the station is empty and unpowered, from its large rooms to its long, silent corridors.`
+	planet Querii'ka
+		attributes uninhabited
+		landscape land/station2ver8
+		description `The ruins of this huge ringworld, built by the Quarg using most of the resources found near the Queri star, seems to be completely uninhabited. Apparently, the Pug moved this massive structure to its current location... somehow. Everything inside the station is empty and unpowered, from its large rooms to its long, silent corridors.`
 
 
 
@@ -291,6 +374,7 @@ mission "Midnight Expansion: Quarg Wrecked Balaur"
 	invisible
 	source "Querii'ka"
 	to offer
+		has "event: Restore Querii'ka patch"
 		or
 			not "Randomize Midnight Expansion: Quarg Wrecked Balaur"
 			and

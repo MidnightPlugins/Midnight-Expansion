@@ -18,7 +18,7 @@ outfit "Systems Core (Huge)"
 	thumbnail "outfit/Midnight huge systems core"
 	"mass" 156
 	"outfit space" -156
-	"energy capacity" 10400
+	"energy capacity" 20800
 	"shield generation" 11.7
 	"shield energy" 16.9
 	"hull repair rate" 1.6

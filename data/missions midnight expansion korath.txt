@@ -103,7 +103,7 @@ mission "Midnight Expansion: Korath Warlord"
 			names "korath"
 			cargo 3
 			variant
-				"Korath Dredger"
+				"Rano'erek"
 				"Far Osk 27" 6
 				"Far Lek 14" 3
 	npc capture
@@ -219,26 +219,26 @@ mission "Midnight Expansion: Korath Warlord Syndication"
 			cargo 3
 			variant 1
 				"Korath Warlord"
-				"Korath Dredger"
-				"Korath Chaser" 4
+				"Rano'erek"
+				"'olofez" 4
 				"Far Osk 27" 2
 				"Far Lek 14" 3
 			variant 3
 				"Korath Warlord"
-				"Korath Raider" 2
-				"Korath Chaser" 4
+				"Palavret" 2
+				"'olofez" 4
 				"Far Osk 27" 2
 				"Far Lek 14" 3
 			variant 1
 				"Korath Warlord (Artillery)"
-				"Korath Dredger"
-				"Korath Chaser" 4
+				"Rano'erek"
+				"'olofez" 4
 				"Far Osk 27" 2
 				"Far Lek 14" 3
 			variant 3
 				"Korath Warlord (Artillery)"
-				"Korath Raider" 2
-				"Korath Chaser" 4
+				"Palavret" 2
+				"'olofez" 4
 				"Far Osk 27" 2
 				"Far Lek 14" 3
 	on fail
@@ -308,10 +308,10 @@ mission "Midnight Expansion: Sestor Protoype"
 
 			`Although you can't read Korath, somehow you manage to figure out what you need from the diagrams on display here. You'll need to bring back the following outfits to complete the ship:`
 			``
-			`	-"Korath Banisher"`
-			`	-"Korath Repeater Turret"`
-			`	-"Korath Warder"`
-			`	-"Korath Piercer Launcher"`
+			`	-"Banisher Grav-Turret"`
+			`	-"Thermal Repeater Turret"`
+			`	-"Warder Anti-Missile"`
+			`	-"Piercer Missile Launcher"`
 			`	-"Triple Plasma Core"`
 			`	-"Systems Core (Large)"`
 			`	-"Systems Core (Medium)"`
@@ -393,15 +393,15 @@ mission "Midnight Expansion: Sestor Protoype"
 mission "Midnight Expansion: Sestor Banisher"
 	landing
 	name "Sestor Protoype: Banisher"
-	description "Bring a Korath Banisher to <destination>. (The outfit will automatically be removed if you bring one.)"
+	description "Bring a Banisher Grav-Turret to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
 	on complete
-		outfit "Korath Banisher" -1
+		outfit "Banisher Grav-Turret" -1
 		conversation
 			scene "outfit/banisher"
-			`	You installed the Korath Banisher and are one step closer to completing the prototype!`
+			`	You installed the Banisher Grav-Turret and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
 		fail "Midnight Expansion: Sestor Banisher"
@@ -448,15 +448,15 @@ mission "Midnight Expansion: Sestor Banisher"
 mission "Midnight Expansion: Sestor Repeater"
 	landing
 	name "Sestor Protoype: Repeater Turret"
-	description "Bring a Korath Repeater Turret to <destination>. (The outfit will automatically be removed if you bring one.)"
+	description "Bring a Thermal Repeater Turret to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
 	on complete
-		outfit "Korath Repeater Turret" -1
+		outfit "Thermal Repeater Turret" -1
 		conversation
 			scene "outfit/repeater turret"
-			`	You installed the Korath Repeater Turret and are one step closer to completing the prototype!`
+			`	You installed the Thermal Repeater Turret and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
 		fail "Midnight Expansion: Sestor Banisher"
@@ -503,15 +503,15 @@ mission "Midnight Expansion: Sestor Repeater"
 mission "Midnight Expansion: Sestor Warder"
 	landing
 	name "Sestor Protoype: Warder"
-	description "Bring a Korath Warder to <destination>. (The outfit will automatically be removed if you bring one.)"
+	description "Bring a Warder Anti-Missile to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
 	on complete
-		outfit "Korath Warder" -1
+		outfit "Warder Anti-Missile" -1
 		conversation
 			scene "outfit/warder"
-			`	You installed the Korath Warder and are one step closer to completing the prototype!`
+			`	You installed the Warder Anti-Missile and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
 		fail "Midnight Expansion: Sestor Banisher"
@@ -558,15 +558,15 @@ mission "Midnight Expansion: Sestor Warder"
 mission "Midnight Expansion: Sestor Piercer"
 	landing
 	name "Sestor Protoype: Piercer Launcher"
-	description "Bring a Korath Piercer Launcher to <destination>. (The outfit will automatically be removed if you bring one.)"
+	description "Bring a Piercer Missile Launcher to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
 		has "Midnight Expansion: Sestor Protoype: active"
 	on complete
-		outfit "Korath Piercer Launcher" -1
+		outfit "Piercer Missile Launcher" -1
 		conversation
 			scene "outfit/piercer launcher"
-			`	You installed the Korath Piercer Launcher and are one step closer to completing the prototype!`
+			`	You installed the Piercer Missile Launcher and are one step closer to completing the prototype!`
 	on abort
 		fail "Midnight Expansion: Sestor Protoype"
 		fail "Midnight Expansion: Sestor Banisher"
@@ -1547,7 +1547,7 @@ mission "Midnight Expansion: Mereti 88:88:88:8"
 		government "Kor Mereti"
 	waypoint "Asikafarnut"
 	to offer
-		"reputation: Kor Mereti" > 0
+		"reputation: Kor Mereti" >= 8
 		( "Midnight Expansion: Mereti Trading Platinum: done" + "Midnight Expansion: Mereti Trading Gold: done" + "Midnight Expansion: Mereti Trading Silver: done" + "Midnight Expansion: Mereti Trading Copper: done" ) >= 4
 		has "event: Blight Shadow Infestation"
 		random < 32
@@ -1621,7 +1621,7 @@ mission "Midnight Expansion: Kor Efret Forager Sales"
 	to offer
 		has "event: Laki Nemparu opens Shipyard"
 	on offer
-		event "kor efret forager sales"
+		event "kor efret forager sales" 30
 		conversation
 			scene "thumbnail/AESmisc korath_stalker"
 			`	The Efret shipyard is developing rapidly. Another type of ship has been added to their inventory and eager buyers are lined up at the entrance.`

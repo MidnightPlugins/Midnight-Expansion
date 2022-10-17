@@ -20,7 +20,7 @@ fleet "Korath Scouter"
 		timid surveillance fleeing uninterested
 	variant 1
 		"Korath Scouter"
-		"Korath Chaser"
+		"'olofez"
 
 mission "Midnight Expansion: Korath Scouter deployments."
 	landing
@@ -86,10 +86,10 @@ fleet "Korath Scouter (Ember)"
 		timid surveillance fleeing uninterested
 	variant 1
 		"Korath Scouter (Fire-Lance)"
-		"Korath Chaser"
+		"'olofez"
 	variant 1
 		"Korath Scouter"
-		"Korath Chaser"
+		"'olofez"
 
 mission "Midnight Expansion: Korath Scouter Ember Waste"
 	landing
@@ -178,7 +178,7 @@ mission "Midnight Expansion: Bounty-Korath Scouter"
 			cargo 3
 			variant
 				"Korath Scouter (Crippled)"
-				"Korath Chaser"
+				"'olofez"
 		dialog "You have destroyed the Korath ship. You can now return to <planet> to collect your payment."
 	on visit
 		dialog phrase "generic bounty hunting on visit"
@@ -247,7 +247,7 @@ mission "Midnight Expansion: Nenia Gas Harvest"
 			names "korath"
 			variant
 				"Korath Scouter (Fire-Lance)"
-				"Korath Chaser"
+				"'olofez"
 	npc accompany
 		government "Remnant"
 		personality target timid launching escort
@@ -290,23 +290,23 @@ event "add Korath Electro Shock Weapons"
 	fleet "Kor Efret Home"
 		add variant 1
 			"Korath World-Ship (Shocker)"
-			"Korath Chaser" 3
+			"Eave-Skiff" 3
 		add variant 1
 			"Korath World-Ship B (Shocker)"
-			"Korath Chaser" 3
+			"Eave-Skiff" 3
 		add variant 1
 			"Korath World-Ship C (Shocker)"
-			"Korath Chaser" 3
+			"Eave-Skiff" 3
 	fleet "Korath Home"
-		add variant 6
+		add variant 1
 			"Korath World-Ship (Shock-Strike)"
-			"Korath Chaser" 3
-		add variant 6
+			"'olofez (Expeller)" 3
+		add variant 1
 			"Korath World-Ship B (Shock-Strike)"
-			"Korath Chaser" 3
-		add variant 6
+			"'olofez (Expeller)" 3
+		add variant 1
 			"Korath World-Ship C (Shock-Strike)"
-			"Korath Chaser" 3
+			"'olofez (Expeller)" 3
 
 mission "Midnight Expansion: Add Korath Electro Shock Warmonger escorts"
 	landing
@@ -319,18 +319,18 @@ mission "Midnight Expansion: Add Korath Electro Shock Warmonger escorts"
 
 event "Add Korath Electro Shock Warmonger escorts"
 	fleet "Kor Efret Home"
-		add variant 5
+		add variant 1
 			"Korath World-Ship (Shocker)"
 			"Korath Warmonger" 2
-			"Korath Chaser" 7
-		add variant 5
+			"Eave-Skiff" 7
+		add variant 1
 			"Korath World-Ship B (Shocker)"
 			"Korath Warmonger" 2
-			"Korath Chaser" 7
-		add variant 5
+			"Eave-Skiff" 7
+		add variant 1
 			"Korath World-Ship C (Shocker)"
 			"Korath Warmonger" 2
-			"Korath Chaser" 7
+			"Eave-Skiff" 7
 
 mission "Scrapyard: Efret Grappler Shocker Warmongers"
 	landing
@@ -347,15 +347,15 @@ event "Efret Grappler Shocker Warmongers"
 		add variant 1
 			"Korath World-Ship (Shocker)"
 			"Korath Warmonger (Grappler)" 2
-			"Korath Chaser" 7
+			"Eave-Skiff" 3
 		add variant 1
 			"Korath World-Ship B (Shocker)"
 			"Korath Warmonger (Grappler)" 2
-			"Korath Chaser" 7
+			"Eave-Skiff" 3
 		add variant 1
 			"Korath World-Ship C (Shocker)"
 			"Korath Warmonger (Grappler)" 2
-			"Korath Chaser" 7
+			"Eave-Skiff" 3
 
 
 
@@ -382,7 +382,7 @@ mission "Midnight Expansion: Kor Efret World Crafter Skeruto"
 			outfitters "Korath Basics"
 			variant
 				"Korath Warmonger" 2
-				"Korath Chaser" 4
+				"Eave-Skiff" 4
 	npc
 		to spawn
 			has "event: Efret Grappler Warmongers"
@@ -396,7 +396,7 @@ mission "Midnight Expansion: Kor Efret World Crafter Skeruto"
 			outfitters "Korath Basics"
 			variant
 				"Korath Warmonger (Grappler)" 2
-				"Korath Chaser" 4
+				"Eave-Skiff" 4
 	npc
 		government "Kor Efret"
 		system Skeruto
@@ -406,7 +406,7 @@ mission "Midnight Expansion: Kor Efret World Crafter Skeruto"
 			fighters "korath"
 			cargo 0
 			variant
-				"Korath Chaser" 4
+				"Eave-Skiff" 4
 	npc kill
 		government "Kor Efret"
 		system Skeruto
@@ -433,13 +433,13 @@ fleet "Korath Scrapper Raid"
 	outfitters "Korath Basics"
 	variant 2
 		"Korath Raider (Scrapyard)"
-		"Korath Chaser" 2
+		"'olofez" 2
 	variant 2
 		"Korath Raider (Scrapyard)"
 		"Far Osk 27" 2
 	variant 1
 		"Korath Dredger (Scrapyard)"
-		"Korath Chaser" 4
+		"'olofez" 4
 	variant 1
 		"Korath Dredger (Scrapyard)"
 		"Far Osk 27" 4
@@ -467,7 +467,7 @@ mission "Midnight Expansion: Scrapper World Forger"
 			outfitters "Efret Salvage"
 			variant
 				"Korath Scouter (Repeater)" 4
-				"Korath Chaser" 10
+				"'olofez" 10
 	npc kill
 		government "Kor Scrappers"
 		system Host
@@ -529,7 +529,7 @@ mission "Midnight Expansion: Scrapper World Shaper"
 			outfitters "Efret Salvage"
 			variant
 				"Korath Scouter (Repeater)" 6
-				"Korath Chaser" 18
+				"'olofez" 18
 	npc kill
 		government "Kor Scrappers"
 		system Persitar
@@ -601,7 +601,7 @@ mission "Midnight Expansion: Ember World Crafter"
 			outfitters "Remnant"
 			variant
 				"Korath Scouter (Fire-Lance)" 4
-				"Korath Chaser" 8
+				"'olofez" 8
 	npc kill
 		government "Korath"
 		system Lucina
@@ -673,7 +673,7 @@ mission "Midnight Expansion: Ember World Forger"
 			outfitters "Remnant"
 			variant
 				"Korath Scouter (Fire-Lance)" 4
-				"Korath Chaser" 10
+				"'olofez" 10
 	npc kill
 		government "Korath"
 		system Lucina
@@ -745,7 +745,7 @@ mission "Midnight Expansion: Ember World Shaper"
 			outfitters "Remnant"
 			variant
 				"Korath Scouter (Fire-Lance)" 6
-				"Korath Chaser" 18
+				"'olofez" 18
 	npc kill
 		government "Korath"
 		system Lucina

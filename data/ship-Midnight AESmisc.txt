@@ -45,11 +45,11 @@ ship "Korath Warlord"
 			"hull damage" 3600
 			"hit force" 9800
 	outfits
-		"Korath Fire-Lance" 2
+		"Fire-Lance" 2
 		"Korath Disruptor Gun" 2
-		"Korath Disruptor" 2
-		"Korath Slicer Turret" 4
-		"Korath Warder" 2
+		"Shield Disruptor Turret" 2
+		"Husk-Slice Turret" 4
+		"Warder Anti-Missile" 2
 
 		"Double Plasma Core"
 		"Triple Plasma Core"
@@ -57,7 +57,7 @@ ship "Korath Warlord"
 		"Systems Core (Medium)"
 		"Large Heat Shunt" 5
 		"Small Heat Shunt"
-		"Korath Repeater Rifle" 24 
+		"Thermal Repeater Rifle" 24 
 
 		"Steering (Stellar Class)"
 		"Thruster (Stellar Class)"
@@ -74,18 +74,18 @@ ship "Korath Warlord"
 		right
 	"steering engine" 78 221
 		left
-	gun -11 -323 "Korath Fire-Lance"
-	gun 11 -323 "Korath Fire-Lance"
+	gun -11 -323 "Fire-Lance"
+	gun 11 -323 "Fire-Lance"
 	gun -22 -272 "Korath Disruptor Gun"
 	gun 22 -272 "Korath Disruptor Gun"
-	turret -50 -261 "Korath Slicer Turret"
-	turret 50 -261 "Korath Slicer Turret"
-	turret -52 -238 "Korath Disruptor"
-	turret 52 -238 "Korath Disruptor"
-	turret -54 -210 "Korath Slicer Turret"
-	turret 54 -210 "Korath Slicer Turret"
-	turret -57 -181 "Korath Warder"
-	turret 57 -181 "Korath Warder"
+	turret -50 -261 "Husk-Slice Turret"
+	turret 50 -261 "Husk-Slice Turret"
+	turret -52 -238 "Shield Disruptor Turret"
+	turret 52 -238 "Shield Disruptor Turret"
+	turret -54 -210 "Husk-Slice Turret"
+	turret 54 -210 "Husk-Slice Turret"
+	turret -57 -181 "Warder Anti-Missile"
+	turret 57 -181 "Warder Anti-Missile"
 	drone 52 -37 under
 	drone 46 0 over
 	drone -52 296 under back
@@ -103,10 +103,10 @@ ship "Korath Warlord"
 ship "Korath Warlord" "Korath Warlord (Artillery)"
 	outfits
 		"Korath Detainer" 2
-		"Korath Repeater Turret" 6
-		"Korath Warder" 2
-		"Korath Piercer Launcher" 2
-		"Korath Piercer" 62
+		"Thermal Repeater Turret" 6
+		"Warder Anti-Missile" 2
+		"Piercer Missile Launcher" 2
+		"Piercer Missile" 62
 		"Double Plasma Core"
 		"Triple Plasma Core"
 		"Systems Core (Large)" 2
@@ -117,16 +117,16 @@ ship "Korath Warlord" "Korath Warlord (Artillery)"
 		"Jump Drive"
 	gun "Korath Detainer"
 	gun "Korath Detainer"
-	gun "Korath Piercer Launcher"
-	gun "Korath Piercer Launcher"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Repeater Turret"
-	turret "Korath Warder"
-	turret "Korath Warder"
+	gun "Piercer Missile Launcher"
+	gun "Piercer Missile Launcher"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
 
 
 
@@ -157,12 +157,12 @@ ship "Prateskar 711"
 			"hull damage" 4100
 			"hit force" 9500
 	outfits
-		"Korath Banisher" 2
-		"Korath Repeater Turret" 8
-		"Korath Warder" 4
-		"Korath Piercer Launcher" 2
-		"Korath Piercer Rack" 3
-		"Korath Piercer" 110
+		"Banisher Grav-Turret" 2
+		"Thermal Repeater Turret" 8
+		"Warder Anti-Missile" 4
+		"Piercer Missile Launcher" 2
+		"Piercer Missile Rack" 3
+		"Piercer Missile" 110
 
 		"Triple Plasma Core" 2
 		"Systems Core (Large)"
@@ -187,24 +187,24 @@ ship "Prateskar 711"
 		over
 	"steering engine" 57.5 297
 		over
-	turret -50.5 -259.5 "Korath Repeater Turret"
-	turret 50.5 -259.5 "Korath Repeater Turret"
-	turret -52 -235.5 "Korath Repeater Turret"
-	turret 52 -235.5 "Korath Repeater Turret"
-	turret -54.5 -207.5 "Korath Repeater Turret"
-	turret 54.5 -207.5 "Korath Repeater Turret"
-	turret -55 -178.5 "Korath Repeater Turret"
-	turret 55 -178.5 "Korath Repeater Turret"
-	turret -53 -152.5 "Korath Warder"
-	turret 53 -152.5 "Korath Warder"
+	turret -50.5 -259.5 "Thermal Repeater Turret"
+	turret 50.5 -259.5 "Thermal Repeater Turret"
+	turret -52 -235.5 "Thermal Repeater Turret"
+	turret 52 -235.5 "Thermal Repeater Turret"
+	turret -54.5 -207.5 "Thermal Repeater Turret"
+	turret 54.5 -207.5 "Thermal Repeater Turret"
+	turret -55 -178.5 "Thermal Repeater Turret"
+	turret 55 -178.5 "Thermal Repeater Turret"
+	turret -53 -152.5 "Warder Anti-Missile"
+	turret 53 -152.5 "Warder Anti-Missile"
 	turret -50.5 -128.5
 	turret 50.5 -128.5
-	turret -123.5 201 "Korath Banisher"
-	turret -102.5 201 "Korath Banisher"
-	turret 102.5 201 "Korath Warder"
-	turret 123.5 201 "Korath Warder"
-	gun -11.5 -319.5 "Korath Piercer Launcher"
-	gun 11.5 -319.5 "Korath Piercer Launcher"
+	turret -123.5 201 "Banisher Grav-Turret"
+	turret -102.5 201 "Banisher Grav-Turret"
+	turret 102.5 201 "Warder Anti-Missile"
+	turret 123.5 201 "Warder Anti-Missile"
+	gun -11.5 -319.5 "Piercer Missile Launcher"
+	gun 11.5 -319.5 "Piercer Missile Launcher"
 	explode "huge explosion" 20
 	explode "large explosion" 60
 	explode "medium explosion" 90
@@ -242,9 +242,9 @@ ship "Model 1024"
 			"hit force" 8400
 	outfits
 		"Korath Disruptor Gun"
-		"Korath Slicer"
-		"Korath Disruptor"
-		"Korath Slicer Turret" 2
+		"Husk-Slice"
+		"Shield Disruptor Turret"
+		"Husk-Slice Turret" 2
 		"Cargo Expansion" 2
 		"Hyperdrive"
 		"Large Heat Shunt" 2
@@ -262,10 +262,10 @@ ship "Model 1024"
 	"steering engine" 149 97
 		left
 	gun -22 -143 "Korath Disruptor Gun"
-	gun 22 -143 "Korath Slicer"
-	turret 91 -102 "Korath Slicer Turret"
-	turret -121 86 "Korath Slicer Turret"
-	turret 54 138 "Korath Disruptor"
+	gun 22 -143 "Husk-Slice"
+	turret 91 -102 "Husk-Slice Turret"
+	turret -121 86 "Husk-Slice Turret"
+	turret 54 138 "Shield Disruptor Turret"
 	explode "large explosion" 35
 	explode "medium explosion" 80
 	explode "small explosion" 115
@@ -300,11 +300,12 @@ ship "Korath Forager"
 			"hull damage" 160
 			"hit force" 480
 	outfits
-		"Korath Fire-Lance" 2
+		"Digger Mining Beam" 2
 
 		"Generator (Furnace Class)"
 		"Systems Core (Small)"
 		"Fuel Processor"
+		"Cargo Expansion"
 
 		"Steering (Asteroid Class)"
 		"Thruster (Asteroid Class)"
@@ -312,8 +313,8 @@ ship "Korath Forager"
 
 	engine -7 37
 	engine 7 37
-	gun -4 -37 "Korath Fire-Lance"
-	gun 4 -37 "Korath Fire-Lance"
+	gun -4 -37
+	gun 4 -37
 	explode "tiny explosion" 30
 	description `Originally designed as a military scout, the Kor Efret have repurposed these interceptors for mining asteroids.`
 
