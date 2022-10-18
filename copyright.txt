@@ -133,3 +133,10 @@ Files: images/land/station2ver8
 License: public-domain
  Taken from morgue-file.com, a collection of photographs that have been donated
  and placed in the public domain.
+
+Files:
+ sounds/ambient/*
+Copyright: various
+License: public-domain
+ Based on public domain sounds taken from freesound.org.
+
