@@ -1596,7 +1596,27 @@ mission "Midnight Expansion: Damnation 1024"
 			variant
 				"Model 1024"
 	to fail
+		has "Scrapyard Damnation 2: done"
+
+mission "Midnight Expansion: Damnation 1024 B"
+	landing
+	invisible
+	source "Esperaktu Station"
+	destination "Desi Seledrak"	
+	to offer
+		has "Scrapyard Damnation 2: done"
+		has "event: Mereti deploy 1024"
+	npc kill
+		government "Kor Mereti (Hostile)"
+		system Feroteri
+		personality waiting staying heroic
+		fleet
+			names "kor mereti"
+			variant
+				"Model 1024"
+	to fail
 		has "Scrapyard Damnation 3: done"
+
 
 mission "Midnight Expansion: Devourer 1024"
 	landing
