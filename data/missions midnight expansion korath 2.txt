@@ -223,7 +223,7 @@ mission "Midnight Expansion: Salvage Scouter"
 mission "Midnight Expansion: Nenia Gas Harvest"
 	job
 	repeat
-	name "Harvest atmosphere from <system>"
+	name "Harvest atmosphere from <stopovers>"
 	description "Use a ship that can land on gas giants to travel with the <npc> to pick up another shipment of atmosphere from <stopovers>, and deliver it to <destination>."
 	cargo equipment 8
 	source
