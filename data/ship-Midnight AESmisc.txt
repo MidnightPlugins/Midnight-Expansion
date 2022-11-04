@@ -214,17 +214,18 @@ ship "Prateskar 711"
 	description `An unfinished protoype being developed by the Kor Sestor at the time their network was shut down. Its deployment into the Sestor fleets could have shifted the balance of power in their war with the Mereti.`
 
 
-	
+
 # Altered some stats and outfits on the Model 1024
 ship "Model 1024"
 	sprite "ship/AESmisc model_1024"
 	thumbnail "thumbnail/AESmisc model_1024"
 	attributes
-		category "Heavy Warship"
+		category "Heavy Freighter"
 		cost 45936000
 		shields 119200
 		hull 37900
 		automaton 1
+		"crew equivalent" 250
 		mass 1300
 		drag 19.1
 		"heat dissipation" .8
