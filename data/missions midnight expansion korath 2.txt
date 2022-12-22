@@ -86,7 +86,7 @@ fleet "Korath Scouter (Ember)"
 		timid surveillance fleeing uninterested
 	variant 1
 		"Korath Scouter (Fire-Lance)"
-		"'olofez"
+		"'olofez (Expeller)"
 	variant 1
 		"Korath Scouter"
 		"'olofez"
@@ -147,6 +147,29 @@ event "Korath Scouter ember waste"
 		add fleet "Korath Scouter (Ember)" 45000
 	system Gerenus
 		add fleet "Korath Scouter (Ember)" 45000
+
+
+
+mission "Midnight Expansion Remnant: Cognizance 4 plus"
+	invisible
+	source "Caelian"
+	landing
+	to offer
+		has "Remnant: Cognizance 2: done"
+	npc kill
+		government "Korath"
+		personality staying surveillance
+		system "Aescolanus"
+		fleet
+			names "korath"
+			commodities "Food"
+			outfitters "Void Sprite Parts"
+			variant
+				"Lor'kas Ik 577 (Ember)"
+				"Korath Scouter (Fire-Lance)" 4
+				"'olofez (Expeller)" 7
+
+
 
 # phasing this version of the job out for a renamed version
 mission "Remnant: Bounty-Korath Scouter"
@@ -276,18 +299,56 @@ mission "Midnight Expansion: Nenia Gas Harvest"
 
 
 
-mission "Midnight Expansion: Add Korath Electro Shock Weapons"
+mission "Midnight Expansion: Add Korath Electro Shock Weapons Patch"
+	landing
+	invisible
+	to offer
+		has "event: add Korath Electro Shock Weapons"
+	on offer
+		event "add Korath Electro Shock Weapons patch"
+		fail
+
+event "add Korath Electro Shock Weapons patch"
+	fleet "Kor Efret Home"
+		remove variant 1
+			"Korath World-Ship (Shocker)"
+			"Eave-Skiff" 3
+		remove variant 1
+			"Korath World-Ship B (Shocker)"
+			"Eave-Skiff" 3
+		remove variant 1
+			"Korath World-Ship C (Shocker)"
+			"Eave-Skiff" 3
+	fleet "Korath Home"
+		remove variant 1
+			"Korath World-Ship (Shock-Strike)"
+			"'olofez (Expeller)" 3
+		remove variant 1
+			"Korath World-Ship B (Shock-Strike)"
+			"'olofez (Expeller)" 3
+		remove variant 1
+			"Korath World-Ship C (Shock-Strike)"
+			"'olofez (Expeller)" 3
+
+
+mission "Midnight Expansion: Add Korath Electro Shock Weapon"
 	landing
 	invisible
 	on offer
-		event "add Korath Electro Shock Weapons"
+		event "add korath electro shock weapon"
 		fail
 
-event "add Korath Electro Shock Weapons"
+event "add korath electro shock weapon"
 	outfitter "Efret Salvage Advanced"
 		add "Korath Electro Shocker"
 		add "Korath Shocker Turret"
 	fleet "Kor Efret Home"
+		add variant 2
+			"Echo-Galleon (Shocker)"
+		add variant 3
+			"Arch-Carrack (Shocker)"
+		add variant 1
+			"Charm-Shallop (Shocker)"
 		add variant 1
 			"Korath World-Ship (Shocker)"
 			"Eave-Skiff" 3
@@ -297,16 +358,25 @@ event "add Korath Electro Shock Weapons"
 		add variant 1
 			"Korath World-Ship C (Shocker)"
 			"Eave-Skiff" 3
-	fleet "Korath Home"
+	fleet "Korath Defense"
 		add variant 1
-			"Korath World-Ship (Shock-Strike)"
-			"'olofez (Expeller)" 3
+			"Ra'gru Ik 618 (Shock Strike)"
 		add variant 1
-			"Korath World-Ship B (Shock-Strike)"
-			"'olofez (Expeller)" 3
-		add variant 1
-			"Korath World-Ship C (Shock-Strike)"
-			"'olofez (Expeller)" 3
+			"Ra'at Ik 621 (Shock Strike)"
+			"'olofez (Expeller)" 9
+	fleet "Korath Ember Waste Large Raid"
+		variant 1
+			"Ra'gru Ik 618 (Shock Strike)"
+			"Rano'erek (Heaver)"
+			"Palavret (Ember)" 3
+			"'olofez" 10
+		variant 1
+			"Ra'at Ik 621 (Shock Strike)"
+			"Rano'erek (Heaver)"
+			"Palavret (Ember)" 3
+			"'olofez" 19
+
+
 
 mission "Midnight Expansion: Add Korath Electro Shock Warmonger escorts"
 	landing
@@ -321,16 +391,66 @@ event "Add Korath Electro Shock Warmonger escorts"
 	fleet "Kor Efret Home"
 		add variant 1
 			"Korath World-Ship (Shocker)"
-			"Korath Warmonger" 2
+			"Korath Warmonger (Shocker)" 2
 			"Eave-Skiff" 7
 		add variant 1
 			"Korath World-Ship B (Shocker)"
-			"Korath Warmonger" 2
+			"Korath Warmonger (Shocker)" 2
 			"Eave-Skiff" 7
 		add variant 1
 			"Korath World-Ship C (Shocker)"
-			"Korath Warmonger" 2
+			"Korath Warmonger (Shocker)" 2
 			"Eave-Skiff" 7
+
+mission "Midnight Expansion: Add Korath Electro Shock Warmonger escorts 2"
+	landing
+	invisible
+	to offer
+		has "Warmonger Construction Completed"
+	on offer
+		event "Add Korath Electro Shock Warmonger escorts 2"
+		fail
+
+event "Add Korath Electro Shock Warmonger escorts 2"
+	fleet "Kor Efret Home"
+		remove variant 1
+			"Korath World-Ship (Shocker)"
+			"Eave-Skiff" 3
+		remove variant 1
+			"Korath World-Ship B (Shocker)"
+			"Eave-Skiff" 3
+		remove variant 1
+			"Korath World-Ship C (Shocker)"
+			"Eave-Skiff" 3
+		add variant 5
+			"Korath Warmonger (Shocker)"
+			"Eave-Skiff" 2
+		add variant 2
+			"Echo-Galleon (Shocker)"
+			"Korath Warmonger (Shocker)" 2
+			"Eave-Skiff" 4
+		add variant 3
+			"Arch-Carrack (Shocker)"
+			"Korath Warmonger (Shocker)"
+			"Eave-Skiff" 2
+		add variant 1
+			"Charm-Shallop (Shocker)"
+			"Korath Warmonger (Shocker)"
+			"Eave-Skiff" 2
+		add variant 1
+			"Vault-Barge"
+			"Korath Warmonger (Shocker)"
+			"Eave-Skiff" 2
+		add variant 1
+			"Bravo-Monitor (Shocker)"
+			"Korath Warmonger (Shocker)"
+			"Eave-Skiff" 2
+		add variant 1
+			"Delta-Ferry"
+			"Korath Warmonger (Shocker)"
+			"Eave-Skiff" 5
+		add variant 1
+			"Bravo-Monitor (Shocker)"
 
 mission "Scrapyard: Efret Grappler Shocker Warmongers"
 	landing
@@ -347,15 +467,44 @@ event "Efret Grappler Shocker Warmongers"
 		add variant 1
 			"Korath World-Ship (Shocker)"
 			"Korath Warmonger (Grappler)" 2
-			"Eave-Skiff" 3
+			"Eave-Skiff" 5
 		add variant 1
 			"Korath World-Ship B (Shocker)"
 			"Korath Warmonger (Grappler)" 2
-			"Eave-Skiff" 3
+			"Eave-Skiff" 5
 		add variant 1
 			"Korath World-Ship C (Shocker)"
 			"Korath Warmonger (Grappler)" 2
-			"Eave-Skiff" 3
+			"Eave-Skiff" 5
+
+mission "Scrapyard: Efret Grappler Shocker Warmongers 2"
+	landing
+	invisible
+	to offer
+		has "event: Add Korath Electro Shock Warmonger escorts 2"
+		has "event: Efret Grappler Warmongers"
+	on offer
+		event "Efret Grappler Shocker Warmongers 2"
+		fail
+
+event "Efret Grappler Shocker Warmongers 2"
+	fleet "Kor Efret Home"
+		add variant 2
+			"Echo-Galleon (Shocker)"
+			"Korath Warmonger (Grappler)" 2
+			"Eave-Skiff" 4
+		add variant 3
+			"Arch-Carrack (Shocker)"
+			"Korath Warmonger (Grappler)"
+			"Eave-Skiff" 2
+		add variant 1
+			"Charm-Shallop (Shocker)"
+			"Korath Warmonger (Grappler)"
+			"Eave-Skiff" 2
+		add variant 1
+			"Bravo-Monitor (Shocker)"
+			"Korath Warmonger (Grappler)"
+			"Eave-Skiff" 2
 
 
 
@@ -821,3 +970,43 @@ mission "Korath Waste Generation"
 	on accept
 		outfit "Korath Waste" 96
 		fail
+
+
+
+##########################
+# Deprecated
+##########################
+
+mission "Midnight Expansion: Add Korath Electro Shock Weapons"
+	landing
+	invisible
+	to offer
+		never
+	on offer
+		event "add Korath Electro Shock Weapons"
+		fail
+
+event "add Korath Electro Shock Weapons"
+	outfitter "Efret Salvage Advanced"
+		add "Korath Electro Shocker"
+		add "Korath Shocker Turret"
+	fleet "Kor Efret Home"
+		add variant 1
+			"Korath World-Ship (Shocker)"
+			"Eave-Skiff" 3
+		add variant 1
+			"Korath World-Ship B (Shocker)"
+			"Eave-Skiff" 3
+		add variant 1
+			"Korath World-Ship C (Shocker)"
+			"Eave-Skiff" 3
+	fleet "Korath Home"
+		add variant 1
+			"Korath World-Ship (Shock-Strike)"
+			"'olofez (Expeller)" 3
+		add variant 1
+			"Korath World-Ship B (Shock-Strike)"
+			"'olofez (Expeller)" 3
+		add variant 1
+			"Korath World-Ship C (Shock-Strike)"
+			"'olofez (Expeller)" 3

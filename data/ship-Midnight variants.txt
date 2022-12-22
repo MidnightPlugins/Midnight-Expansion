@@ -11,6 +11,77 @@
 
 
 
+ship "Echo-Galleon" "Echo-Galleon (Shocker)"
+	outfits
+		"Banisher Grav-Turret"
+		"Digger Mining Beam" 2
+		"Double Plasma Core"
+		"Fuel Processor"
+		"Generator (Inferno Class)"
+		"Grab-Strike Turret"
+		"Korath Electro Shocker" 2
+		"Korath Shocker Turret"
+		"Large Heat Shunt"
+		"Nelmeb GP Hybrid Steering"
+		"Nelmeb GP Hybrid Thruster"
+		"Outfits Expansion" 2
+		"Scram Drive"
+		"Systems Core (Large)"
+		"Thermal Repeater Rifle" 246
+		"Warder Anti-Missile" 2
+	turret "Korath Shocker Turret"
+	turret "Grab-Strike Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	gun "Korath Electro Shocker"
+	gun "Korath Electro Shocker"
+	gun "Digger Mining Beam"
+	gun "Digger Mining Beam"
+
+ship "Arch-Carrack" "Arch-Carrack (Shocker)"
+	outfits
+		"Cargo Expansion"
+		"Digger Mining Beam" 2
+		"Double Plasma Core"
+		"Farves GP Hybrid Thruster"
+		"Fuel Processor"
+		"Gaktem GP Hybrid Steering"
+		"Gaktem GP Hybrid Thruster"
+		"Generator (Furnace Class)"
+		"Korath Shocker Turret"
+		"Large Heat Shunt"
+		"Scram Drive"
+		"Systems Core (Large)"
+		"Thermal Repeater Rifle" 55
+		"Warder Anti-Missile" 2
+	turret "Warder Anti-Missile"
+	turret "Korath Shocker Turret"
+	turret "Warder Anti-Missile"
+	gun "Digger Mining Beam"
+	gun "Digger Mining Beam"
+
+ship "Charm-Shallop" "Charm-Shallop (Shocker)"
+	outfits
+		"Banisher Grav-Turret"
+		"Digger Mining Beam"
+		"Double Plasma Core"
+		"Fuel Processor"
+		"Gaktem GP Hybrid Steering"
+		"Gaktem GP Hybrid Thruster"
+		"Generator (Candle Class)"
+		"Korath Electro Shocker" 2
+		"Large Heat Shunt"
+		"Scram Drive"
+		"Systems Core (Medium)"
+		"Thermal Repeater Rifle" 66
+		"Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	gun "Digger Mining Beam"
+	gun "Korath Electro Shocker"
+	gun "Korath Electro Shocker"
+
 ship "Korath World-Ship" "Korath World-Ship (Shocker)"
 	sprite "ship/oldworld-ship a"
 	thumbnail "thumbnail/oldworld-ship a"
@@ -107,6 +178,171 @@ ship "Korath World-Ship" "Korath World-Ship C (Shocker)"
 	bay "Fighter"  45 -100
 	bay "Fighter" 0 -100
 
+
+
+ship "Korath Warmonger" "Korath Warmonger (Shocker)"
+	outfits
+		"Afterburner (Asteroid Class)"
+		"Double Plasma Core"
+		"Fuel Processor"
+		"Generator (Furnace Class)"
+		Hyperdrive
+		"Korath Electro Shocker" 2
+		"Large Heat Shunt" 3
+		"Outfits Expansion"
+		"Steering (Lunar Class)"
+		"Systems Core (Medium)"
+		"Thermal Repeater Rifle" 70
+		"Thermal Repeater Turret" 4
+		"Thruster (Lunar Class)"
+
+ship "Bravo-Monitor" "Bravo-Monitor (Shocker)"
+	outfits
+		"Banisher Grav-Turret"
+		"Double Plasma Core"
+		"Farves GP Hybrid Steering"
+		"Farves GP Hybrid Thruster"
+		"Fuel Processor"
+		"Grab-Strike Turret"
+		Hyperdrive
+		"Korath Electro Shocker" 2
+		"Large Heat Shunt"
+		"Small Heat Shunt" 2
+		"Systems Core (Medium)"
+		"Thermal Repeater Rifle" 180
+		"Warder Anti-Missile" 2
+	turret "Grab-Strike Turret"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+
+
+
+ship "Ra'gru Ik 618" "Ra'gru Ik 618 (Shock Strike)"
+	outfits
+		"Banisher Grav-Turret" 2
+		"Blaze-Pike Turret" 4
+		Brig
+		Fire-Lance 3
+		"Firelight Missile" 40
+		"Firelight Missile Bank" 2
+		"Fuel Processor"
+		"Jump Drive"
+		"Korath Shock-Strike" 2
+		"Liquid Sodium Cooler"
+		"Microbot Defense Station" 13
+		"Plasma Core"
+		"Small Heat Shunt" 3
+		"Steering (Stellar Class)"
+		"Systems Core (Large)"
+		"Thermal Repeater Rifle" 794
+		"Thruster (Stellar Class)"
+		"Triple Plasma Core"
+		"Warder Anti-Missile" 2
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	turret "Blaze-Pike Turret"
+	turret "Blaze-Pike Turret"
+	turret "Korath Shock-Strike"
+	turret "Korath Shock-Strike"
+	turret "Blaze-Pike Turret"
+	turret "Blaze-Pike Turret"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+
+ship "Ra'at Ik 621" "Ra'at Ik 621 (Shock Strike)"
+	outfits
+		"Banisher Grav-Turret" 2
+		Fire-Lance 3
+		"Fuel Processor"
+		"Jump Drive"
+		"Korath Shock-Strike" 2
+		"Large Heat Shunt" 3
+		"Microbot Defense Station" 12
+		"Outfits Expansion" 2
+		"Reverser (Comet Class)"
+		"Small Heat Shunt" 2
+		"Steering (Stellar Class)"
+		"Systems Core (Large)"
+		"Thermal Repeater Rifle" 799
+		"Thruster (Stellar Class)"
+		"Triple Plasma Core"
+		"Warder Anti-Missile" 3
+	turret "Korath Shock-Strike"
+	turret "Banisher Grav-Turret"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Korath Shock-Strike"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+
+
+
+ship "Korath Scouter" "Korath Scouter (Crippled)"
+	outfits
+		"Banisher Grav-Turret" 2
+		"Warder Anti-Missile" 2
+		"Plasma Core"
+		"Systems Core (Small)"
+		"Small Heat Shunt" 2
+		"Outfits Expansion"
+		"Korath Scanner"
+		"Thermal Repeater Rifle" 36
+		"Steering (Lunar Class)"
+		"Thruster (Lunar Class)"
+		"Scram Drive"
+		"Jump Drive (Broken)"
+	turret "Banisher Grav-Turret"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+
+ship "Korath Scouter" "Korath Scouter (Repeater)"
+	outfits
+		"Thermal Repeater Turret" 2
+		"Warder Anti-Missile" 2
+		"Fuel Processor"
+		"Plasma Core"
+		"Systems Core (Small)"
+		"Small Heat Shunt" 2
+		"Outfits Expansion"
+		"Korath Scanner"
+		"Thermal Repeater Rifle" 36
+		"Steering (Lunar Class)"
+		"Thruster (Lunar Class)"
+		"Scram Drive"
+		"Jump Drive"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+
+ship "Korath Scouter" "Korath Scouter (Fire-Lance)"
+	outfits
+		"Fire-Lance" 2
+		"Warder Anti-Missile" 2
+		"Fuel Processor"
+		"Plasma Core"
+		"Systems Core (Small)"
+		"Small Heat Shunt" 2
+		"Outfits Expansion"
+		"Korath Scanner"
+		"Thermal Repeater Rifle" 36
+		"Steering (Lunar Class)"
+		"Thruster (Lunar Class)"
+		"Scram Drive"
+		"Jump Drive"
+	turret
+	turret
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+
+
+
+#############################
+# Deprecated
+#############################
+
 ship "Korath World-Ship" "Korath World-Ship (Shock-Strike)"
 	sprite "ship/oldworld-ship a"
 	thumbnail "thumbnail/oldworld-ship a"
@@ -199,62 +435,3 @@ ship "Korath World-Ship" "Korath World-Ship C (Shock-Strike)"
 	bay "Fighter"  -45 -100
 	bay "Fighter"  45 -100
 	bay "Fighter" 0 -100
-
-ship "Korath Scouter" "Korath Scouter (Crippled)"
-	outfits
-		"Banisher Grav-Turret" 2
-		"Warder Anti-Missile" 2
-		"Plasma Core"
-		"Systems Core (Small)"
-		"Small Heat Shunt" 2
-		"Outfits Expansion"
-		"Korath Scanner"
-		"Thermal Repeater Rifle" 36
-		"Steering (Lunar Class)"
-		"Thruster (Lunar Class)"
-		"Scram Drive"
-		"Jump Drive (Broken)"
-	turret "Banisher Grav-Turret"
-	turret "Banisher Grav-Turret"
-	turret "Warder Anti-Missile"
-	turret "Warder Anti-Missile"
-
-ship "Korath Scouter" "Korath Scouter (Repeater)"
-	outfits
-		"Thermal Repeater Turret" 2
-		"Warder Anti-Missile" 2
-		"Fuel Processor"
-		"Plasma Core"
-		"Systems Core (Small)"
-		"Small Heat Shunt" 2
-		"Outfits Expansion"
-		"Korath Scanner"
-		"Thermal Repeater Rifle" 36
-		"Steering (Lunar Class)"
-		"Thruster (Lunar Class)"
-		"Scram Drive"
-		"Jump Drive"
-	turret "Thermal Repeater Turret"
-	turret "Thermal Repeater Turret"
-	turret "Warder Anti-Missile"
-	turret "Warder Anti-Missile"
-
-ship "Korath Scouter" "Korath Scouter (Fire-Lance)"
-	outfits
-		"Fire-Lance" 2
-		"Warder Anti-Missile" 2
-		"Fuel Processor"
-		"Plasma Core"
-		"Systems Core (Small)"
-		"Small Heat Shunt" 2
-		"Outfits Expansion"
-		"Korath Scanner"
-		"Thermal Repeater Rifle" 36
-		"Steering (Lunar Class)"
-		"Thruster (Lunar Class)"
-		"Scram Drive"
-		"Jump Drive"
-	turret
-	turret
-	turret "Warder Anti-Missile"
-	turret "Warder Anti-Missile"
