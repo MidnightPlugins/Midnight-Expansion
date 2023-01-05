@@ -29,6 +29,7 @@ ship "Korath Warlord"
 		hull 67400
 		"required crew" 4
 		bunks 24
+		"crew equivalent" 200
 		mass 1850
 		drag 24.6
 		"heat dissipation" .45
@@ -141,6 +142,7 @@ ship "Prateskar 711"
 		shields 88400
 		hull 82100
 		automaton 1
+		"crew equivalent" 200
 		mass 2410
 		drag 30.6
 		"heat dissipation" .4
@@ -225,7 +227,7 @@ ship "Model 1024"
 		shields 119200
 		hull 37900
 		automaton 1
-		"crew equivalent" 250
+		"crew equivalent" 200
 		mass 1300
 		drag 19.1
 		"heat dissipation" .8
