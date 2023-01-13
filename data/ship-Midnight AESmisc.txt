@@ -483,7 +483,6 @@ ship "Quarg Warwyvern"
 		"drag" 9.2
 		"heat dissipation" .52
 		"fuel capacity" 800
-		"ramscoop" 10
 		"cargo space" 19
 		"outfit space" 760
 		"weapon capacity" 300
