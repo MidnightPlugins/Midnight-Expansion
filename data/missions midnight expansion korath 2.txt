@@ -378,40 +378,18 @@ event "add korath electro shock weapon"
 
 
 
-mission "Midnight Expansion: Add Korath Electro Shock Warmonger escorts"
+mission "Midnight Expansion: Add Korath Electro Shock Ranger escorts"
 	landing
 	invisible
 	to offer
-		has "Warmonger Construction Completed"
+		or
+			has "Korath Ranger Construction Completed"
+			has "Warmonger Construction Completed"
 	on offer
-		event "Add Korath Electro Shock Warmonger escorts"
+		event "Add Korath Electro Shock Ranger escorts"
 		fail
 
-event "Add Korath Electro Shock Warmonger escorts"
-	fleet "Kor Efret Home"
-		add variant 1
-			"Korath World-Ship (Shocker)"
-			"Korath Warmonger (Shocker)" 2
-			"Eave-Skiff" 7
-		add variant 1
-			"Korath World-Ship B (Shocker)"
-			"Korath Warmonger (Shocker)" 2
-			"Eave-Skiff" 7
-		add variant 1
-			"Korath World-Ship C (Shocker)"
-			"Korath Warmonger (Shocker)" 2
-			"Eave-Skiff" 7
-
-mission "Midnight Expansion: Add Korath Electro Shock Warmonger escorts 2"
-	landing
-	invisible
-	to offer
-		has "Warmonger Construction Completed"
-	on offer
-		event "Add Korath Electro Shock Warmonger escorts 2"
-		fail
-
-event "Add Korath Electro Shock Warmonger escorts 2"
+event "Add Korath Electro Shock Ranger escorts"
 	fleet "Kor Efret Home"
 		remove variant 1
 			"Korath World-Ship (Shocker)"
@@ -422,89 +400,109 @@ event "Add Korath Electro Shock Warmonger escorts 2"
 		remove variant 1
 			"Korath World-Ship C (Shocker)"
 			"Eave-Skiff" 3
+		add variant 1
+			"Korath World-Ship (Shocker)"
+			"Korath Ranger (Shocker)" 2
+			"Eave-Skiff" 9
+		add variant 1
+			"Korath World-Ship B (Shocker)"
+			"Korath Ranger (Shocker)" 2
+			"Eave-Skiff" 9
+		add variant 1
+			"Korath World-Ship C (Shocker)"
+			"Korath Ranger (Shocker)" 2
+			"Eave-Skiff" 9
 		add variant 5
-			"Korath Warmonger (Shocker)"
-			"Eave-Skiff" 2
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 3
 		add variant 2
 			"Echo-Galleon (Shocker)"
-			"Korath Warmonger (Shocker)" 2
-			"Eave-Skiff" 4
+			"Korath Ranger (Shocker)" 2
+			"Eave-Skiff" 6
 		add variant 3
 			"Arch-Carrack (Shocker)"
-			"Korath Warmonger (Shocker)"
-			"Eave-Skiff" 2
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 3
 		add variant 1
 			"Charm-Shallop (Shocker)"
-			"Korath Warmonger (Shocker)"
-			"Eave-Skiff" 2
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 3
 		add variant 1
 			"Vault-Barge"
-			"Korath Warmonger (Shocker)"
-			"Eave-Skiff" 2
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 3
 		add variant 1
 			"Bravo-Monitor (Shocker)"
-			"Korath Warmonger (Shocker)"
-			"Eave-Skiff" 2
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 3
 		add variant 1
 			"Delta-Ferry"
-			"Korath Warmonger (Shocker)"
-			"Eave-Skiff" 5
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 6
 		add variant 1
 			"Bravo-Monitor (Shocker)"
 
-mission "Scrapyard: Efret Grappler Shocker Warmongers"
+mission "Scrapyard: Efret Grappler Shocker Rangers"
 	landing
 	invisible
 	to offer
-		has "event: Add Korath Electro Shock Warmonger escorts"
-		has "event: Efret Grappler Warmongers"
+		or
+			has "event: Add Korath Electro Shock Ranger escorts"
+			has "event: Add Korath Electro Shock Warmonger escorts"
+		or
+			has "event: Efret Grappler Korath Rangers"
+			has "event: Efret Grappler Warmongers"
 	on offer
-		event "Efret Grappler Shocker Warmongers"
+		event "Efret Grappler Shocker Rangers"
 		fail
 
-event "Efret Grappler Shocker Warmongers"
+event "Efret Grappler Shocker Rangers"
 	fleet "Kor Efret Home"
 		add variant 1
 			"Korath World-Ship (Shocker)"
-			"Korath Warmonger (Grappler)" 2
-			"Eave-Skiff" 5
+			"Korath Ranger (Grappler)" 2
+			"Eave-Skiff" 9
 		add variant 1
 			"Korath World-Ship B (Shocker)"
-			"Korath Warmonger (Grappler)" 2
-			"Eave-Skiff" 5
+			"Korath Ranger (Grappler)" 2
+			"Eave-Skiff" 9
 		add variant 1
 			"Korath World-Ship C (Shocker)"
-			"Korath Warmonger (Grappler)" 2
-			"Eave-Skiff" 5
+			"Korath Ranger (Grappler)" 2
+			"Eave-Skiff" 9
 
-mission "Scrapyard: Efret Grappler Shocker Warmongers 2"
+mission "Scrapyard: Efret Grappler Shocker Rangers 2"
 	landing
 	invisible
 	to offer
-		has "event: Add Korath Electro Shock Warmonger escorts 2"
-		has "event: Efret Grappler Warmongers"
+		or
+			has "event: Add Korath Electro Shock Ranger escorts"
+			has "event: Add Korath Electro Shock Warmonger escorts 2"
+		or
+			has "event: Efret Grappler Korath Rangers"
+			has "event: Efret Grappler Warmongers"
 	on offer
-		event "Efret Grappler Shocker Warmongers 2"
+		event "Efret Grappler Shocker Rangers 2"
 		fail
 
-event "Efret Grappler Shocker Warmongers 2"
+event "Efret Grappler Shocker Rangers 2"
 	fleet "Kor Efret Home"
 		add variant 2
 			"Echo-Galleon (Shocker)"
-			"Korath Warmonger (Grappler)" 2
-			"Eave-Skiff" 4
+			"Korath Ranger (Grappler)" 2
+			"Eave-Skiff" 6
 		add variant 3
 			"Arch-Carrack (Shocker)"
-			"Korath Warmonger (Grappler)"
-			"Eave-Skiff" 2
+			"Korath Ranger (Grappler)"
+			"Eave-Skiff" 3
 		add variant 1
 			"Charm-Shallop (Shocker)"
-			"Korath Warmonger (Grappler)"
-			"Eave-Skiff" 2
+			"Korath Ranger (Grappler)"
+			"Eave-Skiff" 3
 		add variant 1
 			"Bravo-Monitor (Shocker)"
-			"Korath Warmonger (Grappler)"
-			"Eave-Skiff" 2
+			"Korath Ranger (Grappler)"
+			"Eave-Skiff" 3
 
 
 
@@ -520,7 +518,9 @@ mission "Midnight Expansion: Kor Efret World Crafter Skeruto"
 			`A massive world ship has arrived. It is probably providing support to the Kor Efret colony.`
 	npc
 		to spawn
-			has "Warmonger Construction Completed"
+			or
+				has "Korath Ranger Construction Completed"
+				has "Warmonger Construction Completed"
 		government "Kor Efret"
 		system Skeruto
 		personality waiting staying heroic
@@ -530,11 +530,13 @@ mission "Midnight Expansion: Kor Efret World Crafter Skeruto"
 			cargo 5
 			outfitters "Korath Basics"
 			variant
-				"Korath Warmonger" 2
-				"Eave-Skiff" 4
+				"Korath Ranger" 2
+				"Eave-Skiff" 6
 	npc
 		to spawn
-			has "event: Efret Grappler Warmongers"
+			or
+				has "event: Efret Grappler Korath Rangers"
+				has "event: Efret Grappler Warmongers"
 		government "Kor Efret"
 		system Skeruto
 		personality waiting staying heroic
@@ -544,8 +546,8 @@ mission "Midnight Expansion: Kor Efret World Crafter Skeruto"
 			cargo 5
 			outfitters "Korath Basics"
 			variant
-				"Korath Warmonger (Grappler)" 2
-				"Eave-Skiff" 4
+				"Korath Ranger (Grappler)" 2
+				"Eave-Skiff" 6
 	npc
 		government "Kor Efret"
 		system Skeruto
@@ -943,7 +945,7 @@ mission "Korath Waste Disposal"
 	name "Korath Waste Disposal"
 	description "Dispose of 96 tons of industrial waste. You might be able to put this to good use..."
 	source
-		government "Kor Efret" "Korath" "Kor Mereti"
+		government "Kor Efret" "Korath" "Kor Mereti" "Kor Sestor"
 	to offer
 		random < 50
 	on offer
@@ -952,7 +954,7 @@ mission "Korath Waste Disposal"
 		outfit "Korath Waste" 96
 		conversation
 			scene "outfit/PR4987 shunt bomb launcher"
-			`Custody of the industrial waste is transferred to you. You can think of a good way to dispose of it...`
+			`You take possession of the industrial waste. You can think of a good way to dispose of it...`
 		fail
 
 mission "Korath Waste Generation"
@@ -962,7 +964,7 @@ mission "Korath Waste Generation"
 	to offer
 		random < 20
 	source
-		not government "Kor Efret" "Korath" "Kor Mereti"
+		not government "Kor Efret" "Korath" "Kor Mereti" "Kor Sestor"
 	on offer
 		require "Korath Waste Launcher"
 		require "Korath Waste" 0
@@ -982,9 +984,6 @@ mission "Midnight Expansion: Add Korath Electro Shock Weapons"
 	invisible
 	to offer
 		never
-	on offer
-		event "add Korath Electro Shock Weapons"
-		fail
 
 event "add Korath Electro Shock Weapons"
 	outfitter "Efret Salvage Advanced"
@@ -1010,3 +1009,120 @@ event "add Korath Electro Shock Weapons"
 		add variant 1
 			"Korath World-Ship C (Shock-Strike)"
 			"'olofez (Expeller)" 3
+
+
+
+mission "Midnight Expansion: Add Korath Electro Shock Warmonger escorts"
+	landing
+	invisible
+	to offer
+		never
+
+
+event "Add Korath Electro Shock Warmonger escorts"
+	fleet "Kor Efret Home"
+		add variant 1
+			"Korath World-Ship (Shocker)"
+			"Korath Ranger (Shocker)" 2
+			"Eave-Skiff" 9
+		add variant 1
+			"Korath World-Ship B (Shocker)"
+			"Korath Ranger (Shocker)" 2
+			"Eave-Skiff" 9
+		add variant 1
+			"Korath World-Ship C (Shocker)"
+			"Korath Ranger (Shocker)" 2
+			"Eave-Skiff" 9
+
+mission "Midnight Expansion: Add Korath Electro Shock Warmonger escorts 2"
+	landing
+	invisible
+	to offer
+		never
+
+event "Add Korath Electro Shock Warmonger escorts 2"
+	fleet "Kor Efret Home"
+		remove variant 1
+			"Korath World-Ship (Shocker)"
+			"Eave-Skiff" 3
+		remove variant 1
+			"Korath World-Ship B (Shocker)"
+			"Eave-Skiff" 3
+		remove variant 1
+			"Korath World-Ship C (Shocker)"
+			"Eave-Skiff" 3
+		add variant 5
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 3
+		add variant 2
+			"Echo-Galleon (Shocker)"
+			"Korath Ranger (Shocker)" 2
+			"Eave-Skiff" 6
+		add variant 3
+			"Arch-Carrack (Shocker)"
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 3
+		add variant 1
+			"Charm-Shallop (Shocker)"
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 3
+		add variant 1
+			"Vault-Barge"
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 3
+		add variant 1
+			"Bravo-Monitor (Shocker)"
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 3
+		add variant 1
+			"Delta-Ferry"
+			"Korath Ranger (Shocker)"
+			"Eave-Skiff" 6
+		add variant 1
+			"Bravo-Monitor (Shocker)"
+
+mission "Scrapyard: Efret Grappler Shocker Warmongers"
+	landing
+	invisible
+	to offer
+		never
+
+event "Efret Grappler Shocker Warmongers"
+	fleet "Kor Efret Home"
+		add variant 1
+			"Korath World-Ship (Shocker)"
+			"Korath Ranger (Grappler)" 2
+			"Eave-Skiff" 9
+		add variant 1
+			"Korath World-Ship B (Shocker)"
+			"Korath Ranger (Grappler)" 2
+			"Eave-Skiff" 9
+		add variant 1
+			"Korath World-Ship C (Shocker)"
+			"Korath Ranger (Grappler)" 2
+			"Eave-Skiff" 9
+
+mission "Scrapyard: Efret Grappler Shocker Warmongers 2"
+	landing
+	invisible
+	to offer
+		never
+
+event "Efret Grappler Shocker Warmongers 2"
+	fleet "Kor Efret Home"
+		add variant 2
+			"Echo-Galleon (Shocker)"
+			"Korath Ranger (Grappler)" 2
+			"Eave-Skiff" 6
+		add variant 3
+			"Arch-Carrack (Shocker)"
+			"Korath Ranger (Grappler)"
+			"Eave-Skiff" 3
+		add variant 1
+			"Charm-Shallop (Shocker)"
+			"Korath Ranger (Grappler)"
+			"Eave-Skiff" 3
+		add variant 1
+			"Bravo-Monitor (Shocker)"
+			"Korath Ranger (Grappler)"
+			"Eave-Skiff" 3

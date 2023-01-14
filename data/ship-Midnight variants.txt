@@ -179,22 +179,31 @@ ship "Korath World-Ship" "Korath World-Ship C (Shocker)"
 	bay "Fighter" 0 -100
 
 
-
-ship "Korath Warmonger" "Korath Warmonger (Shocker)"
+ship "Korath Ranger" "Korath Ranger (Shocker)"
 	outfits
-		"Afterburner (Asteroid Class)"
+		"Afterburner (Meteor Class)"
 		"Double Plasma Core"
 		"Fuel Processor"
-		"Generator (Furnace Class)"
 		Hyperdrive
 		"Korath Electro Shocker" 2
-		"Large Heat Shunt" 3
-		"Outfits Expansion"
+		"Large Heat Shunt"
+		"Small Heat Shunt" 2
 		"Steering (Lunar Class)"
 		"Systems Core (Medium)"
+		"Thermal Repeater" 2
 		"Thermal Repeater Rifle" 70
-		"Thermal Repeater Turret" 4
+		"Thermal Repeater Turret" 2
 		"Thruster (Lunar Class)"
+		"Warder Anti-Missile"
+	gun "Thermal Repeater"
+	gun "Thermal Repeater"
+	gun "Korath Electro Shocker"
+	gun "Korath Electro Shocker"
+	turret "Warder Anti-Missile"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
+
+
 
 ship "Bravo-Monitor" "Bravo-Monitor (Shocker)"
 	outfits
@@ -435,3 +444,27 @@ ship "Korath World-Ship" "Korath World-Ship C (Shock-Strike)"
 	bay "Fighter"  -45 -100
 	bay "Fighter"  45 -100
 	bay "Fighter" 0 -100
+
+ship "Korath Ranger" "Korath Warmonger (Shocker)"
+	outfits
+		"Afterburner (Meteor Class)"
+		"Double Plasma Core"
+		"Fuel Processor"
+		Hyperdrive
+		"Korath Electro Shocker" 2
+		"Large Heat Shunt"
+		"Small Heat Shunt" 2
+		"Steering (Lunar Class)"
+		"Systems Core (Medium)"
+		"Thermal Repeater" 2
+		"Thermal Repeater Rifle" 70
+		"Thermal Repeater Turret" 2
+		"Thruster (Lunar Class)"
+		"Warder Anti-Missile"
+	gun "Thermal Repeater"
+	gun "Thermal Repeater"
+	gun "Korath Electro Shocker"
+	gun "Korath Electro Shocker"
+	turret "Warder Anti-Missile"
+	turret "Thermal Repeater Turret"
+	turret "Thermal Repeater Turret"
