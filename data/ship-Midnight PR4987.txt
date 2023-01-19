@@ -60,6 +60,8 @@ ship "Korath Scouter"
 	engine -13 31
 	engine 13 31
 	gun -15 -71
+	gun -15 -71
+	gun 15 -71
 	gun 15 -71
 	turret -23 -42 "Banisher Grav-Turret"
 	turret 23 -42 "Banisher Grav-Turret"

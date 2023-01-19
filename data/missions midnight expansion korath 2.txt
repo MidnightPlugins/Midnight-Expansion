@@ -42,6 +42,10 @@ event "Korath Scouter deployments"
 		add fleet "Korath Scouter" 20000
 	system Durax
 		add fleet "Korath Scouter" 10000
+	system Atik
+		add fleet "Korath Scouter" 10000
+	system Misam
+		add fleet "Korath Scouter" 5000
 	system Sheratan
 		add fleet "Korath Scouter" 15000
 	system Polaris
@@ -147,6 +151,59 @@ event "Korath Scouter ember waste"
 		add fleet "Korath Scouter (Ember)" 45000
 	system Gerenus
 		add fleet "Korath Scouter (Ember)" 45000
+
+mission "Midnight Expansion: Korath Scouter Scrapyard"
+	landing
+	invisible
+	to offer
+		has "event: wanderers: sestor eliminated"
+	on offer
+		event "Korath Scouter Scrapyard"
+		fail
+
+event "Korath Scouter Scrapyard"
+	fleet "Small Korath Scrappers"
+		add variant 1
+			"Korath Scouter"
+			"'olofez"
+			"Model 8 (scrapper)"
+			"Model 8 (disruptor)"
+		add variant 1
+			"Korath Scouter"
+			"'olofez"
+			"Model 8 (scrapper)" 2
+			"Model 8 (disruptor)" 2
+		add variant 1
+			"Korath Scouter"
+			"'olofez"
+			"Model 8 (scrapper)" 3
+			"Model 8 (disruptor)" 3
+	fleet "Large Korath Scrappers"
+		add variant 1
+			"Korath Scouter (Repeater)"
+			"Far Osk 27"
+			"Model 8 (scrapper)" 4
+			"Model 8 (disruptor)" 4
+		add variant 1
+			"Korath Scouter (Repeater)"
+			"Far Osk 27"
+			"Model 8 (scrapper)"
+			"Model 8 (disruptor)"
+			"Model 16 (scrapper)"
+			"Met Par Tek 53 (scrapper)"
+		add variant 1
+			"Korath Scouter (Repeater)"
+			"Far Osk 27"
+			"Model 8 (scrapper)"
+			"Model 8 (disruptor)"
+			"Model 16"
+			"Model 16 (scrapper)"
+		add variant 1
+			"Korath Scouter (Repeater)"
+			"Far Osk 27"
+			"Model 8 (scrapper)"
+			"Model 8 (disruptor)"
+			"Model 32 (scrapper)"
 
 
 

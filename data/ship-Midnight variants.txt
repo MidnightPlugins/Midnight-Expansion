@@ -310,11 +310,12 @@ ship "Korath Scouter" "Korath Scouter (Repeater)"
 	outfits
 		"Thermal Repeater Turret" 2
 		"Warder Anti-Missile" 2
-		"Fuel Processor"
 		"Plasma Core"
 		"Systems Core (Small)"
-		"Small Heat Shunt" 2
 		"Outfits Expansion"
+		"Large Heat Shunt"
+		"Fuel Processor"
+		"Small Heat Shunt" 2
 		"Korath Scanner"
 		"Thermal Repeater Rifle" 36
 		"Steering (Lunar Class)"
@@ -328,15 +329,16 @@ ship "Korath Scouter" "Korath Scouter (Repeater)"
 
 ship "Korath Scouter" "Korath Scouter (Fire-Lance)"
 	outfits
-		"Fire-Lance" 2
+		"Fire-Lance" 4
 		"Warder Anti-Missile" 2
 		"Fuel Processor"
 		"Plasma Core"
 		"Systems Core (Small)"
 		"Small Heat Shunt" 2
-		"Outfits Expansion"
+		"Outfits Expansion" 2
 		"Korath Scanner"
 		"Thermal Repeater Rifle" 36
+		"Afterburner (Asteroid Class)"
 		"Steering (Lunar Class)"
 		"Thruster (Lunar Class)"
 		"Scram Drive"
