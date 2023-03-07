@@ -125,7 +125,7 @@ outfit "Korath Shock-Strike"
 
 outfit "Korath Waste"
 	category "Ammunition"
-	cost -2000
+	cost 0
 	thumbnail "outfit/korath waste"
 	"mass" .0625
 	"korath waste capacity" -1
