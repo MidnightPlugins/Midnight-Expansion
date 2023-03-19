@@ -11,6 +11,24 @@
 
 
 
+outfit "Radiological Containment"
+	category "Systems"
+	thumbnail "outfit/Midnight-Becca scavenger"
+	"cost" 1200000
+	"mass" 150
+	"hull" 2200
+	"heat dissipation" .2
+	"outfit space" -10
+	"cargo space" 360
+	"cooling" 12
+	"scan interference" 1000
+	"integrated systems" 1
+	"reinstall" -1
+	"unplunderable" 1
+	description "These cargo storage cylinders are designed to contain hazardous radioactive waste. Their internal structure also interferes with incoming scans enough to almost completely block all of them."
+
+
+
 outfit "Systems Core (Huge)"
 	plural "Systems Cores (Huge)"
 	category "Systems"
