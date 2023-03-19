@@ -70,7 +70,6 @@ Copyright: Arachi-Lover
 License: CC-BY-SA-4.0
 Comment: Derived from works by Michael Zahniser (under the same license).
 
-
 Files:
  data/outfit-Midnight AESmisc.txt
  data/ship-Midnight AESmisc.txt
@@ -79,11 +78,18 @@ License: CC-BY-SA-4.0
 Comment: Derived from works by Darcy Manoel (under the same license) and Michael Zahniser (under the same license) and Arachi-Lover (under the same license).
 
 Files:
+ data/ship-Midnight Becca.txt
+Copyright: Michael Arsollon
+License: CC BY-SA 4.0
+Comment: Derived from works by Becca Tommaso (under the same license)
+
+Files:
  data/outfit-Midnight PR4987.txt
  data/ship-Midnight PR4987.txt
 Copyright: Michael Arsollon
 License: GPL-3+
 Comment: Derived from works by Nomadic Volcano (under the same license) and Michael Zahniser (under the same license).
+
 
 
 Additional Image Sources:
@@ -112,7 +118,19 @@ Copyright: Michael Arsollon
 License: CC-BY-SA-4.0
 Comment: Derived from works by Darcy Manoel (under the same license)
 
+Files:
+ images/ship/Becca*
+ images/thumbnail/Becca*
+Copyright: Becca Tommaso (tommasobecca03@gmail.com)
+License: CC-BY-SA-4.0
 
+Files:
+ images/outfit/Midnight-Becca*
+ images/ship/Midnight-Becca*
+ images/thumbnail/Midnight-Becca*
+Copyright: Michael Arsollon
+License: CC BY-SA 4.0
+Comment: Derived from works by Becca Tommaso (under the same license)
 
 Files:
  images/projectile/PR4987*
