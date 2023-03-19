@@ -19,3 +19,12 @@ Currently features:
 - Parts hunt to restore a derelict Quarg ship
 
 - Increased traffic at Quarg ringworlds
+
+- Large Korath World Ships appear in Ember Waste and Scrapyard
+
+- Korath Exiles have Scouters
+
+- Human Garbage Scow and Modified Garbage Scow ships/missions
+
+- Human Ruhk and Marauder Ruhk ships/missions
+
