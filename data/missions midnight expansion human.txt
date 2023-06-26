@@ -11,6 +11,17 @@
 
 
 
+mission "Midnight Expansion: Add Fuel Stabilizer"
+	landing
+	invisible
+	on offer
+		event "add garbage scows"
+		fail
+
+event "add fuel stabilizer"
+	outfitter "Advanced Fuel"
+		add "Fuel Stabilizer"
+
 mission "Midnight Expansion: Add Garbage Scows"
 	landing
 	invisible

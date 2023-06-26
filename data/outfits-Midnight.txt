@@ -21,7 +21,8 @@ outfit "Radiological Containment"
 	"outfit space" -10
 	"cargo space" 360
 	"cooling" 12
-	"scan interference" 1000
+	"scan interference" 999
+	"scan concealment" 36
 	"integrated systems" 1
 	"reinstall" -1
 	"unplunderable" 1

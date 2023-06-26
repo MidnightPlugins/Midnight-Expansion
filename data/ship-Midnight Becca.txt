@@ -268,8 +268,7 @@ ship "Modified Garbage Scow" "Modified Garbage Scow (Heavy)"
 		"Heavy Laser Turret" 2
 		"Anti-Missile Turret" 2
 		"Stinger Missile Launcher" 2
-		"Stinger Missile" 90
-		"Stinger Missile Rack" 2
+		"Stinger Missile" 60
 		"Fission Reactor"
 		"LP144a Battery Pack"
 		"Modified D41-HY Shielding"
@@ -305,8 +304,8 @@ ship "Modified Garbage Scow" "Modified Garbage Scow (Quad Blaster)"
 	outfits
 		"Quad Mod Blaster Turret" 2
 		"Modified Blaster Turret" 2
-		"Stinger Missile Launcher" 2
-		"Stinger Missile" 90
+		"Stinger Missile" 44
+		"Stinger Missile Pod" 2
 		"Stinger Missile Rack" 2
 		"Fission Reactor"
 		"LP144a Battery Pack"
@@ -351,9 +350,10 @@ ship "Rukh"
 		"Energy Cannon" 2
 		"Energy Cannon Turret" 2
 		"Anti-Missile Turret"
-		"Meteor Missile Launcher" 4
-		"Meteor Missile" 180
-		"Meteor Missile Box" 4
+		"Meteor Missile Launcher" 2
+		"Meteor Missile Pod" 2
+		"Meteor Missile" 179
+		"Meteor Missile Box" 7
 		
 		"Fission Reactor"
 		"LP144a Battery Pack"
@@ -374,8 +374,8 @@ ship "Rukh"
 	gun 13.5 -92 "Energy Cannon"
 	gun -43.5 15 "Meteor Missile Launcher"
 	gun 43.5 15 "Meteor Missile Launcher"
-	gun -58 25 "Meteor Missile Launcher"
-	gun 58 25 "Meteor Missile Launcher"
+	gun -58 25 "Meteor Missile Pod"
+	gun 58 25 "Meteor Missile Pod"
 	turret 0 -39.5 "Anti-Missile Turret"
 	turret -8 70 "Energy Cannon Turret"
 	turret 8 70 "Energy Cannon Turret"
@@ -408,11 +408,12 @@ ship "Rukh" "Rukh (Energy Cannons)"
 
 ship "Rukh" "Rukh (Turbo Blaster)"
 	outfits
+		"Twin Turbo Blaster" 4
 		"Quad Turbo Blaster Turret" 2
 		"Anti-Missile Turret"
-		"Meteor Missile Launcher" 6
-		"Meteor Missile" 270
-		"Meteor Missile Box" 6
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 90
+		"Meteor Missile Box" 2
 		"Fission Reactor"
 		"LP144a Battery Pack"
 		"Modified D41-HY Shielding"
@@ -423,6 +424,13 @@ ship "Rukh" "Rukh (Turbo Blaster)"
 		"X3700 Ion Thruster"
 		"X4200 Ion Steering"
 		"Hyperdrive"
+	gun "Meteor Missile Launcher"
+	gun "Meteor Missile Launcher"
+	gun "Twin Turbo Blaster"
+	gun "Twin Turbo Blaster"
+	gun "Twin Turbo Blaster"
+	gun "Twin Turbo Blaster"
+
 
 ship "Rukh" "Rukh (Turbo)"
 	outfits
@@ -444,10 +452,11 @@ ship "Rukh" "Rukh (Turbo)"
 
 ship "Rukh" "Rukh (Modified Blaster)"
 	outfits
+		"Twin Modified Blaster" 4
 		"Modified Blaster Turret" 3
-		"Meteor Missile Launcher" 6
-		"Meteor Missile" 270
-		"Meteor Missile Box" 6
+		"Meteor Missile Launcher" 2
+		"Meteor Missile" 105
+		"Meteor Missile Box" 3
 		"Fission Reactor"
 		"LP144a Battery Pack"
 		"D41-HY Shield Generator"
@@ -460,6 +469,12 @@ ship "Rukh" "Rukh (Modified Blaster)"
 		"X3700 Ion Thruster"
 		"X4200 Ion Steering"
 		"Hyperdrive"
+	gun 
+	gun 
+	gun "Twin Modified Blaster"
+	gun "Twin Modified Blaster"
+	gun "Twin Modified Blaster"
+	gun "Twin Modified Blaster"
 
 ship "Rukh" "Rukh (Heavy)"
 	outfits
@@ -480,7 +495,7 @@ ship "Rukh" "Rukh (Heavy)"
 		"Hyperdrive"
 
 
-# Modified Rukh is derived from the Warbird in Pirate-Expansion
+# Marauder Rukh is derived from the Warbird in Pirate-Expansion
 ship "Marauder Rukh"
 	sprite "ship/Midnight-Becca marauder_warbird"
 	thumbnail "thumbnail/Midnight-Becca marauder_warbird"
@@ -507,9 +522,9 @@ ship "Marauder Rukh"
 	outfits
 		"Anti-Missile Turret"
 		"Quad Mod Blaster Turret" 2
-		"Torpedo Launcher" 6
-		"Torpedo" 270
-		"Torpedo Storage Rack" 6
+		"Torpedo Pod" 6
+		"Torpedo" 273
+		"Torpedo Storage Rack" 17
 
 		"Fission Reactor"
 		"LP144a Battery Pack"
@@ -531,7 +546,7 @@ ship "Marauder Rukh"
 	gun 43.5 15
 	gun -58 25
 	gun 58 25
-	turret 0 -39.5
+	turret 0 -39.5 "Anti-Missile Turret"
 	turret -8 70
 	turret 8 70
 	leak "leak" 50 50
@@ -542,15 +557,16 @@ ship "Marauder Rukh"
 	explode "medium explosion" 24
 	explode "large explosion" 8
 	"final explode" "final explosion medium"
-	description ""
+	description "After the discovery of the original blueprints for the Rukh, mechanics were able to combine that data with modern ship design principles to further optimize the design for combat."
 
 ship "Marauder Rukh" "Marauder Rukh (Inferno Rocket)"
 	outfits
 		"Anti-Missile Turret"
 		"Quad Turbo Blaster Turret" 2
-		"Inferno Rocket Launcher" 6
-		"Inferno Rocket" 180
-		"Inferno Rocket Rack" 6
+		"Inferno Rocket Launcher" 4
+		"Inferno Rocket Pod" 2
+		"Inferno Rocket" 164
+		"Inferno Rocket Rack" 8
 		"Fission Reactor"
 		"LP144a Battery Pack"
 		"Modified D41-HY Shielding"
@@ -562,6 +578,15 @@ ship "Marauder Rukh" "Marauder Rukh (Inferno Rocket)"
 		"X3700 Ion Thruster"
 		"X4200 Ion Steering"
 		"Hyperdrive"
+	gun "Inferno Rocket Pod"
+	gun "Inferno Rocket Pod"
+	gun 
+	gun 
+	gun 
+	gun 
+	turret "Anti-Missile Turret"
+	turret 
+	turret 
 
 ship "Marauder Rukh" "Marauder Rukh (Heavy)"
 	outfits
