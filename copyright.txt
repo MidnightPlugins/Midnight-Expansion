@@ -119,7 +119,16 @@ License: CC-BY-SA-4.0
 Comment: Derived from works by Darcy Manoel (under the same license)
 
 Files:
+ images/ship/Midnight 1010todd*
+ images/thumbnail/Midnight 1010todd*
+Copyright: Michael Arsollon
+License: GPL-3+
+Comment: Derived from works by 1010todd (under the same license)
+
+
+Files:
  images/ship/Becca*
+ images/outfit/Becca*
  images/thumbnail/Becca*
 Copyright: Becca Tommaso (tommasobecca03@gmail.com)
 License: CC-BY-SA-4.0
