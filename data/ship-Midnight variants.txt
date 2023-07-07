@@ -227,66 +227,6 @@ ship "Bravo-Monitor" "Bravo-Monitor (Shocker)"
 
 
 
-ship "Ra'gru Ik 618" "Ra'gru Ik 618 (Shock Strike)"
-	outfits
-		"Banisher Grav-Turret" 2
-		"Blaze-Pike Turret" 4
-		Brig
-		Fire-Lance 3
-		"Firelight Missile" 40
-		"Firelight Missile Bank" 2
-		"Fuel Processor"
-		"Jump Drive"
-		"Korath Shock-Strike" 2
-		"Liquid Sodium Cooler"
-		"Microbot Defense Station" 13
-		"Plasma Core"
-		"Small Heat Shunt" 3
-		"Steering (Stellar Class)"
-		"Systems Core (Large)"
-		"Thermal Repeater Rifle" 794
-		"Thruster (Stellar Class)"
-		"Triple Plasma Core"
-		"Warder Anti-Missile" 2
-	turret "Warder Anti-Missile"
-	turret "Banisher Grav-Turret"
-	turret "Blaze-Pike Turret"
-	turret "Blaze-Pike Turret"
-	turret "Korath Shock-Strike"
-	turret "Korath Shock-Strike"
-	turret "Blaze-Pike Turret"
-	turret "Blaze-Pike Turret"
-	turret "Banisher Grav-Turret"
-	turret "Warder Anti-Missile"
-
-ship "Ra'at Ik 621" "Ra'at Ik 621 (Shock Strike)"
-	outfits
-		"Banisher Grav-Turret" 2
-		Fire-Lance 3
-		"Fuel Processor"
-		"Jump Drive"
-		"Korath Shock-Strike" 2
-		"Large Heat Shunt" 3
-		"Microbot Defense Station" 12
-		"Outfits Expansion" 2
-		"Reverser (Comet Class)"
-		"Small Heat Shunt" 2
-		"Steering (Stellar Class)"
-		"Systems Core (Large)"
-		"Thermal Repeater Rifle" 799
-		"Thruster (Stellar Class)"
-		"Triple Plasma Core"
-		"Warder Anti-Missile" 3
-	turret "Korath Shock-Strike"
-	turret "Banisher Grav-Turret"
-	turret "Banisher Grav-Turret"
-	turret "Warder Anti-Missile"
-	turret "Korath Shock-Strike"
-	turret "Warder Anti-Missile"
-	turret "Warder Anti-Missile"
-
-
-
 ship "Korath Scouter" "Korath Scouter (Crippled)"
 	outfits
 		"Banisher Grav-Turret" 2
@@ -348,6 +288,66 @@ ship "Korath Scouter" "Korath Scouter (Fire-Lance)"
 	turret "Warder Anti-Missile"
 	turret "Warder Anti-Missile"
 
+
+
+ship "Korsmanath A'awoj" "Korsmanath A'awoj (Refiner)"
+	add attributes
+		"biome" 10
+		"industry" 20
+	outfits
+		"Afterburner (Stellar Class)"
+		"Banisher Grav-Turret" 7
+		"Botanical Garden"
+		"Cargo Expansion"
+		"Firelight Missile" 108
+		"Firelight Missile Bank" 4
+		"Firelight Storage Rack" 4
+		"Fuel Processor"
+		"Fuel Refiner" 2
+		"Jump Drive"
+		"Korath Inferno" 3
+		"Korath Scanner"
+		"Langrage Hyper-Heaver" 3
+		"Liquid Sodium Cooler" 2
+		"Microbot Defense Station" 186
+		"Microbot Fabricator" 2
+		"Reverser (Stellar Class)"
+		"Scram Drive"
+		"Shock-Strike Turret" 2
+		"Steering (Planetary Class)"
+		"Steering (Stellar Class)"
+		"Systems Core (Huge)"
+		"Thermal Repeater Rifle" 1982
+		"Thruster (Planetary Class)"
+		"Thruster (Stellar Class)"
+		"Triple Plasma Core" 3
+		"Warder Anti-Missile" 7
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Langrage Hyper-Heaver"
+	turret "Shock-Strike Turret"
+	turret "Korath Inferno"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	turret "Langrage Hyper-Heaver"
+	turret "Shock-Strike Turret"
+	turret "Banisher Grav-Turret"
+	turret "Warder Anti-Missile"
+	turret "Warder Anti-Missile"
+	turret "Banisher Grav-Turret"
+	turret "Langrage Hyper-Heaver"
+	turret "Korath Inferno"
+	turret "Korath Inferno"
+	turret "Banisher Grav-Turret"
+	gun "Firelight Missile Bank"
+	gun "Firelight Missile Bank"
+	gun "Firelight Missile Bank"
+	gun "Firelight Missile Bank"
 
 
 #############################
