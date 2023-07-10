@@ -886,6 +886,7 @@ mission "Midnight Expansion: Ember World Crafter Cancel"
 		has "Midnight Expansion: Ember World Crafter: active"
 	on offer
 		event "ember world crafter end"
+		fail "Midnight Expansion: Ember World Crafter"
 		conversation
 			scene "thumbnail/PR4987 korath refuge"
 			`It seems the Korath ship occupying Lucina has left. While the Remnant are relieved, it is uncertain if the ship will return or appear elsewhere in the galaxy.`
@@ -903,6 +904,7 @@ mission "Midnight Expansion: Ember World Forger Cancel"
 		has "Midnight Expansion: Ember World Forger: active"
 	on offer
 		event "ember world forger end"
+		fail "Midnight Expansion: Ember World Forger"
 		conversation
 			scene "thumbnail/PR4987 korath refabricator"
 			`It seems the Korath ship occupying Lucina has left. While the Remnant are relieved, it is uncertain if the ship will return or appear elsewhere in the galaxy.`
@@ -920,6 +922,7 @@ mission "Midnight Expansion: Ember World Shaper Cancel"
 		has "Midnight Expansion: Ember World Shaper: active"
 	on offer
 		event "ember world shaper end"
+		fail "Midnight Expansion: Ember World Shaper"
 		conversation
 			scene "thumbnail/PR4987 korath haven"
 			`It seems the Korath ship occupying Lucina has left. While the Remnant are relieved, it is uncertain if the ship will return or appear elsewhere in the galaxy.`
