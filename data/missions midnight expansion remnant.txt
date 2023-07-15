@@ -172,6 +172,7 @@ mission "Midnight Expansion Avialae Salvage 1"
 		dialog "Maybe the Korath are still in orbit observing you or maybe Ciconia is riding on one of your escorts that hasn't arrived. Either way, you won't be able to progress until both are taken care of."
 
 mission "Midnight Expansion Avialae Salvage 2"
+	landing
 	name "Ancient Memory Salvage"
 	description "Bring Ciconia to Viminal to gather supplies for salvaging the Ancient Memory."
 	source "Baianus"
