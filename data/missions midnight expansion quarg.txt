@@ -115,6 +115,8 @@ event "add quarg ringworld traffic"
 		add fleet "Quarg Ringworld Traffic" 40000
 	system Dokdobaru
 		add fleet "Quarg Ringworld Traffic" 40000
+	system Aleit
+		add fleet "Quarg Ringworld Traffic" 40000
 	fleet "Quarg"
 		add variant
 			"Quarg Wardrake" 3
@@ -131,7 +133,18 @@ event "add quarg ringworld traffic"
 			"Quarg Wardrake" 4
 		add variant 1
 			"Quarg Wardrake" 7
-			
+
+mission "Gegno Ringworld Traffic Patch"
+	landing
+	invisible
+	on offer
+		event "gegno ringworld traffic patch"
+		fail
+
+event "add quarg ringworld traffic"
+	system Aleit
+		add fleet "Quarg Ringworld Traffic" 40000
+
 
 
 mission "Midnight Expansion: Quarg Seakraken"
