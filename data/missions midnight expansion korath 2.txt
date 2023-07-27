@@ -345,6 +345,7 @@ mission "Midnight Expansion: Nenia Gas Harvest"
 	destination "Esquiline"
 	to offer
 		has "Remnant: Cognizance 12: done"
+		random < 25
 	stopover
 		planet "Nasqueron" "Slylandro"
 	on stopover
