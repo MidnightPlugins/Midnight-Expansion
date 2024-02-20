@@ -182,15 +182,15 @@ fleet "Large Sestor Colony"
 		"Ekfar Tek 23"
 		"Tercheldar 150"
 	variant 2
-		"Tercheldar 150"
+		"Tercheldar 150 (Tormentor)"
 	variant 1
-		"Tercheldar 150"
-		"Skoretak 13" 2
+		"Tercheldar 150 (Tormentor)" 2
 	variant 1
 		"Tercheldar 150"
 		"Ekfar Tek 23" 2
 		"Skoretak 13" 4
 	variant 1
+		"Tercheldar 150"
 		"Skoretak 13" 6
 
 mission "Midnight Expansion Sestor Baran Salvage"
