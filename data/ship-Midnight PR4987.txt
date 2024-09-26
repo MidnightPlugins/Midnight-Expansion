@@ -1,4 +1,4 @@
-	# Copyright (c) 2022 by Michael Arsollon
+# Copyright (c) 2022 by Michael Arsollon
 # derived from original game at https://github.com/endless-sky/endless-sky
 #
 # Endless Sky is free software: you can redistribute it and/or modify it under the
@@ -398,7 +398,7 @@ ship "Rai'alorej Makwar"
 	explode "large explosion" 40
 	explode "huge explosion" 50
 	"final explode" "final explosion large"
-	description "	This militarized variant of the Rai'alorej-Class Refuge operates as a mobile medical center. It has many of the facilites found on the regular model. Missing are the incubators and nurseries intended for civilian use."
+	description "This militarized variant of the Rai'alorej-Class Refuge operates as a mobile medical center. It has many of the facilities found on the regular model. However, the incubators and nurseries intended for civilian use are missing."
 
 
 

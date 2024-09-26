@@ -213,7 +213,7 @@ ship "Prateskar 711"
 	explode "small explosion" 70
 	explode "tiny explosion" 140
 	"final explode" "final explosion large"
-	description `An unfinished protoype being developed by the Kor Sestor at the time their network was shut down. Its deployment into the Sestor fleets could have shifted the balance of power in their war with the Mereti.`
+	description `An unfinished prototype being developed by the Kor Sestor at the time their network was shut down. Its deployment into the Sestor fleets could have shifted the balance of power in their war with the Mereti.`
 
 
 

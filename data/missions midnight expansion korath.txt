@@ -127,7 +127,7 @@ mission "Midnight Expansion: Korath Warlord"
 		event "korath warlord development" 20
 		conversation
 			scene "thumbnail/AESmisc kar_ik_vot_637"
-			`	The Remnant run intensive scans on the unfamiliar ship as you approach the spaceport. Taely has a team of researchers ready to do a thorough inspection of the vessel as soon as you open the entry hatch. Their inspection is quick and effecient. After only a few hours they're done with the ship. "The level of automation is amazing," Taely signs. "The ship almost flies itself."`
+			`	The Remnant run intensive scans on the unfamiliar ship as you approach the spaceport. Taely has a team of researchers ready to do a thorough inspection of the vessel as soon as you open the entry hatch. Their inspection is quick and efficient. After only a few hours they're done with the ship. "The level of automation is amazing," Taely signs. "The ship almost flies itself."`
 
 ship "Korath Warlord" "Korath Warlord (Prototype)"
 	add attributes
@@ -285,22 +285,22 @@ mission "Midnight Expansion: Korath Warlord Pirate"
 
 
 
-mission "Midnight Expansion: Sestor Protoype"
+mission "Midnight Expansion: Sestor Prototype"
 	landing
-	name "Sestor Protoype: Vector Engine"
+	name "Sestor Prototype: Vector Engine"
 	description "Search for a Vector Engine and bring it back to <destination>."
 	source "Sestor Ikfar"
 	to offer
 		has "event: Scrapyard Add Scrap"
 		or
-			not "Randomize Midnight Expansion: Sestor Protoype"
+			not "Randomize Midnight Expansion: Sestor Prototype"
 			and
-				has "Randomize Midnight Expansion: Sestor Protoype"
-				random < 35 - "Midnight Expansion: Sestor Protoype: declined"
+				has "Randomize Midnight Expansion: Sestor Prototype"
+				random < 35 - "Midnight Expansion: Sestor Prototype: declined"
 	on offer
 		conversation
 			scene "thumbnail/AESmisc kar_ik_vot_711"
-			`While exploring the abandoned factories you find a partially completed ship, a model Prateskar 711. It may have been a protoype still in development, since it isn't a ship you've seen in the Sestor fleets when they were active. Do you want to salvage it?`
+			`While exploring the abandoned factories you find a partially completed ship, a model Prateskar 711. It may have been a Prototype still in development, since it isn't a ship you've seen in the Sestor fleets when they were active. Do you want to salvage it?`
 			choice
 				`	(Salvage the ship.)`
 				`	(Don't salvage the ship.)`
@@ -323,10 +323,10 @@ mission "Midnight Expansion: Sestor Protoype"
 			`	-"Hyperdrive"`
 				accept
 	on decline
-		set "Randomize Midnight Expansion: Sestor Protoype"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		set "Randomize Midnight Expansion: Sestor Prototype"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -340,7 +340,7 @@ mission "Midnight Expansion: Sestor Protoype"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -392,18 +392,18 @@ mission "Midnight Expansion: Sestor Protoype"
 
 mission "Midnight Expansion: Sestor Banisher"
 	landing
-	name "Sestor Protoype: Banisher"
+	name "Sestor Prototype: Banisher"
 	description "Bring a Banisher Grav-Turret to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Banisher Grav-Turret" -1
 		conversation
 			scene "outfit/banisher"
 			`	You installed the Banisher Grav-Turret and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -417,7 +417,7 @@ mission "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -447,18 +447,18 @@ mission "Midnight Expansion: Sestor Banisher"
 
 mission "Midnight Expansion: Sestor Repeater"
 	landing
-	name "Sestor Protoype: Repeater Turret"
+	name "Sestor Prototype: Repeater Turret"
 	description "Bring a Thermal Repeater Turret to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Thermal Repeater Turret" -1
 		conversation
 			scene "outfit/repeater turret"
 			`	You installed the Thermal Repeater Turret and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -472,7 +472,7 @@ mission "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -502,18 +502,18 @@ mission "Midnight Expansion: Sestor Repeater"
 
 mission "Midnight Expansion: Sestor Warder"
 	landing
-	name "Sestor Protoype: Warder"
+	name "Sestor Prototype: Warder"
 	description "Bring a Warder Anti-Missile to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Warder Anti-Missile" -1
 		conversation
 			scene "outfit/warder"
 			`	You installed the Warder Anti-Missile and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -527,7 +527,7 @@ mission "Midnight Expansion: Sestor Warder"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -557,18 +557,18 @@ mission "Midnight Expansion: Sestor Warder"
 
 mission "Midnight Expansion: Sestor Piercer"
 	landing
-	name "Sestor Protoype: Piercer Launcher"
+	name "Sestor Prototype: Piercer Launcher"
 	description "Bring a Piercer Missile Launcher to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Piercer Missile Launcher" -1
 		conversation
 			scene "outfit/piercer launcher"
 			`	You installed the Piercer Missile Launcher and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -582,7 +582,7 @@ mission "Midnight Expansion: Sestor Piercer"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -612,18 +612,18 @@ mission "Midnight Expansion: Sestor Piercer"
 
 mission "Midnight Expansion: Sestor Plasma Core"
 	landing
-	name "Sestor Protoype: Triple Plasma Core"
+	name "Sestor Prototype: Triple Plasma Core"
 	description "Bring a Triple Plasma Core to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Triple Plasma Core" -1
 		conversation
 			scene "outfit/triple plasma core"
 			`	You installed the Triple Plasma Core and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -637,7 +637,7 @@ mission "Midnight Expansion: Sestor Plasma Core"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -667,18 +667,18 @@ mission "Midnight Expansion: Sestor Plasma Core"
 
 mission "Midnight Expansion: Sestor Core (Large)"
 	landing
-	name "Sestor Protoype: Systems Core (Large)"
+	name "Sestor Prototype: Systems Core (Large)"
 	description "Bring a Systems Core (Large) to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Systems Core (Large)" -1
 		conversation
 			scene "outfit/large systems core"
 			`	You installed the Systems Core (Large) and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -692,7 +692,7 @@ mission "Midnight Expansion: Sestor Core (Large)"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -722,18 +722,18 @@ mission "Midnight Expansion: Sestor Core (Large)"
 
 mission "Midnight Expansion: Sestor Core (Medium)"
 	landing
-	name "Sestor Protoype: Systems Core (Medium)"
+	name "Sestor Prototype: Systems Core (Medium)"
 	description "Bring a Systems Core (Medium) to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Systems Core (Medium)" -1
 		conversation
 			scene "outfit/medium systems core"
 			`	You installed the Systems Core (Medium) and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -747,7 +747,7 @@ mission "Midnight Expansion: Sestor Core (Medium)"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -777,18 +777,18 @@ mission "Midnight Expansion: Sestor Core (Medium)"
 
 mission "Midnight Expansion: Sestor Core (Small)"
 	landing
-	name "Sestor Protoype: Systems Core (Small)"
+	name "Sestor Prototype: Systems Core (Small)"
 	description "Bring a Systems Core (Small) to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Systems Core (Small)" -1
 		conversation
 			scene "outfit/small systems core"
 			`	You installed the Systems Core (Small) and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -802,7 +802,7 @@ mission "Midnight Expansion: Sestor Core (Small)"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -832,18 +832,18 @@ mission "Midnight Expansion: Sestor Core (Small)"
 
 mission "Midnight Expansion: Sestor Large Shunt"
 	landing
-	name "Sestor Protoype: Large Heat Shunt"
+	name "Sestor Prototype: Large Heat Shunt"
 	description "Bring a Large Heat Shunt to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Large Heat Shunt" -1
 		conversation
 			scene "outfit/large heat shunt"
 			`	You installed the Large Heat Shunt and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -857,7 +857,7 @@ mission "Midnight Expansion: Sestor Large Shunt"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -887,18 +887,18 @@ mission "Midnight Expansion: Sestor Large Shunt"
 
 mission "Midnight Expansion: Sestor Small Shunt"
 	landing
-	name "Sestor Protoype: Small Heat Shunt"
+	name "Sestor Prototype: Small Heat Shunt"
 	description "Bring a Small Heat Shunt to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Small Heat Shunt" -1
 		conversation
 			scene "outfit/small heat shunt"
 			`	You installed the Small Heat Shunt and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -912,7 +912,7 @@ mission "Midnight Expansion: Sestor Small Shunt"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -942,18 +942,18 @@ mission "Midnight Expansion: Sestor Small Shunt"
 
 mission "Midnight Expansion: Sestor Control Transceiver"
 	landing
-	name "Sestor Protoype: Control Transceiver"
+	name "Sestor Prototype: Control Transceiver"
 	description "Bring a Control Transceiver to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Control Transceiver" -1
 		conversation
 			scene "outfit/control transceiver"
 			`	You installed the Control Transceiver and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -967,7 +967,7 @@ mission "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -997,18 +997,18 @@ mission "Midnight Expansion: Sestor Control Transceiver"
 
 mission "Midnight Expansion: Sestor Hyperdrive"
 	landing
-	name "Sestor Protoype: Hyperdrive"
+	name "Sestor Prototype: Hyperdrive"
 	description "Bring a Hyperdrive to <destination>. (The outfit will automatically be removed if you bring one.)"
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 	on complete
 		outfit "Hyperdrive" -1
 		conversation
 			scene "outfit/hyperdrive"
 			`	You installed the Hyperdrive and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -1022,7 +1022,7 @@ mission "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -1052,11 +1052,11 @@ mission "Midnight Expansion: Sestor Hyperdrive"
 
 mission "Midnight Expansion: Sestor Scrap Metal"
 	landing
-	name "Sestor Protoype: Scrap Metal"
+	name "Sestor Prototype: Scrap Metal"
 	description "Bring 100 pieces of Scrap Metal back to <destination>."
 	destination "Sestor Ikfar"
 	to offer
-		has "Midnight Expansion: Sestor Protoype: active"
+		has "Midnight Expansion: Sestor Prototype: active"
 		has "Midnight Expansion: Sestor Banisher: done"
 		has "Midnight Expansion: Sestor Repeater: done"
 		has "Midnight Expansion: Sestor Warder: done"
@@ -1073,7 +1073,7 @@ mission "Midnight Expansion: Sestor Scrap Metal"
 		conversation
 			scene "outfit/AESmisc vector_engine_reality_class"
 
-			`	You've got everthing but the engines. You've never actually seen Vector Engines on any of the Korath ships you've encountered. Perhaps they don't exist yet. But from the schematics, you can try to make them if you had the spare parts. There's a lot of Scrap Metal floating around Sestor space these days... One hundred pieces should be enough.`
+			`You've got everything but the engines. You've never actually seen Vector Engines on any of the Korath ships you've encountered. Perhaps they don't exist yet. But from the schematics, you can try to make them if you had the spare parts. There's a lot of Scrap Metal floating around Sestor space these days... one hundred pieces should be enough.`
 				accept
 								
 	on complete
@@ -1082,7 +1082,7 @@ mission "Midnight Expansion: Sestor Scrap Metal"
 			scene "outfit/AESmisc vector_engine_reality_class"
 			`	You manually operate the factory machinery to make the Vector Engine (Reality Class) and are one step closer to completing the prototype!`
 	on abort
-		fail "Midnight Expansion: Sestor Protoype"
+		fail "Midnight Expansion: Sestor Prototype"
 		fail "Midnight Expansion: Sestor Banisher"
 		fail "Midnight Expansion: Sestor Repeater"
 		fail "Midnight Expansion: Sestor Warder"
@@ -1096,7 +1096,7 @@ mission "Midnight Expansion: Sestor Scrap Metal"
 		fail "Midnight Expansion: Sestor Control Transceiver"
 		fail "Midnight Expansion: Sestor Hyperdrive"
 		fail "Midnight Expansion: Sestor Scrap Metal"
-		clear "Midnight Expansion: Sestor Protoype: offered"
+		clear "Midnight Expansion: Sestor Prototype: offered"
 		clear "Midnight Expansion: Sestor Banisher: offered"
 		clear "Midnight Expansion: Sestor Repeater: offered"
 		clear "Midnight Expansion: Sestor Warder: offered"
@@ -1126,14 +1126,14 @@ mission "Midnight Expansion: Sestor Scrap Metal"
 
 
 
-mission "Midnight Expansion: Sestor Protoype Rogue"
+mission "Midnight Expansion: Sestor Prototype Rogue"
 	landing
 	name "Rogue Prateskar"
 	description "A rogue Prateskar 711 is on the loose. Track it down and eliminate it before it causes too much damage."
 	source "Sestor Ikfar"
 	to offer
 		has "event: Blight Shadow Infestation"
-		has "Midnight Expansion: Sestor Protoype: done"
+		has "Midnight Expansion: Sestor Prototype: done"
 		random < 5
 	on offer
 		conversation
@@ -1159,15 +1159,15 @@ mission "Midnight Expansion: Sestor Protoype Rogue"
 			variant
 				"Prateskar 711"
 	on abort
-		clear "Midnight Expansion: Sestor Protoype Rogue: offered"
+		clear "Midnight Expansion: Sestor Prototype Rogue: offered"
 
-mission "Midnight Expansion: Sestor Protoype Scrapper"
+mission "Midnight Expansion: Sestor Prototype Scrapper"
 	landing
 	invisible
 	source "Sestor Ikfar"
 	to offer
 		has "event: Blight Shadow Infestation"
-		has "Midnight Expansion: Sestor Protoype Rogue: done"
+		has "Midnight Expansion: Sestor Prototype Rogue: done"
 		random < 5
 	on offer
 		conversation
@@ -1211,7 +1211,7 @@ mission "Midnight Expansion: Sestor Protoype Scrapper"
 				"Far Lek 14" 18
 				"Far Osk 27" 18
 	on complete
-		clear "Midnight Expansion: Sestor Protoype Scrapper: offered"
+		clear "Midnight Expansion: Sestor Prototype Scrapper: offered"
 
 
 mission "Midnight Expansion: Mereti Trading Platinum"
@@ -1700,7 +1700,7 @@ mission "Midnight Expansion: Green Mereti"
 		outfit "Silicon" 2048
 		conversation
 			scene "asteroid/large space flora/large space flora"
-			`The Mereti accept your delivery of the Void Orchids and take them to another part of the station. A large quanity of various ores are deposited into your cargo.`
+			`The Mereti accept your delivery of the Void Orchids and take them to another part of the station. A large quantity of various ores are deposited into your cargo.`
 
 fleet "Kor Mereti Greenhouse"
 	government "Kor Mereti"
