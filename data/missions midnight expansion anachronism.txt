@@ -222,7 +222,6 @@ mission "Midnight Anachronism 6"
 	transition
 	non-blocking
 	invisible
-	deadline 2
 	destination Earth
 	to offer
 		has "vyu-Ira (Quash) destroyed"
